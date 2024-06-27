@@ -27,7 +27,7 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div className={"w-full lg:block lg:w-auto lg:top-0 lg:p-0 lg:static" + (showMobileNav ? "block absolute top-14 z-10 px-4" : "hidden")}>
+                <div className={"w-full lg:block lg:w-auto lg:top-0 lg:p-0 lg:static " + (showMobileNav ? "block absolute top-14 left-0 z-10 px-4" : "hidden")}>
                     <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
                         {navs.map((nav) => (
                             <li key={nav}>
