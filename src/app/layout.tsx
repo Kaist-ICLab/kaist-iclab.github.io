@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import NavBar from "@/components/NavBar";
+
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -16,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar navs={["Projects", "Publications", "Members", "Lectures", "Galleries", "Posts"]} />
+        {children}
+      </body>
     </html>
   );
 }
