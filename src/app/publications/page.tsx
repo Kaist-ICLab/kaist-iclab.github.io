@@ -1,41 +1,30 @@
 "use client"
+import Publication from "@/components/Publication";
+import Tab from "@/components/Tab";
+import { H3 } from "@/components/Typography";
+import publications from "@/data/publications";
 import React, { useState } from "react";
 
-interface TabProps {
-  tabs: string[];
-  selectedTab: string;
-  changeTab: (tab: string) => void;
-}
-const Tab: React.FC<TabProps> = ({ tabs, selectedTab, changeTab }) => {
-  const activeTheme = "grow inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500"
-  const inactiveTheme = "grow inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-  return <div className="w-full">
-    <div className="sm:hidden">
-      <label className="sr-only">Select publication Type</label>
-      <select id="tabs" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        {tabs.map((tab) => (<option>{tab}</option>))}
-      </select>
-    </div>
-    <div className="hidden sm:flex text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
-      <ul className="flex flex-wrap -mb-px">
-        {tabs.map((tab) => (
-          <li key={tab} className="flex grow me-2">
-            <div onClick={() => changeTab(tab)} className={selectedTab === tab ? activeTheme : inactiveTheme}>{tab}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
-}
-
-
-
 export default function Home() {
+  const currentYear = new Date().getFullYear();
+  const years = Array.from({ length: currentYear - 2010 + 1 }, (_, index) => currentYear - index);
   const [selectedTab, setSelectedTab] = useState("All");
   return (
-    <div className="flex flex-col">
-      <div className="self-center w-full px-6 flex flex-col items-center">
-        <Tab tabs={["All", "Conference", "Journal"]} selectedTab={selectedTab} changeTab={setSelectedTab} />
+    <div className="m-auto px-4 w-full max-w-screen-xl flex flex-col">
+      <Tab tabs={["All", "Conference", "Journal", "Workshop", "Patent"]} selectedTab={selectedTab} changeTab={setSelectedTab} />
+      <div className="w-full flex flex-col gap-12">
+        {years.map((year) => {
+          const filteredPublications = Object.values(publications).filter((publication) => publication.year === year && (selectedTab === "All" || publication.type === selectedTab));
+          if (filteredPublications.length === 0) return null;
+          return <div key={year} className="mt-6 self-center w-full max-w-screen-xl flex flex-col items-start gap-4">
+            <H3>{year}</H3>
+            <div className="w-full flex flex-col gap-8">
+              {
+                filteredPublications.map((publication, index) => <Publication key={index} {...publication} />)
+              }
+            </div>
+          </div>
+        })}
       </div>
     </div>
   );

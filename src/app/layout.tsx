@@ -3,6 +3,7 @@ import NavBar from "@/components/NavBar";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <NavBar navs={["Projects", "Publications", "Members", "Lectures", "Galleries", "Posts"]} />
+      <body className={inter.className} suppressHydrationWarning={true}>
+        <NavBar navs={["projects", "publications", "members", "lectures", "galleries", "posts"]} />
+        <main className="min-h-screen">
         {children}
+        </main>
+        <Footer/>
       </body>
     </html>
   );
