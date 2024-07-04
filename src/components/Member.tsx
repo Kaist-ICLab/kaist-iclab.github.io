@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react";
+import { Icon } from '@iconify/react';
 
 type MemberRole = "Director" | "Post Doctoral Researcher" | "Ph.D. Student" | "M.S. Student" | "Alumni";
 
@@ -35,11 +36,13 @@ const Member: React.FC<MemberProp> = (member) => {
                         </div>
                     }
                     <ul className="mt-6 flex gap-x-6">
-                        {[[member.email, "email"], [member.google_scholar, "google_scholar"], [member.github, "github"], [member.homepage, "homepage"]].map(([link, type]) => (
+                        {[[member.email, "mdi:email"], [member.google_scholar, "academicons:google-scholar"], [member.github, "mdi:github"], [member.homepage, "mdi:home"]].map(([link, type]) => (
                             link && <li key={type}>
-                                <a href={link} className="text-gray-400">
-                                    {/* TODO: change */}
-                                    <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"><path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z"></path></svg>
+                                <a href={link} className="relative text-gray-400" onClick={(event) => {type==="mdi:email"? emailClick(event): null}}>
+                                    <Icon icon={type as string} className="w-6 h-6" />
+                                    {type === "mdi:email" ? <div id="toast-success" className="z-10 bg-white opacity-100 absolute top-0 left-6 w-44 hidden">
+                                        <Toast />
+                                    </div> : null}
                                 </a>
                             </li>
                         ))}
@@ -50,9 +53,11 @@ const Member: React.FC<MemberProp> = (member) => {
     } else {
         return (<div className="border-l-2 border-blue-800 px-2 mt-6 flex flex-col sm:flex-row gap-2 sm:items-center">
             <div className="flex flex-row items-center gap-2">
-                <a href={member.email} className="text-gray-400">
-                    {/* TODO: change */}
-                    <svg className="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"><path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z"></path></svg>
+                <a href={member.email} className="relative text-gray-400" onClick={(event) => { emailClick(event) }}>
+                    <Icon icon="mdi:email" className="w-6 h-6" />
+                    <div id="toast-success" className="absolute top-0 left-6 w-44 hidden bg-white opacity-100">
+                        <Toast />
+                    </div>
                 </a>
                 <div className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</div>
             </div>
@@ -61,6 +66,30 @@ const Member: React.FC<MemberProp> = (member) => {
         )
     }
 
+}
+
+const emailClick = async (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    event.preventDefault();
+    console.log("currentTarget", event.currentTarget)
+    const toast = event.currentTarget.lastChild as HTMLElement
+    const email = event.currentTarget.href.replace(window.location.origin + "/", "");
+    await navigator.clipboard.writeText(email)
+    toast?.classList.remove("hidden")
+    setTimeout(() => {
+        toast?.classList.add("hidden")
+    }, 1000)
+}
+
+const Toast = () => {
+    return <div className="z-10 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+        <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+            <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
+            </svg>
+            <span className="sr-only">Check icon</span>
+        </div>
+        <div className="ms-3 text-sm font-normal">Email Copied!</div>
+    </div>
 }
 
 

@@ -61,11 +61,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-white dark:bg-gray-800 lg:drop-shadow">
+      <section className="bg-white dark:bg-gray-800">
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold leading-5 tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              News
+              Latest News
             </h2>
           </div>
           <div className="max-w-3xl p-1 mx-auto mt-8 dark:border-gray-700">

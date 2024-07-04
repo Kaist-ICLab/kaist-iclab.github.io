@@ -30,7 +30,7 @@ const Publication: React.FC<PublicationProp> = (publication) => {
                 [slide, "slide", "yellow"],
                 [publication.code, "code", "gray"], 
                 [publication.video, "video", "red"]].map(([link, type, color]) => (
-                    link && <a href={link} key={type} className={`bg-${color}-100 text-${color}-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-${color}-900 dark:text-${color}-300`}>
+                    link && <a target="_blank" href={link} key={type} className={`bg-${color}-100 text-${color}-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-${color}-900 dark:text-${color}-300`}>
                         {type}
                     </a>
                 ))}
