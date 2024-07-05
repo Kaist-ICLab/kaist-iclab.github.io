@@ -19,7 +19,7 @@ interface LectureProp {
 const Lecture: React.FC<LectureProp> = (lecture) => {
     if (lecture.type === "Main") {
         return (
-            <div className="w-full max-screen-xl flex flex-col gap-10 pt-12 lg:flex-row lg:items-center">
+            <div className="not-format w-full max-screen-xl flex flex-col gap-10 pt-12 lg:flex-row lg:items-center">
                 <img className="self-center aspect-[4/3] w-full lg:w-auto lg:h-[300px] flex object-fit lg:rounded-lg" src={lecture.img} alt="" />
                 <div className="self-center sm:self-auto lg:items-start flex-auto flex flex-col">
                     <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
@@ -45,7 +45,7 @@ const Lecture: React.FC<LectureProp> = (lecture) => {
             </div>
         )
     } else {
-        return <div className="border-l-2 border-blue-800 px-2 mt-6 flex flex-col sm:flex-row gap-2 sm:items-center">
+        return <div className="not-format border-l-2 border-blue-800 px-2 mt-6 flex flex-col sm:flex-row gap-2 sm:items-center">
             <span className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{`${lecture.code}: ${lecture.name} - ${lecture.syllabuses[0].semester}`}</span>
         </div>
     }

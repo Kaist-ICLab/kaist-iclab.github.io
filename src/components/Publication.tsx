@@ -21,7 +21,7 @@ const Publication: React.FC<PublicationProp> = (publication) => {
     const paper = publication.paper? ("/publications/papers/" + publication.paper): undefined;
     const slide = publication.slide? ("/publications/slides/" + publication.slide): undefined;
     return (
-        <div className="w-full max-w-screen-xl flex flex-col">
+        <div className="not-format w-full max-w-screen-xl flex flex-col">
             <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{publication.title}</h3>
             <p className="text-sm leading-7 text-gray-600">{formatAuthors(publication.authors)}</p>
             <p className="italic text-base leading-7 text-gray-600">{publication.venue + (publication.published === undefined || publication.published? "":" (To be appear)")}</p>

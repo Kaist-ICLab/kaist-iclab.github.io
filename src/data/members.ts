@@ -3,11 +3,11 @@ import { MemberProp, MemberRole } from "@/components/Member";
 const members: { [key: string]: MemberProp } = {
     UichinLee: {
         name: "Uichin Lee",
-        role: "Director",
+        role: "Professor",
         email: "uclee@kaist.ac.kr",
         google_scholar: 'https://scholar.google.co.kr/citations?user=Sc2pBzYAAAAJ',
         histories: {
-            "Director": "2010.03 ~ "
+            "Professor": "2010.03 ~ "
         }
     },
     JeonghyunKim: {

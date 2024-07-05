@@ -3,12 +3,13 @@
 import React from "react";
 import { Icon } from '@iconify/react';
 
-type MemberRole = "Director" | "Post Doctoral Researcher" | "Ph.D. Student" | "M.S. Student" | "Alumni";
+type MemberRole = "Professor" | "Post Doctoral Researcher" | "Ph.D. Student" | "M.S. Student" | "Alumni";
 
 interface MemberProp {
     name: string;
     role: MemberRole;
     email: string;
+    image?: string;
     research_interests?: string[];
     affiliation?: string; // affiliation for Alumnis
     google_scholar?: string;
@@ -22,7 +23,7 @@ const Member: React.FC<MemberProp> = (member) => {
     const image = "/members/" + member.name.replace(" ", "") + ".jpg";
     if (member.role !== "Alumni") {
         return (
-            <div className="flex flex-col gap-10 pt-12 sm:flex-row">
+            <div className="not-format flex flex-col gap-10 pt-12 sm:flex-row">
                 <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={image} alt={member.name} />
                 <div className="self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
                     <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</h3>

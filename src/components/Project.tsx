@@ -10,7 +10,7 @@ interface ProjectProp {
 
 const Project: React.FC<ProjectProp> = () => {
     return (
-        <div className="gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row">
+        <div className="not-format gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row">
             <img className="object-contain lg:w-2/5 lg:h-full rounded-lg shadow" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/cta/fundraising-1.png" alt="" />
             <div>
                 <div>

@@ -12,7 +12,7 @@ const Tab: React.FC<TabProps> = ({ tabs, selectedTab, changeTab }) => {
     const activeTheme = "inline-block w-full p-4 text-white bg-blue-600"
     const inactiveTheme = "inline-block w-full p-4 hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white"
     return (
-        <div className="w-full max-w-screen-xl mt-4">
+        <div className="not-format w-full max-w-screen-xl mt-4">
             <div className="sm:hidden">
                 <label className="sr-only">Select Publication Type</label>
                 <select className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
