@@ -1,0 +1,108 @@
+---
+title: 'Markdown Available Feature Test'
+created: '2024-07-05'
+lastModified: '2024-07-05'
+tags: ['next-js', 'tailwind', 'guide']
+type: 'post'
+---
+
+## Overview
+
+This post was made for testing various component for MDX file.
+
+## Heading
+
+Heading will represented as below:
+
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+
+## Emphasizing
+
+Emphasizing text such as `<em>` and `<strong>` will be displayed as follow:
+
+*Emphasize*
+
+**Bold**
+
+~~this~~
+
+`code`
+
+[Link](https://www.google.com)
+
+## List
+Ordered List:
+1. one
+2. two
+3. three
+
+Unordered List:
+* apple
+* banana
+* citrus
+
+Nested List
+* Nested well?
+  1. I hope so
+  2. It will
+* Check bullet after nested list
+
+* asdas
+  * sad
+
+Ordered List does not support nested list...
+
+## Block
+
+Code Block
+
+```javascript
+// create a function named greet()
+function greet() {
+    console.log("Hello World!");
+}
+
+// store a function in the displayPI variable
+// this is a function expression
+let displayPI = function() {
+    console.log("PI = 3.14");
+}
+
+// call the greet() function
+greet();
+
+// call the reply() function
+displayPI();
+
+// Output:
+// Hello World!
+// PI = 3.14
+```
+
+Quote
+
+> Anything write using quote css, it looks like quote!
+
+Task  Lists
+- [ ] List Syntax (Require github flavored Markdown, GFM)
+- [x] List Syntax (Require github flavored Markdown, GFM)
+
+
+Table
+| First Header                | Second Header                |
+| --------------------------- | ---------------------------- |
+| Content from cell 1         | Content from cell 2          |
+| Content in the first column | Content in the second column |
+
+Image
+
+![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+
+MDX Equation
+
+$$e^{i\pi} +1  = 0 $$

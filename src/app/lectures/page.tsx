@@ -7,16 +7,16 @@ import lectures from "@/data/lectures";
 export default function Home() {
   return (
     <div className="m-auto w-full max-w-screen-xl flex flex-col items-center sm:items-start py-12 px-4 gap-32">
-      <div className="w-full max-w-screen-xl flex flex-col items-center sm:items-start">
+      <div className="w-full max-w-screen-xl flex flex-col">
         <H3>Main Lectures</H3>
-        {lectures.map((lecture) => (
+        {lectures.filter((lecture)=> (lecture.type === "Main")).map((lecture) => (
           <Lecture key={lecture.code} {...lecture} />
         ))}
       </div>
       <div className="flex flex-col items-center sm:items-start">
         <H3>Special Lectures</H3>
         {
-          lectures.map((lecture) => (
+          lectures.filter((lecture)=> (lecture.type !== "Main")).map((lecture) => (
             <Lecture key={lecture.code} {...lecture} />
           ))
         }

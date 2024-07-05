@@ -1,6 +1,5 @@
 "use client"
 import Project from "@/components/Project";
-import { H3 } from "@/components/Typography";
 // import projects from "@/data/projects";
 import React, { useState } from "react";
 

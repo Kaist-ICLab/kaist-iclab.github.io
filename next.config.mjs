@@ -1,5 +1,7 @@
+// import {PrettyCodeOptions} from 'rehype-pretty-code/types';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
     webpack: config => {
         config.module.rules.push({
             test: /\.svg$/,
@@ -8,6 +10,7 @@ const nextConfig = {
 
         return config;
     },
+    transpilePackages: ['next-mdx-remote']
 };
 
 export default nextConfig;

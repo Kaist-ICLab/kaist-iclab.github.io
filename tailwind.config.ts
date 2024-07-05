@@ -11,10 +11,13 @@ const config: Config = {
       aspectRatio: {
         "4/5": "4 / 5",
         "8/5": "8 / 5",
-
+        "4/3": "4 / 3"
       }
     },
-  }
+  },
+  plugins: [
+    require("flowbite-typography")
+  ]
 
 };
 export default config;

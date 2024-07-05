@@ -23,7 +23,7 @@ export default function Home() {
         <div className="py-8 px-4 mx-auto max-w-screen-xl text-center sm:py-16 sm:px-6">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Research Area</h2>
           <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-            We are studying Human-Computer Interaction(HCI), especially Affective Computing on Mobile Devices.
+            We are studying Human-Computer Interaction(HCI), especially affective computing on mobile devices.
             <br/>
             We always strive to make not only scholarly contributions but also social impact by making our findings and service available.
           </p>
@@ -65,14 +65,14 @@ export default function Home() {
         <div className="max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold leading-5 tracking-tight text-gray-900 sm:text-4xl dark:text-white">
-              Latest News
+              Announcement
             </h2>
           </div>
           <div className="max-w-3xl p-1 mx-auto mt-8 dark:border-gray-700">
             <div className="pt-5 pb-8 border-b border-gray-200 dark:border-gray-700">
               <p className="text-sm text-gray-600 dark:text-gray-300 font-light">Jan 8th, 2024</p>
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                Seven Papers accepted to CHI 2024!
+                Seven Papers accepted to CHI 2024! 
               </h3>
               <p className="mt-1 text-base font-normal text-gray-500 dark:text-gray-400">
                 The seven papers were accepted to CHI 2024! Please take a look
