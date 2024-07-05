@@ -106,3 +106,5 @@ Image
 MDX Equation
 
 $$e^{i\pi} +1  = 0 $$
+
+$$\frac{1}{3}$$

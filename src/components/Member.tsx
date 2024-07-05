@@ -40,7 +40,7 @@ const Member: React.FC<MemberProp> = (member) => {
                         {[[member.email, "mdi:email"], [member.google_scholar, "academicons:google-scholar"], [member.github, "mdi:github"], [member.homepage, "mdi:home"]].map(([link, type]) => (
                             link && <li key={type}>
                                 <a href={link} className="relative text-gray-400" onClick={(event) => {type==="mdi:email"? emailClick(event): null}}>
-                                    <Icon icon={type as string} className="w-6 h-6" />
+                                    <Icon icon={type as string} className="w-7 h-7 hover:text-blue-600 text-gray-400"/>
                                     {type === "mdi:email" ? <div id="toast-success" className="z-10 bg-white opacity-100 absolute top-0 left-6 w-44 hidden">
                                         <Toast />
                                     </div> : null}
@@ -55,7 +55,7 @@ const Member: React.FC<MemberProp> = (member) => {
         return (<div className="border-l-2 border-blue-800 px-2 mt-6 flex flex-col sm:flex-row gap-2 sm:items-center">
             <div className="flex flex-row items-center gap-2">
                 <a href={member.email} className="relative text-gray-400" onClick={(event) => { emailClick(event) }}>
-                    <Icon icon="mdi:email" className="w-6 h-6" />
+                    <Icon icon="mdi:email" className="w-7 h-7 hover:text-blue-600 text-gray-500" />
                     <div id="toast-success" className="absolute top-0 left-6 w-44 hidden bg-white opacity-100">
                         <Toast />
                     </div>
@@ -82,7 +82,7 @@ const emailClick = async (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 }
 
 const Toast = () => {
-    return <div className="z-10 flex items-center w-full max-w-xs p-4 mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+    return <div className="z-10 flex items-center w-full max-w-xs p-4 mb-4 text-gray-700 bg-green-50 rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
         <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
             <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z" />
