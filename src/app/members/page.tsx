@@ -1,6 +1,6 @@
 "use client"
 import Member, { MemberRole } from "@/components/Member";
-import members from "@/data/members";
+import members from "../../../data/members";
 
 const Members: React.FC = () => {
     const positions: MemberRole[] = [

@@ -1,5 +1,5 @@
 import Lecture from "@/components/Lecture";
-import lectures from "@/data/lectures";
+import lectures from "../../../data/lectures";
 
 const Lectures: React.FC = () => {
   return (

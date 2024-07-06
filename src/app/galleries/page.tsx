@@ -1,5 +1,5 @@
 "use client"
-import galleries from "@/data/galleries"
+import galleries from "../../../data/galleries"
 
 const Galleries: React.FC = () => {
 

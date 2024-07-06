@@ -1,7 +1,7 @@
 "use client"
 import Publication from "@/components/Publication";
 import Tab from "@/components/Tab";
-import publications from "@/data/publications";
+import publications from "../../../data/publications";
 import React, { useState } from "react";
 
 export default function Home() {
