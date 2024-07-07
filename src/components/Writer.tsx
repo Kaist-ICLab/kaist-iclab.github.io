@@ -1,5 +1,4 @@
-import members from "../../data/members";
-
+import members from "@data/members";
 
 const Writer: React.FC<{name: string}> = ({name}) => {
     const member = members[name]
