@@ -1,20 +1,4 @@
-"use client"
-
-interface Syllabus {
-    link: string;
-    semester: string;
-}
-
-interface LectureProp {
-    img?: string;
-    name: string;
-    type: "Main" | "Special"
-    code: string;
-    description?: string;
-    audience?: string;
-    syllabuses: Syllabus[];
-}
-
+import { LectureProp } from "@/types/lecture"
 
 const Lecture: React.FC<LectureProp> = (lecture) => {
     if (lecture.type === "Main") {
@@ -51,6 +35,5 @@ const Lecture: React.FC<LectureProp> = (lecture) => {
     }
 }
 
-export type { LectureProp, Syllabus };
 export default Lecture
 

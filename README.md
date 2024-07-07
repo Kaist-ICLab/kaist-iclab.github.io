@@ -15,6 +15,7 @@ The website is build based on [Next.js](https://nextjs.org/), [Tailwind CSS](htt
 This website keeps data, features, and UI as separate as possible for code management.
 
 * Data: For data that is easier to manage in a json or markdown file, such as keywords, paths, descriptions, etc are located in `/data`, and the images and files (i.e., pdf) are located in `/public`.
+    * Some data is preprocessed in `utils/preprocess.ts`
 
 * Type: For the data, we defined types on `/src/types`
 

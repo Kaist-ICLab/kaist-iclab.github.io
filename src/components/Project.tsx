@@ -1,13 +1,4 @@
-"use client"
-
-interface ProjectProp {
-    id: string,
-    title: string,
-    tags?: string[],
-    image?: string,
-    content: string,
-    [key: string]: any
-}
+import { ProjectProp } from "@/types/post"
 
 const Project: React.FC<ProjectProp> = (project) => {
     return (
@@ -42,5 +33,4 @@ const Project: React.FC<ProjectProp> = (project) => {
     )
 }
 
-export type { ProjectProp };
 export default Project

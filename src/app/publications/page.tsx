@@ -1,9 +1,9 @@
 import Publication from "@/components/Publication";
+import { getYears } from "@/utils/process";
 import publications from "@data/publications";
 
 const Publications: React.FC = () =>  {
-  const currentYear = new Date().getFullYear();
-  const years = Array.from({ length: currentYear - 2010 + 1 }, (_, index) => currentYear - index);
+  const years = getYears()
   return (
     <div className="max-w-screen-xl w-full m-auto flex flex-col items-center">
       <h2>Publications</h2>

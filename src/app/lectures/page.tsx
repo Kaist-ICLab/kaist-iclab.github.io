@@ -1,5 +1,5 @@
 import Lecture from "@/components/Lecture";
-import lectures from "../../../data/lectures";
+import lectures from "@data/lectures";
 
 const Lectures: React.FC = () => {
   return (
@@ -11,14 +11,14 @@ const Lectures: React.FC = () => {
           <Lecture key={lecture.code} {...lecture} />
         ))}
       </div>
-      <div className="mt-20 w-full flex flex-col items-center sm:items-start">
+      {/* <div className="mt-20 w-full flex flex-col items-center sm:items-start">
         <h3>Special Lectures</h3>
         {
           lectures.filter((lecture) => (lecture.type !== "Main")).map((lecture) => (
             <Lecture key={lecture.code} {...lecture} />
           ))
         }
-      </div>
+      </div> */}
     </div>
   );
 }

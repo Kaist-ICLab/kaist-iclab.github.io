@@ -1,4 +1,3 @@
-"use client"
 import Member from "@/components/Member";
 import members from "@data/members";
 import { memberRoles } from "@/types/member";
