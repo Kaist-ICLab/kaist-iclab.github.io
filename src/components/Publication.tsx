@@ -1,21 +1,5 @@
 "use client"
-
-type PublicationType = "Conference" | "Journal" | "Poster" | "Workshop" | "Patent"
-
-interface PublicationProp {
-    title: string;
-    year: number;
-    venue: string;
-    type: PublicationType;
-    authors: string[];
-    published?: boolean;
-    doi?: string;
-    venue_alias?: string;
-    paper?: string;
-    slide?: string;
-    video?: string;
-    code?: string;
-}
+import { PublicationProp } from "@/types/publication";
 
 const Publication: React.FC<PublicationProp> = (publication) => {
     const paper = publication.paper? ("/publications/papers/" + publication.paper): undefined;

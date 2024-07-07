@@ -6,13 +6,15 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "process": "node processing/testbed.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.0.1",
     "@mdx-js/react": "^3.0.1",
     "@next/mdx": "^14.2.4",
     "@types/mdx": "^2.0.13",
+    "bibtex-js-parser": "^1.1.6",
     "front-matter": "^4.0.2",
     "gray-matter": "^4.0.3",
     "next": "14.2.4",

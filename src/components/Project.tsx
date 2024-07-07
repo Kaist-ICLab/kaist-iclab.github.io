@@ -18,10 +18,10 @@ const Project: React.FC<ProjectProp> = (project) => {
                     <h3 className="text-lg font-bold leading-5 text-gray-900 dark:text-white lg:mt-3">
                         {project.title}
                     </h3>
-                    <div className="mt-3 p-0.1 flex flex-row gap-1">
+                    <div className="mt-3 p-0.1 flex flex-row gap-3">
                         {
                             project.tags?.map((tag) => (
-                                <div key={tag} className="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                                <div key={tag} className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
                                     {tag}
                                 </div>
                             ))

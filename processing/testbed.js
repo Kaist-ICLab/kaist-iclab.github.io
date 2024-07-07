@@ -1,6 +1,4 @@
-import { PublicationProp } from "@/components/Publication";
-
-const publications: {[key: string]: PublicationProp} = {
+const publications = {
     kim2024navigating: {
         year: 2024,
         title: "Navigating User-System Gaps: Understanding User-Interactions in User-Centric Context-Aware Systems for Digital Well-being Intervention",
@@ -8,9 +6,11 @@ const publications: {[key: string]: PublicationProp} = {
         authors: ["Inyeop Kim", "Uichin Lee"],
         doi: "https://doi.org/10.1145/3613904.3641979",
         venue_alias: "CHI",
+        type: "Conference",
         venue: "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems",
     },
     lee2024sadl: {
+        type: "Conference",
         year: 2024,
         title: "S-ADL: Exploring Smartphone-based Activities of Daily Living to Detect Blood Alcohol Concentration in a Controlled Environment",
         doi: "https://doi.org/10.1145/3613904.3642832",
@@ -20,6 +20,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "lee2024sadl.pdf"
     },
     lee2024priviaware: {
+        type: "Conference",
         year: 2024,
         title: "PriviAware: Exploring Data Visualization and Dynamic Privacy Control Support for Data Collection in Mobile Sensing Research",
         doi: "https://doi.org/10.1145/3613904.3642815",
@@ -29,6 +30,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "lee2024priviaware.pdf"
     },
     jung2024deepstress: {
+        type: "Conference",
         year: 2024,
         title: "DeepStress: Supporting Stressful Context Sensemaking in Personal Informatics Systems Using a Quasi-experimental Approach",
         doi: "https://doi.org/10.1145/3613904.3642766",
@@ -38,6 +40,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "jung2024deepstress.pdf"
     },
     kim2024interrupting: {
+        type: "Conference",
         year: 2024,
         title: "Interrupting for Microlearning: Understanding Perceptions and Interruptibility of Proactive Conversational Microlearning Services",
         doi: "https://doi.org/10.1145/3613904.3642778",
@@ -47,6 +50,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "kim2024interrupting.pdf"
     },
     lim2024exploring: {
+        type: "Conference",
         year: 2024,
         title: "Exploring Context-Aware Mental Health Self-Tracking Using Multimodal Smart Speakers in Home Environments",
         doi: "https://doi.org/10.1145/3613904.3642846",
@@ -56,6 +60,7 @@ const publications: {[key: string]: PublicationProp} = {
         venue: "Proceedings of the 2024 CHI Conference on Human Factors in Computing Systems",
     },
     lee2024familyscope: {
+        type: "Conference",
         year: 2024,
         title: "FamilyScope: Visualizing Affective Aspects of Family Social Interactions using Passive Sensor Data",
         doi: "https://doi.org/10.1145/3637334",
@@ -65,6 +70,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "lee2024familyscope.pdf"
     },
     jung2024tutorial: {
+        type: "Conference",
         year: 2024,
         doi: "https://doi.org/10.1145/3648356",
         title: "A Tutorial on Matching-based Causal Analysis of Human Behaviors Using Smartphone Sensor Data",
@@ -74,7 +80,8 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "jung2024tutorial.pdf"
     },
     kobiljon2024SOSW: {
-        year: 2024, 
+        type: "Conference",
+        year: 2024,
         title: "SOSW: Stress Sensing with Off-the-Shelf Smartwatches in the Wild",
         authors: ["Kobiljon Toshnazarov, Varun Mishra, Byung Hyung Kim, Uichin Lee, Lismer Andres Caceres Najarro, Youngtae Noh"],
         doi: "https://doi.org/10.1109/JIOT.2024.3375299",
@@ -83,6 +90,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "kobiljon2024SOSW.pdf"
     },
     koh2023datavisualization: {
+        type: "Conference",
         year: 2023,
         doi: "https://doi.org/10.1109/VAHC60858.2023.00017",
         title: "Data Visualization for Mental Health Monitoring in Smart Home Environment: A Case Study",
@@ -92,6 +100,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "koh2023datavisualization.pdf"
     },
     han2023watchppg: {
+        type: "Conference",
         year: 2023,
         title: 'WatchPPG: An Open-Source Toolkit for PPG-based Stress Detection using Off-the-shelf Smartwatches',
         authors: ['Yunjo Han', 'Kobiljon E Toshnazarov', 'Byung Hyung Kim', 'Youngtae Noh', 'Uichin Lee'],
@@ -101,6 +110,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'han2023watchppg.pdf',
     },
     park2023measuring: {
+        type: "Conference",
         year: 2023,
         title: 'Measuring Device-Specific Physical Activity Trackability in Multi-Device Environments',
         authors: ['Sangjun Park', 'Eunji Park', 'Paul H Lee', 'Uichin Lee'],
@@ -110,6 +120,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2023measuring.pdf',
     },
     lee2023analysis: {
+        type: "Conference",
         year: 2023,
         title: 'Analysis system and method for causal inference of digital therapeutics based on mobile data',
         authors: ['Uichin Lee', 'JUNG Gyuwon', 'MA Eun-Yeol', 'Heeyoung Kim'],
@@ -119,6 +130,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2023analysis.pdf',
     },
     ma2023investigating: {
+        type: "Conference",
         year: 2023,
         title: 'Investigating Causality in Mobile Health Data through Deep Learning Models',
         authors: ['Eun-Yeol Ma', 'Heeyoung Kim', 'Uichin Lee'],
@@ -128,6 +140,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'ma2023investigating.pdf',
     },
     orzikulova2023finderme: {
+        type: "Conference",
         year: 2023,
         title: 'FinerMe: Examining App-level and Feature-level Interventions to Regulate Mobile Social Media Use',
         authors: ['Adiba Orzikulova', 'Hyunsung Cho', 'Hye-Young Chung', 'Hwajung Hong', 'Uichin Lee', 'Sung-Ju Lee'],
@@ -137,6 +150,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'orzikulova2023finderme.pdf',
     },
     heo2023form: {
+        type: "Conference",
         year: 2023,
         title: 'Form to Flow: Exploring Challenges and Roles of Conversational UX Designers in Real-world, Multi-channel Service Environments',
         authors: ['Jeongyun Heo', 'Uichin Lee'],
@@ -146,6 +160,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'heo2023form.pdf',
     },
     park2023understanding: {
+        type: "Conference",
         year: 2023,
         title: 'Understanding Disengagement in Just-in-Time Mobile Health Interventions',
         authors: ['Joonyoung Park', 'Uichin Lee'],
@@ -155,6 +170,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2023understanding.pdf',
     },
     kang2023k: {
+        type: "Conference",
         year: 2023,
         title: 'K-EmoPhone: A Mobile and Wearable Dataset with In-Situ Emotion, Stress, and Attention Labels',
         authors: ['Soowon Kang', 'Woohyeok Choi', 'CheulYoung Park', 'Narae Cha', 'Auk Kim', 'Ahsan Habib Khandoker', 'Leontios Hadjileontiadis', 'Heepyung Kim', 'Yong Jeong', 'Uichin Lee'],
@@ -163,6 +179,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kang2023k.pdf',
     },
     jung2023causal: {
+        type: "Conference",
         year: 2023,
         title: 'Causal Analytic Process for Mobile Health Data',
         authors: ['Gyuwon Jung', 'Sangjun Park', 'Uichin Lee', 'Eun-Yeol Ma', 'Heeyoung Kim'],
@@ -171,6 +188,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'jung2023causal.pdf',
     },
     lee2023data1: {
+        type: "Conference",
         year: 2023,
         title: 'Data-driven Digital Therapeutics Analytics',
         authors: ['Uichin Lee', 'Gyuwon Jung', 'Sangjun Park', 'Eun-Yeol Ma', 'Heeyoung Kim', 'Yonggeon Lee', 'Youngtae Noh'],
@@ -179,6 +197,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2023data1.pdf',
     },
     lee2023data2: {
+        type: "Conference",
         year: 2023,
         title: 'Data Processing Pipeline of Short-Term Depression Detection with Large-Scale Dataset',
         authors: ['Yonggeon Lee', 'Youngtae Noh', 'Uichin Lee'],
@@ -187,6 +206,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2023data2.pdf',
     },
     park2023charlie: {
+        type: "Conference",
         year: 2023,
         title:
             'Charlie and the Semi-Automated Factory: Data-Driven Operator Behavior and Performance Modeling for Human-Machine Collaborative Systems',
@@ -197,6 +217,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2023charlie.pdf',
     },
     park2023quickref: {
+        type: "Conference",
         year: 2023,
         title:
             'QuickRef: Should I Read Cited Papers for Understanding This Paper?',
@@ -208,6 +229,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2023quickref.pdf',
     },
     jung2023enjoy: {
+        type: "Conference",
         year: 2023,
         title:
             'Enjoy, but Moderately!”: Designing a Social Companion Robot for Social Engagement and Behavior Moderation in Solitary Drinking Context',
@@ -217,6 +239,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'jung2023enjoy.pdf',
     },
     han2022stressbal: {
+        type: "Conference",
         year: 2022,
         title:
             'StressBal: Personalized Just-in-time Stress Intervention with Wearable and Phone Sensing',
@@ -228,6 +251,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'han2022stressbal.pdf'
     },
     choi2023loss: {
+        type: "Conference",
         year: 2023,
         title:
             "Loss-Framed Adaptive Microcontingency Management for Preventing Prolonged Sedentariness: Development and Feasibility Study",
@@ -237,6 +261,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'choi2023loss.pdf',
     },
     lee2023toward: {
+        type: "Conference",
         year: 2023,
         title:
             'Toward Data-Driven Digital Therapeutics Analytics: Literature Review and Research Directions',
@@ -255,6 +280,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2023toward.pdf',
     },
     shin2022smarthome: {
+        type: "Conference",
         year: 2022,
         title: "스마트홈 IoT 기술 및 프라이버시 최신 연구 동향",
         authors: ["신유원", "이현수", "최우혁", "김희평", "정용", "이의진"],
@@ -264,6 +290,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "shin2022smarthome.pdf"
     },
     zitouni2022lstm: {
+        type: "Conference",
         year: 2022,
         title:
             'LSTM-Modeling of Emotion Recognition Using Peripheral Physiological Signals in Naturalistic Conversations',
@@ -279,6 +306,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'zitouni2022lstm.pdf',
     },
     lee2022trends: {
+        type: "Conference",
         year: 2022,
         title:
             'Trends in smart helmets with multimodal sensing for health and safety: scoping review',
@@ -297,6 +325,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022trends.pdf',
     },
     choi2022you: {
+        type: "Conference",
         year: 2022,
         title:
             'You Are Not Alone: How Trending Stress Topics Brought \#Awareness and \#Resonance on Campus',
@@ -314,6 +343,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://youtu.be/u_lSLpPVbFg',
     },
     lee2022towarddynamic: {
+        type: "Conference",
         year: 2022,
         title:
             'Toward Dynamic Consent for Privacy-Aware Pervasive Health and Well-being: A scoping review and research directions',
@@ -323,6 +353,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022towarddynamic.pdf',
     },
     lee2022lv: {
+        type: "Conference",
         year: 2022,
         title:
             'LV-Linker: Supporting Fine-grained User Interaction Analyses by Linking Smartphone Log and Recorded Video Data',
@@ -337,6 +368,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022lv.pdf',
     },
     lee2022methodAndApparatus: {
+        type: "Conference",
         year: 2022,
         title:
             'Method and apparatus for context-adaptive personalized psychological state sampling for wearable device',
@@ -351,6 +383,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022method.pdf',
     },
     lee2022methodAndSystem: {
+        type: "Conference",
         year: 2022,
         title:
             'Method and system for distraction management of context-aware rule-based smart device',
@@ -363,6 +396,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022method.pdf',
     },
     choi2022facilitating: {
+        type: "Conference",
         year: 2022,
         title: 'Facilitating instant interactions for stressful experiences sharing and peer support',
         authors: [
@@ -378,6 +412,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'choi2022facilitating.pdf',
     },
     lee2022beyond: {
+        type: "Conference",
         year: 2022,
         title:
             'Beyond pathogen filtration: Possibility of smart masks as wearable devices for personal and group health and safety management',
@@ -398,6 +433,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022beyond.pdf',
     },
     salman2022darcas: {
+        type: "Conference",
         year: 2022,
         title:
             'DARCAS: Dynamic Association Regulator Considering Airtime Over SDN-Enabled Framework',
@@ -413,6 +449,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'salman2022darcas.pdf',
     },
     kim2022social: {
+        type: "Conference",
         year: 2022,
         title: 'Social-Spiritual Face: Designing Social Reading Support for Spiritual Well-being',
         authors: [
@@ -431,6 +468,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2022social.pdf',
     },
     lee2022adverse: {
+        type: "Conference",
         year: 2022,
         title: 'Editorial: Adverse Health Consequences of Excessive Smartphone Usage',
         authors: ['Uichin Lee', 'Paul H. Lee'],
@@ -439,6 +477,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2022adverse.pdf',
     },
     lee2021systematic: {
+        type: "Conference",
         year: 2022,
         title: 'A Systematic Survey on Android API Usage for Data-Driven Analytics with Smartphones',
         authors: ['Hansoo Lee', 'Joonyoung Park', 'Uichin Lee'],
@@ -447,6 +486,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2021systematic.pdf',
     },
     lee2022understanding: {
+        type: "Conference",
         year: 2022,
         title:
             'Understanding Perceived Benefits and Privacy Risks in Open Dataset Collection for Mobile Affective Computing',
@@ -458,6 +498,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2022understanding.pdf'
     },
     salman2022csi: {
+        type: "Conference",
         year: 2022,
         title:
             'CSI:DeSpy- Enabling Effortless Spy Camera Detection via Passive Sensing of User Activities and Bitrate Variations',
@@ -468,6 +509,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'salman2022csi.pdf',
     },
     jung2022caremouse: {
+        type: "Conference",
         year: 2022,
         title:
             'CareMouse: An Interactive Mouse System that Supports Wrist Stretching Exercises in the Workplace',
@@ -480,6 +522,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=lUj4s3ITmxs',
     },
     kang2022understanding: {
+        type: "Conference",
         year: 2022,
         title: 'Understanding Emotion Changes in Mobile Experience Sampling',
         authors: ['Soowon Kang', 'Cheul Young Park', 'Narae Cha', 'Auk Kim', 'Uichin Lee'],
@@ -490,6 +533,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kang2022understanding.pdf'
     },
     choi2022s: {
+        type: "Conference",
         year: 2022,
         title:
             "It’s not wrong, but I'm quite disappointed: Toward an Inclusive Algorithmic Experience for Content Creators with Disabilities",
@@ -499,6 +543,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'choi2022s.pdf',
     },
     zitouni2022privacy: {
+        type: "Conference",
         year: 2022,
         title: 'Privacy Aware Affective State Recognition from Visual Data',
         authors: [
@@ -513,6 +558,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'zitouni2022privacy.pdf',
     },
     al2022successfully: {
+        type: "Conference",
         year: 2022,
         title:
             'Successfully implementing digital health to ensure future global health security during pandemics: a consensus statement',
@@ -536,6 +582,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'al2022successfully.pdf',
     },
     kim2021poster: {
+        type: "Conference",
         year: 2021,
         title:
             'Poster: Exploring User Contexts and Needs for Context-aware Smartphone Distraction Management',
@@ -550,6 +597,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2021poster.pdf',
     },
     kang2021poster: {
+        type: "Conference",
         year: 2021,
         title:
             'Poster: Toward Context-aware Proactive Conversation for Smart Speakerst',
@@ -564,6 +612,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kang2021poster.pdf',
     },
     kim2021causal: {
+        type: "Conference",
         year: 2021,
         title:
             'Causal Analysis of Observational Mobile Sensor Data: A Comparative Study',
@@ -580,6 +629,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2021causal.pdf',
     },
     kim2021cheersbot: {
+        type: "Conference",
         year: 2021,
         title: "Cheersbot: 외로움 개선을 위한 물리적 / 청각적 상호작용을 제공하는 술친구 소셜 로봇",
         authors: ["김채원", "정유경", "정규원", "우운택", "이의진"],
@@ -588,6 +638,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "kim2021cheersbot.pdf"
     },
     nasrat2021emotion: {
+        type: "Conference",
         year: 2021,
         title:
             'Emotion Recognition in the Wild from Long-term Heart Rate Recording using Wearable Sensor and Deep Learning Ensemble Classification',
@@ -604,6 +655,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'nasrat2021emotion.pdf',
     },
     zitouni2021arousal: {
+        type: "Conference",
         year: 2021,
         title:
             'Arousal-Valence Classification from Peripheral Physiological Signals Using Long Short-Term Memory Networks',
@@ -620,6 +672,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'zitouni2021arousal.pdf',
     },
     lee2021dynamic: {
+        type: "Conference",
         year: 2021,
         title: 'Dynamic Consent for Sensor-Driven Research',
         authors: ['Hyunsoo Lee', 'Uichin Lee'],
@@ -629,6 +682,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2021dynamic.pdf',
     },
     kim2021utilitarian: {
+        type: "Conference",
         year: 2021,
         title:
             'Utilitarian or Relational? Exploring Indicators of User Orientation Towards Intelligent Agents',
@@ -639,6 +693,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2021utilitarian.pdf',
     },
     lee2021benefits: {
+        type: "Conference",
         year: 2021,
         title: 'Benefits of Mobile Contact Tracing on COVID-19: Tracing Capacity Perspectives',
         authors: ['Uichin Lee', 'Auk Kim'],
@@ -649,6 +704,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2021benefits.pdf',
     },
     jung2021good: {
+        type: "Conference",
         year: 2021,
         title: '“Good Enough!”: Flexible Goal Achievement with Margin-based Outcome Evaluation',
         authors: ['Gyuwon Jung', 'Jio Oh', 'Youjin Jung', 'Juho Sun', 'Ha-Kyung Kong', 'Uichin Lee'],
@@ -658,6 +714,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=mxMoqi58A4I&feature=youtu.be',
     },
     lee2021sticky: {
+        type: "Conference",
         year: 2021,
         title: 'Sticky Goals: Understanding Goal Commitments for Behavioral Changes in the Wild',
         authors: ['Hyunsoo Lee', 'Auk Kim', 'Hwajung Hong', 'Uichin Lee'],
@@ -668,6 +725,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2021sticky.pdf'
     },
     park2021goldentime: {
+        type: "Conference",
         year: 2021,
         title:
             'GoldenTime: Exploring System-Driven Timeboxing and Micro-Financial Incentives for Self-Regulated Phone Use',
@@ -679,6 +737,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=oVSeVFfBhQE',
     },
     kim2021beneficial: {
+        type: "Conference",
         year: 2021,
         title:
             'Beneficial Neglect: Instant Message Notification Handling Behaviors and Academic Performance',
@@ -689,6 +748,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2021beneficial.pdf',
     },
     samson2020asian: {
+        type: "Conference",
         year: 2020,
         title:
             'Asian CHI symposium: HCI research from Asia and on Asian contexts and cultures',
@@ -724,6 +784,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'samson2020asian.pdf',
     },
     kim2020understanding: {
+        type: "Conference",
         year: 2020,
         title:
             'Understanding User Contexts and Coping Strategies for Context-aware Phone Distraction Management System Design',
@@ -734,6 +795,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2020understanding.pdf',
     },
     lee2021validation: {
+        type: "Conference",
         year: 2020,
         title:
             'Validation of self-reported smartphone usage against objectively-measured smartphone usage in Hong Kong Chinese adolescents and young adults',
@@ -743,6 +805,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2021validation.pdf',
     },
     al2020riyadh: {
+        type: "Conference",
         year: 2020,
         title: 'The Riyadh Declaration: the role of digital health in fighting pandemics',
         authors: [
@@ -765,6 +828,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'al2020riyadh.pdf',
     },
     lee2021temporal: {
+        type: "Conference",
         year: 2020,
         title:
             'Temporal association between objectively measured smartphone usage, sleep quality and physical activity among Chinese adolescents and young adults',
@@ -774,6 +838,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2021temporal.pdf',
     },
     murray2020digital: {
+        type: "Conference",
         year: 2020,
         title: 'Digital Public Health and COVID-19',
         authors: ['Christopher J L Murray', 'Nurah Maziad S Alamro', 'Hee Hwang', 'Uichin Lee'],
@@ -782,6 +847,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'murray2020digital.pdf',
     },
     park2020k: {
+        type: "Conference",
         year: 2020,
         title:
             'K-EmoCon, a multimodal sensor dataset for continuous emotion recognition in naturalistic conversations',
@@ -801,6 +867,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2020k.pdf',
     },
     cha2020hello: {
+        type: "Conference",
         year: 2020,
         title:
             'Hello there! Is now a good time to talk?: Opportune Moments for Proactive Conversational Interaction with Smart Speakers',
@@ -821,6 +888,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=AA8CTi2hEf0',
     },
     jung2020too: {
+        type: "Conference",
         year: 2020,
         title:
             'Too Much Information: Assessing Privacy Risks of Contact Trace Data Disclosure on People With COVID-19 in South Korea',
@@ -830,6 +898,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'jung2020too.pdf',
     },
     kim2020dashcam: {
+        type: "Conference",
         year: 2020,
         title: 'Dashcam Witness: Video Sharing Motives and Privacy Concerns across Different Nations',
         authors: ['Joohyun Kim', 'Sangkeun Park', 'Uichin Lee'],
@@ -839,6 +908,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2020dashcam.pdf',
     },
     balili2020termball: {
+        type: "Conference",
         year: 2020,
         title:
             'TermBall: Tracking and Predicting Evolution Types of Research Topics by Using Knowledge Structures in Scholarly Big Data',
@@ -848,6 +918,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'balili2020termball.pdf',
     },
     park2020cognitive: {
+        type: "Conference",
         year: 2020,
         title:
             'Cognitive States Matter: Design Guidelines for Driving Situation Awareness in Smart Vehicles',
@@ -857,6 +928,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2020cognitive.pdf',
     },
     rhim2020tracking: {
+        type: "Conference",
         year: 2020,
         title: 'Tracking and Modeling Subjective Well-Being Using Smartphone-Based Digital Phenotype',
         authors: ['Soyoung Rhim', 'Uichin Lee', 'Kyungsik Han'],
@@ -866,6 +938,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'rhim2020tracking.pdf',
     },
     lee2020privacy: {
+        type: "Conference",
         year: 2020,
         title: 'Privacy Concerns of Digital Phenotyping for Older Adults with Mental Health Issues',
         authors: ['Hyunsoo Lee', 'Uichin Lee'],
@@ -874,6 +947,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2020privacy.pdf',
     },
     sun2020beactive: {
+        type: "Conference",
         year: 2020,
         title:
             'BeActive: Encouraging Physical Activities with Just-in-time Health Intervention and Micro Financial Incentives',
@@ -896,6 +970,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'sun2020beactive.pdf',
     },
     oh2020scriptfree: {
+        type: "Conference",
         year: 2020,
         title:
             'ScriptFree: Designing Speech Preparation Systems with Adaptive Visual Reliance Control on Script',
@@ -906,6 +981,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'oh2020scriptfree.pdf',
     },
     kim2020interruptibility: {
+        type: "Conference",
         year: 2020,
         title:
             'Interruptibility for In-vehicle Multitasking: Influence of Voice Task Demands and Adaptive Behaviors',
@@ -916,6 +992,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2020interruptibility.pdf',
     },
     lee2020objectively: {
+        type: "Conference",
         year: 2020,
         title: 'Objectively-Measured Smartphone Usage, Sleep Quality, and Physical Activity Among Chinese Adolescents and Young Adults',
         venue: "ResearchSquare",
@@ -924,6 +1001,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2020objectively.pdf',
     },
     lee2019maximizing: {
+        type: "Conference",
         year: 2019,
         title:
             'Maximizing MapReduce Job Speed and Reliability in the Mobile Cloud by Optimizing Task Allocation',
@@ -934,6 +1012,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2019maximizing.pdf',
     },
     kim2019predicting: {
+        type: "Conference",
         year: 2019,
         title: 'Predicting Opportune Moments for In-vehicle Proactive Speech Services',
         authors: ['Auk Kim', 'Woohyeok Choi', 'Jungmi Park', 'Kyeyoon Kim', 'Uichin Lee'],
@@ -943,6 +1022,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2019predicting.pdf',
     },
     lee2019pass: {
+        type: "Conference",
         year: 2019,
         title:
             'PASS: Reducing Redundant Notifications between a Smartphone and a Smartwatch for Energy Saving',
@@ -952,6 +1032,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2019pass.pdf',
     },
     kim2019understanding: {
+        type: "Conference",
         year: 2019,
         title: 'Understanding Smartphone Usage in College Classrooms: A Long-term Measurement Study',
         authors: [
@@ -969,6 +1050,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2019understanding.pdf',
     },
     choi2019multi: {
+        type: "Conference",
         year: 2019,
         title: 'Multi-Stage Receptivity Model for Mobile Just-In-Time Health Intervention',
         authors: ['Woohyeok Choi', 'Sangkeun Park', 'Duyeon Kim', 'Youn-kyung Lim', 'Uichin Lee'],
@@ -978,6 +1060,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'choi2019multi.pdf',
     },
     kim2019lockntype: {
+        type: "Conference",
         year: 2019,
         title: 'LocknType: Lockout Task Intervention for Discouraging Smartphone App Use',
         authors: ['Jaejeung Kim', 'Joonyoung Park', 'Hyunsoo Lee', 'Minsam Ko', 'Uichin Lee'],
@@ -988,6 +1071,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2019lockntype.pdf',
     },
     lee2019commitment: {
+        type: "Conference",
         year: 2019,
         title: 'Commitment devices in online behavior change support systems',
         authors: ['Hyunsoo Lee', 'Uichin Lee', 'Hwajung Hong'],
@@ -997,6 +1081,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2019commitment.pdf',
     },
     shin2019slow: {
+        type: "Conference",
         year: 2019,
         title: 'Slow Robots for Unobtrusive Posture Correction',
         authors: [
@@ -1015,6 +1100,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=0iQ6hzU_ct0',
     },
     lee2019interaction: {
+        type: "Conference",
         year: 2019,
         title: 'Interaction Restraint Framework for Digital Wellbeing',
         authors: ['Uichin Lee', 'Jaejeung Kim'],
@@ -1025,6 +1111,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2019interaction.pdf'
     },
     oh2019wake: {
+        type: "Conference",
         year: 2019,
         title: 'Wake-Up Task: Understanding Users in Task-based Mobile Alarm App',
         authors: [
@@ -1043,6 +1130,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'oh2019wake.pdf',
     },
     kim2019goalkeeper: {
+        type: "Conference",
         year: 2019,
         title: 'GoalKeeper: Exploring Interaction Lockout Mechanisms for Regulating Smartphone Use',
         authors: ['Jaejeung Kim', 'Hayoung Jung', 'Minsam Ko', 'Uichin Lee'],
@@ -1052,6 +1140,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2019goalkeeper.pdf',
     },
     kang2019fire: {
+        type: "Conference",
         year: 2019,
         title: 'Fire in Your Hands: Understanding Thermal Behavior of Smartphones',
         authors: [
@@ -1070,6 +1159,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://youtu.be/yLNF0-S5aLE',
     },
     kim2018interrupting: {
+        type: "Conference",
         year: 2019,
         title:
             'Interrupting Drivers for Interactions: Predicting Opportune Moments for In-vehicle Proactive Auditory-verbal Tasks',
@@ -1080,6 +1170,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2018interrupting.pdf',
     },
     이의진2019긍정: {
+        type: "Conference",
         year: 2019,
         title: '긍정 컴퓨팅을 위한 설득적 인터랙션 제한 시스템',
         authors: ['이의진', '김재정'],
@@ -1088,6 +1179,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '이의진2019긍정.pdf',
     },
     kang2018understanding: {
+        type: "Conference",
         year: 2018,
         title: "Understanding Customers'Interests in the Wild",
         authors: ['Soowon Kang', 'Auk Kim', 'Jemin Lee', 'Ikhee Shin', 'Uichin Lee'],
@@ -1097,6 +1189,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kang2018understanding.pdf',
     },
     cha2018hellobot: {
+        type: "Conference",
         year: 2018,
         title: 'HelloBot: Facilitating Social Inclusion with an Interactive Greeting Robot',
         authors: ['Narae Cha', 'Inyeop Kim', 'Mingyu Park', 'Auk Kim', 'Uichin Lee'],
@@ -1106,6 +1199,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'cha2018hellobot.pdf',
     },
     kim2018exploring: {
+        type: "Conference",
         year: 2018,
         title: 'Exploring Context-aware Proactive Blocking for Distraction Management',
         authors: ['Inyeop Kim', 'Uichin Lee', 'Narae Cha'],
@@ -1115,6 +1209,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2018exploring.pdf',
     },
     park2018campuswatch: {
+        type: "Conference",
         year: 2018,
         title: 'CampusWatch: Exploring Communitysourced Patrolling with Pervasive Mobile Technology',
         authors: ['Sangkeun Park', 'Sujin Kown', 'Uichin Lee'],
@@ -1124,6 +1219,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2018campuswatch.pdf',
     },
     cha2018complex: {
+        type: "Conference",
         year: 2018,
         title: 'Complex and Ambiguous: Understanding Sticker Misinterpretations in Instant Messaging',
         authors: ['Yoonjeong Cha', 'Jongwon Kim', 'Sangkeun Park', 'Mun Yong Yi', 'Uichin Lee'],
@@ -1133,6 +1229,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'cha2018complex.pdf',
     },
     park2018localness: {
+        type: "Conference",
         year: 2018,
         title: 'Localness of Location-based Knowledge Sharing: A Study of Naver KiN “Here”',
         authors: ['Sangkeun Park', 'Mark S. Ackerman', 'Uichin Lee'],
@@ -1141,6 +1238,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2018localness.pdf',
     },
     lee2019intelligent: {
+        type: "Conference",
         year: 2018,
         title:
             'Intelligent Positive Computing with Mobile, Wearable, and IoT Devices: Literature Review and Research Directions',
@@ -1160,6 +1258,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2019intelligent.pdf',
     },
     han2019optical: {
+        type: "Conference",
         year: 2018,
         title:
             'Optical-acoustic Hybrid Network Toward Real-time Video Streaming for Mobile Underwater Sensors',
@@ -1169,6 +1268,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'han2019optical.pdf',
     },
     park2018interaction: {
+        type: "Conference",
         year: 2018,
         title:
             'Interaction Restraint: Enforcing Adaptive Cognitive Tasks to Restrain Problematic User Interaction',
@@ -1181,6 +1281,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://drive.google.com/file/d/1S4_C4uozwrfX9yvtBXcCj7u0y33LHzHU/view?usp=sharing',
     },
     shin2018actuating: {
+        type: "Conference",
         year: 2018,
         title: 'Actuating a Monitor for Posture Changes',
         authors: ['Joon Gi Shin', 'Woohyeok Choi', 'Uichin Lee', 'Daniel Saakes'],
@@ -1190,6 +1291,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'shin2018actuating.pdf',
     },
     shin2018tnt: {
+        type: "Conference",
         year: 2018,
         title: 'TNT: Exploring Pseudo Social Reminding for Effective Task Management',
         authors: ['Wonyoung Shin', 'Soowon Kang', 'Inyeop Kim', 'Mun Yong Yi', 'Uichin Lee'],
@@ -1199,6 +1301,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'shin2018tnt.pdf',
     },
     lee2018flower: {
+        type: "Conference",
         year: 2017,
         title: 'Flower-Pop: Facilitating Casual Group Conversations With Multiple Mobile Devices',
         authors: [
@@ -1218,6 +1321,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2018flower.pdf',
     },
     balili2017tracking: {
+        type: "Conference",
         year: 2017,
         title: 'Tracking and Predicting the Evolution of Research Topics in Scientific Literature',
         authors: ['Christine Balili', 'Aviv Segev', 'Uichin Lee'],
@@ -1226,6 +1330,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'balili2017tracking.pdf',
     },
     kim2017technology: {
+        type: "Conference",
         year: 2017,
         title:
             'Technology Supported Behavior Restriction for Mitigating Self-Interruptions in Multi-device Environments',
@@ -1237,6 +1342,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "kim2017technology.pdf",
     },
     kim2017let: {
+        type: "Conference",
         year: 2017,
         title: "Let's FOCUS: Mitigating Mobile Phone Use in College Classrooms",
         authors: ['Inyeop Kim', 'Gyuwon Jung', 'Hayoung Jung', 'Minsam Ko', 'Uichin Lee'],
@@ -1248,6 +1354,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: 'https://www.youtube.com/watch?v=orm1dFj3RY0',
     },
     kim2017trailsense: {
+        type: "Conference",
         year: 2017,
         title:
             'TrailSense: A Crowdsensing System for Detecting Risky Mountain Trail Segments with Walking Pattern Analysis',
@@ -1259,6 +1366,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "kim2017trailsense.pdf",
     },
     jeong2017smartwatch: {
+        type: "Conference",
         year: 2017,
         title: 'Smartwatch Wearing Behavior Analysis: A Longitudinal Study',
         authors: ['Hayeon Jeong', 'Heepyung Kim', 'Rihun Kim', 'Uichin Lee', 'Yong Jeong'],
@@ -1269,6 +1377,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "jeong2017smartwatch.pdf",
     },
     oh2017understanding: {
+        type: "Conference",
         year: 2017,
         title: 'Understanding Mobile Document Capture and Correcting Orientation Errors',
         authors: [
@@ -1285,6 +1394,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'oh2017understanding.pdf',
     },
     park2017virtual: {
+        type: "Conference",
         year: 2017,
         title: 'Virtual Figure Model Crafting with VR HMD and Leap Motion',
         authors: ['Gangrae Park', 'Hyunmin Choi', 'Uichin Lee', 'Seongah Chin'],
@@ -1293,6 +1403,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2017virtual.pdf',
     },
     chin2017watchout: {
+        type: "Conference",
         year: 2017,
         title: 'WatchOut: Facilitating Safe Driving Behaviors with Social Support',
         authors: ['Hyojin Chin', 'Hengameh Zabihi', 'Sangkeun Park', 'Mun Yong Yi', 'Uichin Lee'],
@@ -1303,6 +1414,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'chin2017watchout.pdf',
     },
     kim2017sensors: {
+        type: "Conference",
         year: 2017,
         title: 'Sensors Know Which Photos Are Memorable',
         authors: [
@@ -1320,6 +1432,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2017sensors.pdf',
     },
     kim2017s: {
+        type: "Conference",
         year: 2017,
         title:
             "It's More than Just Sharing Game Play Videos! Understanding User Motives in Mobile Game Social Media",
@@ -1338,6 +1451,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2017s.pdf',
     },
     park2017facilitating: {
+        type: "Conference",
         year: 2017,
         title: 'Facilitating Pervasive Community Policing on the Road with Mobile Roadwatch',
         authors: [
@@ -1355,6 +1469,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "park2017facilitating.pdf",
     },
     kim2017letspic: {
+        type: "Conference",
         year: 2017,
         title: 'LetsPic: Supporting In-situ Collaborative Photography over a Large Physical Space',
         authors: ['Auk Kim', 'Sungjoon Kang', 'Uichin Lee'],
@@ -1365,6 +1480,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "kim2017letspic.pdf",
     },
     noh2016infrastructure: {
+        type: "Conference",
         year: 2016,
         title:
             'Infrastructure-free Collaborative Indoor Positioning Scheme for Time-critical Team Operations',
@@ -1375,6 +1491,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'noh2016infrastructure.pdf',
     },
     lee2016internet: {
+        type: "Conference",
         year: 2016,
         title: 'Internet of Vehicles: From Intelligent Grid to Autonomous Cars and Vehicular Fogs',
         authors: ['Eun-Kyu Lee', 'Mario Gerla', 'Giovanni Pau', 'Uichin Lee', 'Jae-Han Lim'],
@@ -1383,6 +1500,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2016internet.pdf',
     },
     chae2016cannibalism: {
+        type: "Conference",
         year: 2016,
         title: 'Cannibalism in Medical Topic Networks',
         authors: ['Suhyun Chae', 'Aviv Segev', 'Uichin Lee'],
@@ -1391,6 +1509,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'chae2016cannibalism.pdf',
     },
     choi2016exploring: {
+        type: "Conference",
         year: 2016,
         title:
             'Exploring User Experiences of Active Workstations: A Case Study of Under Desk Elliptical Trainers',
@@ -1402,6 +1521,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: "choi2016exploring.pdf",
     },
     choi2016designing: {
+        type: "Conference",
         year: 2016,
         title: 'Designing Interactive Multiswimmer Exergames: A Case Study',
         authors: [
@@ -1420,6 +1540,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'choi2016designing.pdf',
     },
     shin2016motion: {
+        type: "Conference",
         year: 2016,
         title: 'Motion-MiX DHT for Wireless Mobile Networks',
         authors: ['Seungjae Shin', 'Uichin Lee', 'Falko Dressler', 'Hyunsoo Yoon'],
@@ -1428,6 +1549,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'shin2016motion.pdf',
     },
     choi2016lockdoll: {
+        type: "Conference",
         year: 2016,
         title: 'LockDoll: Providing Ambient Feedback of Smartphone Usage within Social Interaction',
         authors: ['Seungwoo Choi', 'Hayeon Jeong', 'Minsam Ko', 'Uichin Lee'],
@@ -1438,6 +1560,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'choi2016lockdoll.pdf',
     },
     kim2016ecomeal: {
+        type: "Conference",
         year: 2016,
         title: 'EcoMeal: A Smart Tray for Promoting Healthy Dietary Habits',
         authors: ['Jaejeung Kim', 'Joonyoung Park', 'Uichin Lee'],
@@ -1448,6 +1571,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2016ecomeal.pdf',
     },
     jung2016social: {
+        type: "Conference",
         year: 2016,
         title:
             'Social or Financial Goals? Comparative Analysis of User Behaviors in Couchsurfing and Airbnb',
@@ -1466,6 +1590,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'jung2016social.pdf',
     },
     oh2016report: {
+        type: "Conference",
         year: 2016,
         title: 'How to Report App Feedback? Analyzing Feedback Reporting Behavior',
         authors: ['Jeungmin Oh', 'SangJeong Lee', 'Uichin Lee'],
@@ -1476,6 +1601,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'oh2016report.pdf',
     },
     kim2016slideqa: {
+        type: "Conference",
         year: 2016,
         title: 'SlideQA: Supporting Effective Q&A in an Offline Academic Presentation',
         authors: ['Juyoun Kim', 'Yoochan Kim', 'Sangkeun Park', 'Uichin Lee'],
@@ -1486,6 +1612,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2016slideqa.pdf',
     },
     choi2016swimtrain: {
+        type: "Conference",
         year: 2016,
         title: 'SwimTrain: Exploring Exergame Design for Group Fitness Swimming',
         authors: ['Woohyeok Choi', 'Jeungmin Oh', 'Darren Edge', 'Joohyun Kim', 'Uichin Lee'],
@@ -1497,6 +1624,7 @@ const publications: {[key: string]: PublicationProp} = {
         video: "https://youtu.be/AmVvpktm0QY",
     },
     park2016motives: {
+        type: "Conference",
         year: 2016,
         title: 'Motives and Concerns of Dashcam Video Sharing',
         authors: ['Sangkeun Park', 'Joohyun Kim', 'Rabeb Mizouni', 'Uichin Lee'],
@@ -1507,6 +1635,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'park2016motives.pdf',
     },
     ko2016lock: {
+        type: "Conference",
         year: 2016,
         title:
             "Lock n'LoL: Group-based Limiting Assistance App to Mitigate Smartphone Distractions in Group Activities",
@@ -1517,6 +1646,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'ko2016lock.pdf',
     },
     shin2016analysis: {
+        type: "Conference",
         year: 2016,
         title: 'Analysis of Cell Sojourn Time in Heterogeneous Networks with Small Cells',
         authors: ['Seungjae Shin', 'Uichin Lee', 'Falko Dressler', 'Hyunsoo Yoon'],
@@ -1525,6 +1655,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'shin2016analysis.pdf',
     },
     ko2016makes: {
+        type: "Conference",
         year: 2016,
         title:
             'What Makes Sports Fans Interactive? Identifying Factors Affecting Chat Interactions in Online Sports Viewing',
@@ -1535,6 +1666,7 @@ const publications: {[key: string]: PublicationProp} = {
         code: 'https://zenodo.org/record/34939#.Vnt0dRWLTcu',
     },
     ko2016understanding: {
+        type: "Conference",
         year: 2016,
         title:
             'Understanding Mass Interactions in Online Sports Viewing: Chatting Motives and Usage Patterns',
@@ -1546,6 +1678,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'ko2016understanding.pdf',
     },
     ko2015familync: {
+        type: "Conference",
         year: 2015,
         title: "FamiLync: Facilitating Participatory Parental Mediation of Adolescents' Smartphone Use",
         authors: ['Minsam Ko', 'Seungwoo Choi', 'Subin Yang', 'Joonwon Lee', 'Uichin Lee'],
@@ -1556,6 +1689,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'ko2015familync.pdf',
     },
     choi2015designing: {
+        type: "Conference",
         year: 2015,
         title: 'Designing Group Fitness Swimming Exergames: A Case Study',
         authors: ['Woohyeok Choi', 'Joohyun Kim', 'Jeungmin Oh', 'Darren Edge', 'Uichin Lee'],
@@ -1566,6 +1700,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'choi2015designing.pdf',
     },
     jeong2015eng: {
+        type: "Conference",
         year: 2015,
         title: 'I-Eng: An Interactive Toy for Second Language Learning',
         authors: ['Hayeon Jeong', 'Daniel Pieter Saakes', 'Uichin Lee'],
@@ -1576,6 +1711,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'jeong2015eng.pdf',
     },
     kim2015crowdcolor: {
+        type: "Conference",
         year: 2015,
         title: 'CrowdColor: Crowdsourcing Color Perceptions Using Mobile Devices',
         authors: [
@@ -1592,6 +1728,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'kim2015crowdcolor.pdf',
     },
     noh2015hydrocast: {
+        type: "Conference",
         year: 2015,
         title: 'HydroCast: Pressure Routing for Underwater Sensor Networks',
         authors: [
@@ -1609,6 +1746,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'noh2015hydrocast.pdf',
     },
     oh2015scanshot: {
+        type: "Conference",
         year: 2015,
         title: 'ScanShot: Detecting Document Capture Moments and Correcting Device Orientation',
         authors: ['Jeungmin Oh', 'Woohyeok Choi', 'Joohyun Kim', 'Uichin Lee'],
@@ -1619,6 +1757,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'oh2015scanshot.pdf',
     },
     ko2015lock: {
+        type: "Conference",
         year: 2015,
         title: "Lock n' LoL: Mitigating Smartphone Disturbance in Co-located Social Interactions",
         authors: [
@@ -1638,6 +1777,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'ko2015lock.pdf',
     },
     song2015every: {
+        type: "Conference",
         year: 2015,
         title:
             'Every Little Helps: Understanding Donor Behavior in a Crowdfunding Platform for Non-profits',
@@ -1649,6 +1789,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'song2015every.pdf',
     },
     lee2015socialkeyboard: {
+        type: "Conference",
         year: 2015,
         title: 'SocialKeyboard: Proofreading Everyday Writings in Mobile Phones',
         authors: ['Jin-woo Lee', 'Joohyun Kim', 'Uichin Lee', 'Jae-Gil Lee'],
@@ -1658,6 +1799,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2015socialkeyboard.pdf',
     },
     ko2015nugu: {
+        type: "Conference",
         year: 2015,
         title:
             'NUGU: A Group-based Intervention App for Improving Self-Regulation of Limiting Smartphone Use',
@@ -1680,6 +1822,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'ko2015nugu.pdf',
     },
     oh2015exploring: {
+        type: "Conference",
         year: 2015,
         title: 'Exploring UX Issues in Quantified Self Technologies',
         authors: ['Jeungmin Oh', 'Uichin Lee'],
@@ -1693,6 +1836,7 @@ const publications: {[key: string]: PublicationProp} = {
     // bookmark
 
     이의진2015iot: {
+        type: "Conference",
         year: 2015,
         title: 'IoT 응용 설득 컴퓨팅 서비스 개요 및 연구 동향',
         authors: ['이의진'],
@@ -1701,6 +1845,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '', // no pdf
     },
     양수빈2014청소년: {
+        type: "Conference",
         year: 2015,
         title: '청소년 자녀의 스마트폰 사용에 관한 부모중재 서비스 디자인 탐구',
         authors: ['양수빈', '고민삼', '이의진'],
@@ -1709,6 +1854,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '양수빈2014청소년.pdf',
     },
     오태화2014활동이론에: {
+        type: "Conference",
         year: 2015,
         title:
             '활동이론에 근거한 대학원생의 교내 융합연구관련 Q&A 행동 분석 및 시스템 디자인 가이드라인',
@@ -1718,6 +1864,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '오태화2014활동이론에.pdf',
     },
     최우혁2014수영: {
+        type: "Conference",
         year: 2015,
         title: '수영 환경을 고려한 다중 사용자 운동게임 디자인',
         authors: ['최우혁', '이의진'],
@@ -1726,6 +1873,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '최우혁2014수영.pdf',
     },
     lee2015secure: {
+        type: "Conference",
         year: 2014,
         title: 'Secure Personal Content Networking over Untrusted Devices',
         authors: ['Uichin Lee', 'Josh Joy', 'Youngtae Noh'],
@@ -1735,6 +1883,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2015secure.pdf',
     },
     bao2014methods: {
+        type: "Conference",
         year: 2014,
         title: 'Methods of locating data spots and networks and user equipment for using the same',
         authors: ['Xuan Bao', 'Uichin Lee', 'Ivica Rimac'],
@@ -1743,6 +1892,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'bao2014methods.pdf',
     },
     choi2014mobydick: {
+        type: "Conference",
         venue: 'Proceedings of the 12th ACM Conference on Embedded Network Sensor Systems',
         venue_alias: 'SenSys',
         paper: 'choi2014mobydick.pdf',
@@ -1764,6 +1914,7 @@ const publications: {[key: string]: PublicationProp} = {
         //   "In Proc. of the 12th ACM Conference on Embedded Networked Sensor Systems (SenSys'14), Memphis, TN, November 3-6, 2014",
     },
     park2014understanding: {
+        type: "Conference",
         // venue: 'Proceedings of the 16th international conference on Human-computer interaction with mobile devices \& services',
         venue_alias: 'MobileHCI',
         paper: 'park2014understanding.pdf',
@@ -1775,6 +1926,7 @@ const publications: {[key: string]: PublicationProp} = {
             "In Proc. of the 16th International Conference on Human-Computer Interaction with Mobile Devices and Services (MobileHCI'14), Toronto, Canada, Sept. 23-26, 2014",
     },
     cho2015placewalker: {
+        type: "Conference",
         year: 2014,
         title:
             'PlaceWalker: An Energy-efficient Place Logging Method that Considers Kinematics of Normal Human Walking',
@@ -1784,6 +1936,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'cho2015placewalker.pdf',
     },
     park2014human: {
+        type: "Conference",
         year: 2014,
         title: 'Human Factors of Speed-based Exergame Controllers',
         authors: [
@@ -1799,6 +1952,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2014human.pdf',
     },
     lee2014hooked: {
+        type: "Conference",
         year: 2014,
         title:
             'Hooked on Smartphones: An Exploratory Study on Smartphone Overuse among College Students',
@@ -1824,6 +1978,7 @@ const publications: {[key: string]: PublicationProp} = {
     /////////////////
 
     baumer2014refusing: {
+        type: "Conference",
         year: 2014,
         title:
             'Supporting Temporary Non-Use of Smartphones Refusing, Limiting, Departing: Why We Should Study Technology Non-use',
@@ -1833,6 +1988,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'baumer2014refusing.pdf',
     },
     ko2014motives: {
+        type: "Conference",
         year: 2014,
         title: 'Motives for Mass Interactions in Online Sports Viewing',
         authors: [
@@ -1849,6 +2005,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'ko2014motives.pdf',
     },
     gerla2014internet: {
+        type: "Conference",
         year: 2014,
         title: 'Internet of Vehicles: From Intelligent Grid to Autonomous Cars and Vehicular Clouds',
         authors: ['Mario Gerla', 'Eun-Kyu Lee', 'Giovanni Pau', 'Uichin Lee'],
@@ -1858,6 +2015,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'gerla2014internet.pdf',
     },
     noh2014dots: {
+        type: "Conference",
         year: 2014,
         title:
             'DOTS: A Propagation Delay-aware Opportunistic MAC Protocol for Mobile Underwater Networks',
@@ -1875,6 +2033,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'noh2014dots.pdf',
     },
     고민삼2014스마트폰: {
+        type: "Conference",
         year: 2014,
         title: '스마트폰 과도사용 중재 모바일 앱 분석: 중재 방법 관점',
         authors: ['고민삼', '이준원', '양수빈', '이의진'],
@@ -1884,6 +2043,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '고민삼2014스마트폰.pdf',
     },
     강성준2014다중: {
+        type: "Conference",
         year: 2014,
         title: '다중 스마트 단말 협업 기반 모바일 어플리케이션 및 UX 디자인 고찰',
         authors: ['강성준', '신대희', '명미라', '이의진', '박준성'],
@@ -1893,6 +2053,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: '강성준2014다중.pdf',
     },
     lee2013understanding: {
+        type: "Conference",
         year: 2013,
         title:
             'Understanding Processing Overheads of Network Coding Based Content Distribution in VANETs',
@@ -1902,6 +2063,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2013understanding.pdf',
     },
     sung2013booming: {
+        type: "Conference",
         year: 2013,
         title:
             'Booming Up the Long Tails: Discovering Potentially Contributive Users in Community-based Question Answering Services',
@@ -1911,6 +2073,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'sung2013booming.pdf',
     },
     lee2013sociophone: {
+        type: "Conference",
         year: 2013,
         title:
             'SocioPhone: Everyday Face-to-Face Interaction Monitoring Platform Using Multi-Phone Sensor Fusion',
@@ -1932,6 +2095,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2013sociophone.pdf',
     },
     lee2013analyzing: {
+        type: "Conference",
         year: 2013,
         title: 'Analyzing Crowd Workers in Mobile Pay-for-Answer Q&A',
         authors: ['Uichin Lee', 'Jihyoung Kim', 'Eunhee Yi', 'Juyup Sung', 'Mario Gerla'],
@@ -1941,6 +2105,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2013analyzing.pdf',
     },
     oh2013facilitating: {
+        type: "Conference",
         year: 2013,
         title: 'Facilitating Developer-User Interactions with Mobile App Review Digests',
         authors: ['Jeungmin Oh', 'Daehoon Kim', 'Uichin Lee', 'Jae-Gil Lee', 'Junehwa Song'],
@@ -1949,6 +2114,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'oh2013facilitating.pdf',
     },
     bao2013dataspotting: {
+        type: "Conference",
         year: 2013,
         title:
             'DataSpotting: Exploiting Naturally Clustered Mobile Devices to Offload Cellular Traffic',
@@ -1958,6 +2124,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'bao2013dataspotting.pdf',
     },
     han2013m: {
+        type: "Conference",
         year: 2013,
         title: 'M-FAMA: A Multi-session MAC Protocol for Reliable Underwater Acoustic Streams',
         authors: ['Seongwon Han', 'Youngtae Noh', 'Uichin Lee', 'Mario Gerla'],
@@ -1967,6 +2134,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'han2013m.pdf',
     },
     noh2013infrastructure: {
+        type: "Conference",
         venue: 'IEEE Transactions on Systems, Man, and Cybernetics: Systems',
         venue_alias: 'IEEE SMC',
         paper: 'noh2013infrastructure.pdf',
@@ -1984,6 +2152,7 @@ const publications: {[key: string]: PublicationProp} = {
         // venue: 'IEEE PerCom 2013, San Diego, CA, March 18-22, 2013',
     },
     park2013exersync: {
+        type: "Conference",
         venue: 'Proceedings of the 2013 conference on Computer supported cooperative work',
         venue_alias: 'CSCW',
         paper: 'park2013exersync.pdf',
@@ -2000,6 +2169,7 @@ const publications: {[key: string]: PublicationProp} = {
         ],
     },
     lee2013mobile: {
+        type: "Conference",
         venue: 'Proceedings of CHI',
         venue_alias: 'CHI',
         paper: '', // no pdf
@@ -2008,6 +2178,7 @@ const publications: {[key: string]: PublicationProp} = {
         authors: ['Uichin Lee', 'Eunhee Yi', 'Minsam Ko'],
     },
     lee2013dungeons: {
+        type: "Conference",
         year: 2013,
         title: 'Dungeons & Swimmers: Designing an Interactive Exergame for Swimming,',
         authors: [
@@ -2024,6 +2195,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2013dungeons.pdf',
     },
     park2012exerlink: {
+        type: "Conference",
         venue:
             'Proceedings of the 10th international conference on Mobile systems, applications, and services',
         venue_alias: 'MobiSys',
@@ -2033,6 +2205,7 @@ const publications: {[key: string]: PublicationProp} = {
         authors: ['Park et al.'],
     },
     lee2012understanding: {
+        type: "Conference",
         year: 2012,
         title: 'Understanding Mobile Q&A Usage: An Exploratory Study',
         authors: ['Uichin Lee', 'Hyanghong Kang', 'Eunhee Yi', 'Mun Y. Yi', 'Jussi Kantola'],
@@ -2042,6 +2215,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2012understanding.pdf',
     },
     noh2013vapr: {
+        type: "Conference",
         authors: ['Youngtae Noh', 'Uichin Lee', 'Paul Wang', 'Brian Sung Chul Choi', 'Mario Gerla'],
         title: 'VAPR: Void Aware Pressure Routing for Underwater Sensor Networks',
         venue: 'IEEE Transactions on Mobile Computing',
@@ -2050,6 +2224,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'noh2013vapr.pdf',
     },
     bellavista2012editorial: {
+        type: "Conference",
         authors: ['Paolo Bellavista', 'Mario Gerla', 'Hariharan Krishnan', 'Uichin Lee'],
         title: 'Editorial - Special Issue: Wide-Scale Vehicular Sensor Networks and Mobile Sensing',
         venue: 'Pervasive and Mobile Computing',
@@ -2058,6 +2233,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'bellavista2012editorial.pdf',
     },
     lee2012emerging: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Howon Lee', 'Bang Chul Jung', 'Junehwa Song'],
         title:
             'Emerging Ubiquitous Knowledge Services: From Mobile Sensing to Ubiquitous Crowdsourcing and Beyond',
@@ -2067,6 +2243,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2012emerging.pdf',
     },
     ahnn2011geoserv: {
+        type: "Conference",
         authors: ['Jong Hoon Ahn', 'Uichin Lee', 'Hyun Jin Moon'],
         title: 'GeoServ: A Distributed Urban Sensing Platform',
         venue: '2011 11th IEEE/ACM International Symposium on Cluster, Cloud and Grid Computing',
@@ -2076,6 +2253,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'ahnn2011geoserv.pdf',
     },
     lim2013sewersnort: {
+        type: "Conference",
         authors: [
             'Jung Soo Lim',
             'Jihyoung Kim',
@@ -2094,6 +2272,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lim2013sewersnort.pdf',
     },
     lee2011toward: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Ivica Rimac', 'Daniel Kilper', 'Volker Hilt'],
         title: 'Toward Energy Efficient Content Dissemination',
         venue: 'IEEE Network',
@@ -2102,6 +2281,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2011toward.pdf',
     },
     varvello2011design: {
+        type: "Conference",
         authors: ['Matteo Varvello', 'Ivica Rimac', 'Uichin Lee', 'Lloyd Greenwald', 'Volker Hilt'],
         title: 'On the Design of Content-Centric MANETs',
         venue:
@@ -2111,6 +2291,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'varvello2011design.pdf',
     },
     noh2010dots: {
+        type: "Conference",
         title:
             'DOTS: A Propagation Delay-aware Opportunistic MAC Protocol for Underwater Sensor Networks',
         authors: ['Youngtae Noh', 'Paul Wang', 'Uichin Lee', 'Dustin Torres', 'Mario Gerla'],
@@ -2121,6 +2302,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'noh2010dots.pdf',
     },
     noh2012vapr: {
+        type: "Conference",
         authors: ['Youngtae Noh', 'Paul Wang', 'Uichin Lee', 'Mario Gerla'],
         title: 'VAPR: Void Aware Pressure Routing Protocol',
         venue: 'IEEE Transactions on Mobile Computing',
@@ -2129,6 +2311,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'noh2012vapr.pdf',
     },
     lee2010geo: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Uichin Lee', 'Mario Gerla'],
         title: 'Geo-Opportunistic Routing for Vehicular Networks',
         venue: 'IEEE Communications Magazine',
@@ -2137,6 +2320,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2010geo.pdf',
     },
     lee2010trace: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Juan M. Navarro', 'Tin Y. Chong', 'Uichin Lee', 'Mario Gerla'],
         title: 'Trace-based Evaluation of Rate Adaptation Schemes in Vehicular Environments',
         venue: '2010 IEEE 71st Vehicular Technology Conference',
@@ -2145,6 +2329,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2010trace.pdf',
     },
     lee2010greening: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Ivica Rimac', 'Volker Hilt'],
         title: 'Greening the Internet with Content Centric Networking',
         venue:
@@ -2155,6 +2340,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2010greening.pdf',
     },
     cho2010autogait: {
+        type: "Conference",
         authors: ['Dae-Ki Cho', 'Min Mun', 'Uichin Lee', 'William J. Kaiser', 'Mario Gerla'],
         title: 'AutoGait: A Mobile Platform that Accurately Estimates the Distance Walked',
         venue:
@@ -2165,6 +2351,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'cho2010autogait.pdf',
     },
     park2010vehicular: {
+        type: "Conference",
         authors: ['Joon-Sang Park', 'Uichin Lee', 'Mario Gerla'],
         title: 'Vehicular Communications: Emergency Video Streams and Network Coding',
         venue: 'Journal of Internet Services and Applications',
@@ -2173,6 +2360,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2010vehicular.pdf',
     },
     lee2010pressure: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Paul Wang',
@@ -2189,6 +2377,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2010pressure.pdf',
     },
     lee2010surveyurban: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Mario Gerla'],
         title: 'A Survey of Urban Vehicular Sensing Platforms',
         venue_alias: 'Computer Networks',
@@ -2197,6 +2386,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2010surveyurban.pdf',
     },
     lee2009fleanet: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Jiyeon Lee', 'Joon-Sang Park', 'Mario Gerla'],
         title: 'FleaNet: A Virtual Market Place on Vehicular Networks',
         venue: 'IEEE Transactions on Vehicular Technology',
@@ -2206,6 +2396,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2009fleanet.pdf',
     },
     lee2009p2p: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Sewook Jung', 'Alexander Chang', 'Dae-Ki Cho', 'Mario Gerla'],
         title: 'P2P Content Distribution to Mobile Bluetooth Users',
         venue: 'IEEE Transactions on vehicular Technology',
@@ -2214,6 +2405,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2009p2p.pdf',
     },
     lee2009scaling: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Soon Young Oh', 'Kang-Won Lee', 'Mario Gerla'],
         title: 'Scaling Properties of Delay Tolerant Networks with Correlated Motion Patterns',
         venue: 'Proceedings of the 4th ACM Workshop on Challenged Networks',
@@ -2223,6 +2415,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2009scaling.pdf',
     },
     lee2009relaycast: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Soon Young Oh', 'Kang-Won Lee', 'Mario Gerla'],
         title: 'RelayCast: Scalable Multicast Routing in Delay Tolerant Coalition Networks',
         venue: 'Proc. Third Annual Conference of ITA',
@@ -2231,6 +2424,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2009relaycast.pdf',
     },
     kim2009sewersnort: {
+        type: "Conference",
         authors: [
             'Jihyoung Kim',
             'Jung Soo Lim',
@@ -2249,6 +2443,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'kim2009sewersnort.pdf',
     },
     lee2009go: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Uichin Lee', 'Mario Gerla'],
         title: 'TO-GO: TOpology-assist Geo-Opportunistic Routing in Urban Vehicular Grids',
         venue:
@@ -2259,6 +2454,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2009go.pdf',
     },
     lee2010surveyrouting: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Uichin Lee', 'Mario Gerla.'],
         title: 'Survey of Routing Protocols in Vehicular Ad Hoc Networks',
         venue: 'Advances in vehicular ad-hoc networks: Developments and challenges',
@@ -2267,6 +2463,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'https://www.igi-global.com/chapter/advances-vehicular-hoc-networks/43169',  // need to pay for downloading pdf
     },
     lee2009bio: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Eugenio Magistretti',
@@ -2282,6 +2479,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2009bio.pdf',
     },
     lee2008dissemination: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Eugenio Magistretti',
@@ -2296,6 +2494,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2008dissemination.pdf',
     },
     lee2009emerging: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Ryan Cheung', 'Mario Gerla'],
         title: 'Emerging Vehicular Applications',
         venue: 'Vehicular networks: From theory to practice',
@@ -2304,6 +2503,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2009emerging.pdf',
     },
     lee2008relaycast: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Soon Young Oh', 'Kang-Won Lee', 'Mario Gerla'],
         title: 'RelayCast: Scalable Multicast Routing in Delay Tolerant Networks',
         venue: '2008 IEEE International Conference on Network Protocols',
@@ -2313,6 +2513,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2008relaycast.pdf',
     },
     vieira2008phero: {
+        type: "Conference",
         authors: ['Luiz F. M. Vieira', 'Uichin Lee', 'Mario Gerla'],
         title: 'Phero-Trail: a Bio-inspired Location Service for Mobile Underwater Sensors',
         venue: 'Proceedings of the third ACM international workshop on Underwater Networks',
@@ -2322,6 +2523,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'vieira2008phero.pdf',
     },
     lee2007bio: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Eugenio Magistretti',
@@ -2337,6 +2539,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2007bio.pdf',
     },
     lee2008content: {
+        type: "Conference",
         authors: ['Seung-Hoon Lee', 'Uichin Lee', 'Kang-Won Lee', 'Mario Gerla'],
         title:
             'Content Distribution in VANETs using Network Coding: The Effect of Disk I/O and Processing O/H',
@@ -2348,6 +2551,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2008content.pdf',
     },
     lee2008efficient: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Joon-Sang Park',
@@ -2363,6 +2567,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2008efficient.pdf',
     },
     park2008delay: {
+        type: "Conference",
         authors: [
             'Joon-Sang Park',
             'Uichin Lee',
@@ -2380,6 +2585,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'park2008delay.pdf',
     },
     gerla2008tapping: {
+        type: "Conference",
         authors: ['Mario Gerla', 'Uichin Lee'],
         title: 'Tapping Vehicle Sensors for Homeland Security',
         venue: '',
@@ -2388,6 +2594,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'https://www.amazon.com/Homeland-Security-Technology-Challenges-Encrypting/dp/1596932899',   // have to pay for downloading pdf
     },
     lee2007enhanced: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Jerome Haerri', 'Uichin Lee', 'Mario Gerla'],
         title:
             'Enhanced Perimeter Routing for Geographic Forwarding Protocols in Urban Vehicular Scenarios',
@@ -2397,6 +2604,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2007enhanced.pdf',
     },
     bellavista2007standard: {
+        type: "Conference",
         authors: ['P. Bellavista', 'E. Magistretti', 'U. Lee', 'and M. Gerla.'],
         title:
             'Standard Integration of Sensing and Opportunistic Diffusion for Urban Monitoring in Vehicular Sensor Networks: the MobEyes Architecture',
@@ -2406,6 +2614,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'bellavista2007standard.pdf',
     },
     magistretti2007mobile: {
+        type: "Conference",
         authors: [
             'Eugenio Magistretti',
             'Jiejun Kong',
@@ -2422,6 +2631,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'magistretti2007mobile.pdf',
     },
     jung2007bluetorrent: {
+        type: "Conference",
         authors: ['Sewook Jung', 'Uichin Lee', 'Alexander Chang', 'Dae-Ki Cho', 'Mario Gerla'],
         title: 'BlueTorrent: Cooperative Content Sharing for Bluetooth Users',
         venue: 'Pervasive and Mobile Computing',
@@ -2431,6 +2641,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'jung2007bluetorrent.pdf',
     },
     lee2007time: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Jiejun Kong', 'Eugenio Magistretti', 'Joon-Sang Park', 'Mario Gerla'],
         title:
             'Time-critical Underwater Sensor Diffusion with No Proactive Exchanges and Negligible Reactive Floods',
@@ -2440,6 +2651,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2007time.pdf',
     },
     lee2006mobeyes: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Eugenio Magistretti',
@@ -2456,6 +2668,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2006mobeyes.pdf',
     },
     lee2006code: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Joon-Sang Park', 'Joseph Yeh', 'Giovanni Pau', 'Mario Gerla'],
         title: 'CodeTorrent: Content Distribution using Network Coding in VANETs',
         venue:
@@ -2466,6 +2679,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2006code.pdf',
     },
     gerla2006vehicular: {
+        type: "Conference",
         authors: [
             'Mario Gerla',
             'Biao Zhou',
@@ -2482,6 +2696,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'gerla2006vehicular.pdf',
     },
     lee2006efficient: {
+        type: "Conference",
         authors: [
             'Uichin Lee',
             'Eugenio Magistretti',
@@ -2498,6 +2713,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2006efficient.pdf',
     },
     lee2006understanding: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Min Choi', 'Junghoo Cho', 'Medy. Y. Sanadidi', 'Mario Gerla'],
         title: 'Understanding Pollution Dynamics in P2P File Sharing',
         venue: 'IPTPS',
@@ -2507,6 +2723,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2006understanding.pdf',
     },
     lee2005flowbased: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Joon-Sang Park', 'M. Y. Sanadidi', 'M. Gerla'],
         title: 'Flow Based Dynamic Load Balancing for Passive Network Monitoring',
         venue: 'Communications and Computer Networks',
@@ -2515,6 +2732,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2005flowbased.pdf',
     },
     lee2005automatic: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Zhenyu Liu', 'Junghoo Cho'],
         title: 'Automatic Identification of User Goals in Web Search',
         venue: 'Proceedings of the 14th international conference on World Wide Web',
@@ -2523,6 +2741,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2005automatic.pdf',
     },
     chen2009codecast: {
+        type: "Conference",
         authors: ['Chien-Chia Chen', 'Chieh-Ning Lien', 'Uichin Lee', 'Soon Y. Oh', 'Mario Gerla'],
         title: 'CodeCast: Network Coding Based Multicast in MANETs',
         venue:
@@ -2532,6 +2751,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'chen2009codecast.pdf',
     },
     cao2008proof: {
+        type: "Conference",
         authors: ['Zhen Cao', 'Jiejun Kong', 'Uichin Lee', 'Mario Gerla', 'Zhong Chen'],
         title:
             'Proof-of-Relevance: Filtering False Data via Authentic Consensus in Vehicle Ad-hoc Networks',
@@ -2541,6 +2761,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'cao2008proof.pdf',
     },
     lee2008understanding: {
+        type: "Conference",
         authors: ['Uichin Lee', 'Kang-Won Lee', 'Soon-Young Oh', 'Mario Gerla'],
         title:
             'Understanding the Capacity and Delay Scaling Laws of Delay Tolerant Networks: A Unified Approach',
@@ -2550,6 +2771,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'lee2008understanding.pdf',
     },
     lee2007first: {
+        type: "Conference",
         authors: ['Kevin C. Lee', 'Seung-Hoon Lee', 'Ryan Cheung', 'Uichin Lee', 'Mario Gerla'],
         title: 'First Experience with CarTorrent in a Real Vehicular Ad Hoc Network Testbed',
         venue: '2007 Mobile Networking for Vehicular Environments',
@@ -2559,6 +2781,7 @@ const publications: {[key: string]: PublicationProp} = {
         slide: 'lee2007first.pdf',
     },
     vieira2006analysis: {
+        type: "Conference",
         authors: ['Luiz Filipe M. Vieira', 'Jiejun Kong', 'Uichin Lee', 'Mario Gerla'],
         title: 'Analysis of aloha protocols for underwater acoustic sensor networks',
         venue: 'Extended abstract from WUWNet',
@@ -2567,6 +2790,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: 'vieira2006analysis.pdf',
     },
     park2006emergency: {
+        type: "Conference",
         authors: ['Joon-Sang Park', 'Uichin Lee', 'Soon Young Oh', 'Mario Gerla', 'Desmond Lun'],
         title: 'Emergency Related Video Streaming in VANETs using Network Coding',
         venue: 'Proceedings of the 3rd international workshop on Vehicular ad hoc networks',
@@ -2576,4 +2800,40 @@ const publications: {[key: string]: PublicationProp} = {
     },
 }
 
-export default publications;
+import fs from 'fs';
+
+const bibs = fs.readFileSync('data/publication.bib')
+
+const findDOIs = async () => {
+    for (const key in publications) {
+        const title = publications[key].title
+        try {
+            const response = await fetch(`https://api.crossref.org/works?query=${title}`)
+            const data = await response.json();
+            if(response.status !== 200) throw new Error(data.message)
+            if (data.message.items.length > 0) {
+                const doi = data.message.items[0].DOI;
+                const bibtex_response = await fetch(`https://doi.org/${doi}`,  { headers: { 'Accept': 'application/x-bibtex' } })
+                const bib = await bibtex_response.text();
+                console.log(title);
+                console.log(bib.trim());
+                console.log("\n");
+                dois = [{title, doi}, ...dois]
+            } else {
+                // console.log(title, "DOI not found")
+            }
+        } catch (error) {
+            console.error(title, error)
+        }
+        // break
+    }
+}
+findDOIs().then(() => {
+    console.log(JSON.stringify(dois, null, 2));
+    console.log(dois.length);
+})
+
+
+// console.log("N: ", Object.entries(publications).length)
+// console.log("N dois: ",  dois.length)
+// console.log(JSON.stringify(dois, null, 2))

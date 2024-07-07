@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# KAIST Interactive Computing Lab Homepage
 
-## Getting Started
+![Typescript](https://shields.io/badge/TypeScript-3178C6?logo=TypeScript&logoColor=FFF&style=flat-square)
 
-First, run the development server:
+## How it was build?
+The website is build based on [Next.js](https://nextjs.org/), [Tailwind CSS](https://tailwindcss.com/), [FlowBite](https://flowbite.com/), and [Github Action](https://docs.github.com/ko/actions)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* Next.js: The React framework for the web that allows intuitive file-system based router and static site rendering.
+* Tailwind CSS: The CSS framework that allows easy configuration of CSS through `className`.
+* FlowBite: The Tailwind CSS component library. 
+* Github Action: The continuous deploy (CD) tool that is provided by Github. We used it for deploying website as github-page.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Repository Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This website keeps data, features, and UI as separate as possible for code management.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* Data: For data that is easier to manage in a json or markdown file, such as keywords, paths, descriptions, etc are located in `/data`, and the images and files (i.e., pdf) are located in `/public`.
 
-## Learn More
+* Type: For the data, we defined types on `/src/types`
 
-To learn more about Next.js, take a look at the following resources:
+* Function: For the function that can be used to do formatting, loading data, and etc are defined in `/src/utils` and `/src/hooks`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* UI: UI-related code can be found in the `/src/app` folder, which is used for Next.js's file system routing, and in the `/src/component` folder, where reusable components are located.
+    * `/src/components`: We haven't added any margin or padding to the top tag of the component to handle spacing among components only in `/src/app`.
+    * `/src/app`: In most cases, layout and spacing among components are defined.  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+* CI & CD: 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How to update/change the data?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## How to run locally?
