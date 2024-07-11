@@ -4,20 +4,22 @@ import { memberRoles } from "@/types/member";
 
 const Members: React.FC = () => {
     return (
-        <div className="max-w-screen-xl w-full m-auto flex flex-col gap-12 items-center">
+        <div className="max-w-screen-xl w-full m-auto flex flex-col items-center md:items-start">
             <h2>Members</h2>
-            {
-                memberRoles.map((role) => {
-                    const matched = Object.values(members).filter((member) => member.role === role)
-                    if (matched.length === 0) return null
-                    return <div key={role} className="mt-20 w-full flex flex-col items-center sm:items-start gap-0">
-                        <h3>{role}</h3>
-                        <div className="w-full">
-                            {matched.map((member) => <Member key={member.name} {...member} />)}
+            <div className="pt-8 flex flex-col gap-4">
+                {
+                    memberRoles.map((role) => {
+                        const matched = Object.values(members).filter((member) => member.role === role)
+                        if (matched.length === 0) return null
+                        return <div key={role} className="w-full flex flex-col items-center md:items-start mb-20">
+                            <h3>{role}</h3>
+                            <div className="pt-4 flex flex-col w-full gap-12">
+                                {matched.map((member) => <Member key={member.name} {...member} />)}
+                            </div>
                         </div>
-                    </div>
-                })
-            }
+                    })
+                }
+            </div>
         </div>
     );
 }

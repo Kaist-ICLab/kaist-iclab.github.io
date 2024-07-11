@@ -8,20 +8,20 @@ const Member: React.FC<MemberProp> = (member) => (
 
 const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
     return (
-        <div className="not-format flex flex-col gap-10 pt-12 sm:flex-row">
+        <div className="not-format flex flex-col sm:gap-12 sm:flex-row">
             <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={member.image} alt={member.name} />
-            <div className="self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
+            <div className="mt-5 self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</h3>
                 <p className="text-base leading-7 text-gray-600">{member.role}</p>
                 {member.research_interests &&
-                    <div className="text-center sm:text-start mt-6 text-base leading-7 text-gray-600">
+                    <div className="text-center sm:text-start mt-4 text-base leading-7 text-gray-600">
                         <strong className="font-semibold text-gray-600 dark:text-white">Research Interest</strong>
                         <ul className="max-w-md space-y-1 text-gray-500 sm:list-disc sm:list-inside dark:text-gray-400">
                             {member.research_interests?.slice(0, 3).map((interest, idx) => (<li key={idx}>{interest}</li>))}
                         </ul>
                     </div>
                 }
-                <ul className="mt-6 flex gap-x-6">
+                <ul className="mt-4 flex gap-x-6">
                     {["email", "google_scholar", "github", "homepage"].map((type) => (
                         member[type as keyof CurrentMemberProp] && <li key={type}>
                             <a href={member[type as keyof CurrentMemberProp] as string} className="relative text-gray-400" onClick={(event) => { type === "email" ? emailClick(event) : null }}>
