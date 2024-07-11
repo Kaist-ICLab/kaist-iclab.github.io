@@ -6,7 +6,7 @@ import KAISTSOC from "@/icons/KAIST SoC.svg";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <footer className="bg-white rounded-lg dark:bg-gray-900 border m-4">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 flex-wrap">
                     <Logo />

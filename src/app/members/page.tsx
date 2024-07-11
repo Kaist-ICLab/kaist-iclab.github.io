@@ -11,9 +11,9 @@ const Members: React.FC = () => {
                     memberRoles.map((role) => {
                         const matched = Object.values(members).filter((member) => member.role === role)
                         if (matched.length === 0) return null
-                        return <div key={role} className="w-full flex flex-col items-center md:items-start mb-20">
+                        return <div key={role} className="w-full flex flex-col items-center md:items-start mb-20" >
                             <h3>{role}</h3>
-                            <div className="pt-4 flex flex-col w-full gap-12">
+                            <div className={"pt-4 flex flex-col w-full " + (role === "Alumni"? "pt-0 gap-4":"gap-12")}>
                                 {matched.map((member) => <Member key={member.name} {...member} />)}
                             </div>
                         </div>
