@@ -1,6 +1,6 @@
 export interface PostProp {
     id: string,
-    type: "announcement" | "blog",
+    type: "announcement" | "blog" | "project",
     writer: string,
     created: string,
     lastModified?: string,
@@ -18,7 +18,7 @@ export interface AnnouncementProp extends PostProp {
 }
 
 export interface ProjectProp extends PostProp {
-    
+    type: "project"
 }
 
 export interface BlogProp extends PostProp {

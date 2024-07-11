@@ -2,8 +2,11 @@ import { ProjectProp } from "@/types/post"
 
 const Project: React.FC<ProjectProp> = (project) => {
     return (
-        <a href={`/projects/${project.id}`} className="not-format no-underline hover:no-underline gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row">
-            <img className="object-contain lg:w-2/5 lg:h-full rounded-lg shadow" src={project.image} />
+        <a href={`/projects/${project.id}`} className="not-format no-underline hover:no-underline gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row lg:items-center">
+            <div className="h-[240px] basis-[300px] shrink-0 rounded-lg shadow" >
+                <img className="object-contain w-full h-full" src={project.image} alt="" />
+            </div>
+            {/* <img className="object-contain lg:w-2/5 lg:h-full rounded-lg shadow" src={project.image} /> */}
             <div>
                 <div>
                     <h3 className="text-lg font-bold leading-5 text-gray-900 dark:text-white lg:mt-3">

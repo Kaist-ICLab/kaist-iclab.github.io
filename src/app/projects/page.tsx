@@ -3,8 +3,7 @@ import { ProjectProp } from "@/types/post";
 import { readMDXDir } from "@/utils/file";
 
 const Projects: React.FC = () => {
-  const projects = readMDXDir('data/projects') as ProjectProp[];
-  
+  const projects = readMDXDir('data/projects/') as ProjectProp[];
   return (
     <div className="max-w-screen-xl w-full m-auto flex flex-col gap-12 items-center">
       <h2>Projects</h2>

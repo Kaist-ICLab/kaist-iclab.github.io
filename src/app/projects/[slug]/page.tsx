@@ -6,13 +6,12 @@ export async function generateStaticParams() {
     return posts.map((post) => ({
         params: {
             slug: post.id,
-        },
-        post
+        }
     }))
 }
 
 
-const Page: React.FC<{ params: { slug: string }, post: Record<string, any> }> = ({ params, post }) => {
+const Page: React.FC<{ params: { slug: string } }> = ({ params }) => {
     const md = readMDFileByPath(`data/projects/${params.slug}.mdx`)
     return (<article className="max-w-screen-xl w-full m-auto">
         <MDX source={md.content} />
