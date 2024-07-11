@@ -39,7 +39,7 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
 }
 
 const Alumni: React.FC<AlumniProp> = (member) => {
-    return (<div className="border-l-2 border-blue-800 px-2 mt-6 flex flex-col sm:flex-row gap-2 sm:items-center">
+    return (<div className="border-l-2 border-blue-800 px-2 flex flex-col sm:flex-row gap-2 sm:items-center">
         <div className="flex flex-row items-center gap-2">
             <a href={member.email} className="relative text-gray-400" onClick={(event) => { emailClick(event) }}>
                 <Icon icon="email" className="w-7 h-7 hover:text-blue-600 text-gray-500" />
