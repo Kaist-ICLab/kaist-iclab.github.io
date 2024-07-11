@@ -1,6 +1,6 @@
-import { AlumniProp, CurrentMemberProp } from "@/types/member";
+import { AlumniProp, CurrentMemberProp, MemberProp, memberRoles } from "@/types/member";
 
-const members: { [key: string]: AlumniProp | CurrentMemberProp } ={
+let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
     "UichinLee": {
         "name": "Uichin Lee",
         "role": "Professor",
@@ -209,6 +209,8 @@ const members: { [key: string]: AlumniProp | CurrentMemberProp } ={
         "name": "Panyu Zhang",
         "role": "Ph.D. Student",
         "email": "panyu@kaist.ac.kr",
+        "github": "https://github.com/SteinPanyu",
+        "homepage": "https://steinpanyu.github.io/",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -894,5 +896,18 @@ const members: { [key: string]: AlumniProp | CurrentMemberProp } ={
     }
 }
 
+const sortMemberByEntrance = (a: MemberProp, b: MemberProp) => {
+    const findEntranceYear = (member: MemberProp) => {
+        for(let role of memberRoles){
+            const idx = member.histories.findIndex((history) => history.role === role);
+            if(idx !== -1)
+                return member.histories[idx].enterance;
+        }
+        throw new Error("Member does not have entrance year");
+    }
+    return findEntranceYear(a).localeCompare(findEntranceYear(b));
+}
+
+members = Object.fromEntries(Object.entries(members).sort((a, b) => sortMemberByEntrance(a[1], b[1])));
 
 export default members;
