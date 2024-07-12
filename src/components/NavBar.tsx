@@ -2,7 +2,7 @@
 // Change from https://flowbite.com/docs/components/navbar/
 
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 
 interface NavBarProps {
@@ -13,10 +13,22 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
     const currentPath = usePathname();
     const [showMobileNav, changeMobileNav] = useState(false);
 
+    const [position, setPosition] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          setPosition(window.scrollY);
+        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+    }, [position]);
+
     const activeTheme = "capitalize block py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500"
     const inactiveTheme = "capitalize block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
     return (
-        <nav className="bg-white border-gray-200 dark:bg-gray-900">
+        <nav className={"sticky top-0 bg-white border-gray-200 dark:bg-gray-900 z-[999]" + (position > 0 ? " shadow-md" : "")}>
             <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* TODO: Logo Change*/}
                 <Logo/>
