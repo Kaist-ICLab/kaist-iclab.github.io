@@ -28,7 +28,7 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
     const activeTheme = "capitalize block py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500"
     const inactiveTheme = "capitalize block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
     return (
-        <nav id="header" className={"sticky top-0 bg-white border-gray-200 dark:bg-gray-900 z-[999]" + (position > 0 ? " shadow-md" : "")}>
+        <nav className={"sticky top-0 bg-white border-gray-200 dark:bg-gray-900 z-[999]" + (position > 0 ? " shadow-md" : "")}>
             <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* TODO: Logo Change*/}
                 <Logo/>
