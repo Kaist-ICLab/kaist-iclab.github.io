@@ -13,7 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
     const currentPath = usePathname();
     const [showMobileNav, changeMobileNav] = useState(false);
 
-    const [position, setPosition] = useState(window.scrollY);
+    const [position, setPosition] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
