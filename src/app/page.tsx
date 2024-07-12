@@ -4,7 +4,9 @@ import { readMDXDir } from "@/utils/file";
 import main from "@data/main";
 
 const Home: React.FC = () => {
-  const announcements = readMDXDir("data/posts").filter((post) => post.type === "announcement") as AnnouncementProp[]
+  const announcements = (readMDXDir("data/posts")
+    .filter((post) => post.type === "announcement") as AnnouncementProp[])
+    .sort((a, b)=> (a.pinned? -1: 1) - (b.pinned? -1: 1))
 
   return (
     <div className="m-auto w-full max-w-screen-xl bg-white dark:bg-gray-900">
@@ -48,7 +50,7 @@ const Home: React.FC = () => {
         <h2 className="text-center">
           Announcement
         </h2>
-        <div className="max-w-3xl px-4 pt-5 pb-8 gap-12 mx-auto mt-8 flex flex-col border-gray-200 border rounded-sm dark:border-gray-700">
+        <div className="border-y px-4 pt-5 pb-8 gap-5 mx-auto mt-8 flex flex-col">
           {announcements.map((announcement, idx) => <Announcement {...announcement} key={idx} />)}
         </div>
       </section>
