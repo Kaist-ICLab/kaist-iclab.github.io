@@ -28,6 +28,7 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
                 <ul className="mt-4 flex gap-x-6">
                     {["email", "google_scholar", "github", "homepage"].map((type) => (
                         member[type as keyof CurrentMemberProp] && <li key={type}>
+                            <span className="sr-only">{type}</span>
                             <a 
                                 href={member[type as keyof CurrentMemberProp] as string} 
                                 className="relative text-gray-400"
@@ -41,7 +42,7 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
                                 </div> : null}
                             </a>
                             {isHovered && target===type && 
-                                <span className="absolute bg-gray-400 text-white px-3 py-2 rounded-lg transition-opacity duration-300 z-50 text-sm tooltip">{type}</span>
+                                <span className="absolute bg-gray-400 text-white px-3 py-2 rounded-lg transition-opacity duration-300 z-50 text-sm tooltip">{type.replace("_"," ")}</span>
                             }
                         </li>
                     ))}
