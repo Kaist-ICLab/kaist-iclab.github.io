@@ -1,4 +1,5 @@
 "use client"
+import { useState } from "react";
 import { MemberRole, MemberProp, CurrentMemberProp, AlumniProp } from "@/types/member";
 import Icon from "@/components/Icon";
 
@@ -7,6 +8,9 @@ const Member: React.FC<MemberProp> = (member) => (
 )
 
 const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
+    const [target, setTarget] = useState<string>("")
+    const [isHovered, setIsHovered] = useState<boolean>(false)
+
     return (
         <div className="not-format flex flex-col sm:gap-12 sm:flex-row">
             <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={member.image} alt={member.name} />
@@ -24,12 +28,22 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
                 <ul className="mt-4 flex gap-x-6">
                     {["email", "google_scholar", "github", "homepage"].map((type) => (
                         member[type as keyof CurrentMemberProp] && <li key={type}>
-                            <a href={member[type as keyof CurrentMemberProp] as string} className="relative text-gray-400" onClick={(event) => { type === "email" ? emailClick(event) : null }}>
+                            <span className="sr-only">{type}</span>
+                            <a 
+                                href={member[type as keyof CurrentMemberProp] as string} 
+                                className="relative text-gray-400"
+                                onClick={(event) => { type === "email" ? emailClick(event) : null }}
+                                onMouseEnter={() => {setIsHovered(true); setTarget(type);}}
+                                onMouseLeave={() => {setIsHovered(false); setTarget("");}}
+                            >
                                 <Icon icon={type as string} className="w-7 h-7 hover:text-blue-600 text-gray-400" />
                                 {type === "email" ? <div id="toast-success" className="z-10 bg-white opacity-100 absolute top-0 left-6 w-44 hidden">
                                     <Toast />
                                 </div> : null}
                             </a>
+                            {isHovered && target===type && 
+                                <span className="absolute bg-gray-400 text-white px-3 py-2 rounded-lg transition-opacity duration-300 z-50 text-sm tooltip">{type.replace("_"," ")}</span>
+                            }
                         </li>
                     ))}
                 </ul>
@@ -41,7 +55,11 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
 const Alumni: React.FC<AlumniProp> = (member) => {
     return (<div className="border-l-2 border-blue-800 px-2 flex flex-col sm:flex-row gap-2 sm:items-center">
         <div className="flex flex-row items-center gap-2">
-            <a href={member.email} className="relative text-gray-400" onClick={(event) => { emailClick(event) }}>
+            <a 
+                href={member.email} 
+                className="relative text-gray-400" 
+                onClick={(event) => { emailClick(event) }}
+            >
                 <Icon icon="email" className="w-7 h-7 hover:text-blue-600 text-gray-500" />
                 <div id="toast-success" className="absolute top-0 left-6 w-44 hidden bg-white opacity-100">
                     <Toast />
