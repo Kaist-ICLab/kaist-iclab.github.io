@@ -48,7 +48,7 @@ const Home: React.FC = () => {
         <h2 className="text-center">
           Announcement
         </h2>
-        <div className="max-w-3xl px-4 pt-5 pb-8 gap-12 mx-auto mt-8 flex flex-col border-gray-200 border rounded-sm dark:border-gray-700">
+        <div className="px-4 pt-5 pb-8 gap-5 mx-auto mt-8 flex flex-col">
           {announcements.map((announcement, idx) => <Announcement {...announcement} key={idx} />)}
         </div>
       </section>
