@@ -44,7 +44,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      <section id="announcement" className="mt-10 bg-white dark:bg-gray-800 max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16">
+      <section id="announcement" className="mt-10 bg-white dark:bg-gray-900 max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16">
         <h2 className="text-center">
           Announcement
         </h2>

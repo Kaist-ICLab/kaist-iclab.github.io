@@ -6,13 +6,17 @@ import KAISTSOC from "@/icons/KAIST SoC.svg";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="bg-white rounded-lg dark:bg-gray-900 border m-4">
+        <footer className="bg-white  dark:bg-gray-900 border-t m-4 dark:border-gray-500">
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="flex flex-col md:flex-row justify-between items-center gap-8 flex-wrap">
                     <Logo />
                     <div className="flex flex-wrap flex-row justify-center items-center gap-6">
-                        <KAISTSOC height="40" />
-                        <HCIKAIST height="40" />
+                        <div className="dark:bg-gray-50 p-3 rounded-sm">
+                            <KAISTSOC height="40" />
+                        </div>
+                        <div className="dark:bg-gray-50 p-3 rounded-sm">
+                            <HCIKAIST height="40" />
+                        </div>
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
