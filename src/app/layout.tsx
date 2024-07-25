@@ -1,14 +1,13 @@
-import type { Metadata } from "next";
 import NavBar from "@/components/NavBar";
 
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-import { mainSEO, navs } from "@data/meta";
+import { meta, navs } from "@data/meta";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = mainSEO;
+export const metadata = meta;
 
 export default function RootLayout({
   children,
