@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Inter } from "next/font/google";
 import "./globals.css";
@@ -8,6 +9,8 @@ import { meta, navs } from "@data/meta";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = meta;
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID as string;
 
 export default function RootLayout({
   children,
@@ -23,6 +26,7 @@ export default function RootLayout({
         </main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }
