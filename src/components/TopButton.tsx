@@ -8,10 +8,8 @@ const TopButton = () => {
     const handleScroll = () => {
         if (window.scrollY > 100) { // 스크롤이 100px 이상일 때 버튼 표시
             setShowButton(true);
-            console.log("약속인걸?");
         } else {
             setShowButton(false);
-            console.log("FALSE");
         }
     };
 
