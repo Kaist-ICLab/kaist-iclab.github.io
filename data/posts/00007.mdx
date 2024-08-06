@@ -1,0 +1,80 @@
+---
+type: 'post'
+writer: SoowonKang
+title: "Does ESM Change Emotion?"
+created: "2022-08-24"
+lastModified: "2022-08-24"
+tags: ['research', 'ESM']
+image: "posts/00007_001.jpg"
+publish: True
+pinned: False
+---
+
+# Will Experience Sampling Change Your Emotion?
+
+[Professor Uichin Lee's research team](https://ic.kaist.ac.kr/) from the School of Computing at KAIST and [Professor Auk Kim](https://kimauk.github.io/) from Kangwon University have explored the emotion change phenomenon while collecting people's emotions in their daily lives.
+
+This research has been published at [ACM CHI 2022](https://chi2022.acm.org/), one of the most prestigious academic conferences in the field of human-computer interaction (HCI). The conference was held online and offline simultaneously from April 29 to May 5, 2022.
+  
+
+<iframe width="700.000000" height="394.000000" src="https://www.youtube.com/embed/CCw1uEOuhZM" frameborder="0" allowfullscreen="" style={{width: '748px', height: '421px'}}/>
+                    “Understanding Emotion Changes in Mobile Experience Sampling”  
+(Pre-recorded Presentations for the ACM CHI Conference on Human Factors in Computing Systems, April 29-May 5, 2022)
+
+
+
+---
+
+## Collecting Self-Reported Emotion Data with an Experience Sampling Method (ESM)
+
+Over the past decade, mobile and wearable devices have been popularly used to collect a broad range of information from users, including the health status and contextual data. Moreover, a variety of mobile applications with low-cost embedded sensors offer opportunities for extracting information such as user's behavior patterns, preferences, and emotions. Traditionally, researchers conducted controlled experiments to acquire the relationship between various stimuli with posed situations and the corresponding emotional responses to understand the basis of people's psycho-affective states. Since they are limited in collecting realistic data with naturalistic contexts during people's daily lives, the Experience Sampling Method (ESM) has been employed to gather various real-time behaviors and in-situ thoughts in people's day-to-day activities. The ESM can acquire the target behaviors or thoughts as naturally as possible because it delivers minimal restrictions, such as commonly used notifications from mobile applications, on people's ongoing work.
+
+![](/posts/00007_001.jpg)  
+
+
+Figure 1) A sequential description of the interruption in the context of ESM response tasks.
+
+Recent studies have used this ESM to collect people's affect states. As shown in Figure 1, people who engage the ESM response tasks (secondary task) need to suspend the ongoing task (primary task), which means delivering an ESM task at a random time point will likely interrupt people's ongoing task. Interrupting this ongoing task at an inappropriate time may influence not only the performance of tasks but also user experience including emotional states. According to this, affect states, especially emotions, collected by the ESM can hold biases inherent in the method. This raises a validity issue of collecting emotion data with the ESM. Therefore, it is required to investigate the effects of ESM interruptions on emotion sampling.
+
+## Will Emotion Sampling Attempts Induce Emotion Changes?
+
+![](/posts/00007_002.jpg)Table 1) ESM questionnaire used in this study. (Q1: Valence, Q2: Arousal, Q3: Attention level, Q4: Stress level, Q5: Emotion duration, Q6: Task disturbance level, Q7: Emotion change)
+
+To assess emotion changes during ESM response tasks, the research team designed a new questionnaire. They first considered how to measure the emotion change phenomenon. Can people distinguish the emotions before and after the ESM response tasks? The research team conducted 4-step iterative pilot studies and found that people can recognize the separate emotions before and after responding to the ESM questionnaire. The final ESM questionnaire is described in Table 1, which consists of 7-point Likert scaled questions including emotion (Q1, Q2) and emotion change (Q7). The questionnaire guides to distinguish the emotion itself and the change in emotion by adding the reference time point such as “right before doting this survey” and “while you are answering the survey now”. This study mainly focused on analyzing the results of item-Q7.
+
+![](/posts/00007_003.jpg)Figure 2) Overview of the data collection.  
+
+
+Figure 2 described the overview of data collection. This study conducted a week-long data collection with smartphones and wearable sensors (e.g., Microsoft Band 2 and Polar H10). The affective states labels were collected by the ESM requests 16 times a day. The resulting ESM responses were 5,753 samples from 80 participants. However, a lot of invalid samples were excluded because some participants did not collect the sensor data or did not follow the ESM request time. As a result, this study analyzed the 2,227 samples from 78 participants to understand the emotion change phenomenon.
+
+![](/posts/00007_004.png)Figure 3) Amount of emotion changes.
+
+As illustrated in Figure 3, this study revealed that all participants had experienced the emotion change negatively or positively and the significant number of ESM samples (38.6%) reported emotion changes among 2,227 ESM samples. This means that participants might confuse their emotions when answering the ESM questions since the emotion assessment influenced the emotional states at the time. Thus, researchers should understand this emotion change phenomenon and devise some approaches that can enable participants to reflect upon their emotions carefully.
+
+![](/posts/00007_005.png)Table 2) The factors used in the multilevel regression analysis.
+
+Table 2 described the factor candidates that can influence emotion changes. These factors were commonly used in the existing works for the emotion or interruptibility prediction. To find significant factors, the research team built a generalized linear mixed model (GLMM). As a result, they found eight factors (highlighted in yellow) such as affect states (valence, stress level), attention states (level of attention and task disturbance), frequently stayed location, smartphone use time, heart beat variation, and time of day during weekend were statistically significant to estimate the emotion change phenomenon. Positive changes are associated with the instances when participants were engaged, less stressed, and less disturbed. Furthermore, they were also related with visits to infrequently visited places, less time to use the phone, highly fluctuated heartbeats, and weekday periods.
+
+## What Caused Emotion Changes?
+
+The research team conducted an interview with the participants and revealed several major causes of emotion changes for both negative and positive cases. The negative emotion changes were reported when an ESM task diminished an individual's attention about the ongoing tasks and an ESM task violated the social norms. For example, one of the interviewees said “I felt sorry to disturb others with the notification vibration in my office.” Interestingly, positive emotion changes were also reported when an ESM task helped to avoid the current uncomfortable (or stressful) situation, an ESM task helped to acknowledge the current emotions, and an ESM task recalled positive memories in the past.
+
+## Suggestions for the Future Research
+
+As mentioned above, this study found that clearly specified reference time points where people will be asked to report their emotions help to reduce errors and biases in emotion data collected by the ESM. When designing the ESM studies on emotions, clarifying the distinction between primary and secondary tasks would help people to report their emotions accurately.
+
+Future works could investigate the relationship between emotion changes and ESM scheduling parameters. While this study only used the ESM requests with random time intervals, the different configurations of ESM can cause adverse bias and effects (e.g., systematic bias and expectancy effects). The sampling frequency or the medium of the ESM trigger (e.g., vibration, light, and sound) can differ the level of emotion changes. Furthermore, the development of the context-aware scheduling rules can be one of the great research opportunities. The level of emotion changes can be adjusted by the level of perceived interruption. As the interruptibility studies have predicted the opportune moments, the ESM trigger algorithm may decide the timing of lowering the emotion changes by using the contextual information extracted from the mobile and wearable sensor data.
+
+
+
+---
+
+## Reference
+
+Soowon Kang, Cheul Young Park, Narae Cha, Auk Kim, and Uichin Lee. 2022. Understanding Emotion Changes in Mobile Experience Sampling. In CHI Conference on Human Factors in Computing Systems (CHI '22), April 29-May 5, 2022, New Orleans, LA, USA. Association for Computing Machinery (ACM), New York, NY, USA, 14 pages. [https://doi.org/10.1145/3491102.3501944](https://doi.org/10.1145/3491102.3501944)
+
+[CHI'22 Mobile ESM — presentation.pdf](https://drive.google.com/file/d/1L5-J3TdpwualAem1r-kqKkoFRoh6HEa2/view?usp=sharing)  
+“Understanding Emotion Changes in Mobile Experience Sampling”  
+(Presentations PPT for the ACM CHI Conference on Human Factors in Computing Systems, April 29-May 5, 2022)
+
+

@@ -1,7 +1,7 @@
 import members from "@data/members";
 
 const Writer: React.FC<{name: string}> = ({name}) => {
-    const member = members[name]
+    const member = members[name] ?? {name: "KAIST ICLab", role: ""};
     return (
         <div className="not-format inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
             <img className="mr-4 w-16 h-16 rounded-full" src={'image' in member? member.image:"/members/Anony.jpg"} alt={member.name} />

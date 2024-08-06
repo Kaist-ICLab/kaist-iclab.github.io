@@ -1,0 +1,74 @@
+---
+type: 'post'
+writer: GyuwonJung
+title: "Digital Health: Flexible Goals"
+created: "2022-05-30"
+lastModified: "2022-05-30"
+tags: []
+image: "posts/00005_001.png"
+publish: True
+pinned: False
+---
+
+# Designing a Digital Health Service that Supports Human Behavior Change with a Flexible Evaluation Method
+
+
+[Professor Uichin Lee's research team](http://ic.kaist.ac.kr/) from the [School of Computing at KAIST](https://cs.kaist.ac.kr/) and [Professor Ha-Kyung Kong](http://www.hidykong.com/) from Seattle University have developed a digital health service that promotes the user's physical activity by exploring human-friendly techniques for flexible goal achievement evaluation in intelligent agents.
+
+This research has been published at [ACM CHI 2021](https://chi2021.acm.org/), the most prestigious academic conference in the field of human-computer interaction, which was held online from May 8 to 13, 2021.
+
+"Good Enough!”: Flexible Goal Achievement with Margin-based Outcome Evaluation (Pre-recorded Presentations for the ACM CHI Virtual Conference on Human Factors in Computing Systems, May 8-13, 2021)
+
+---
+
+## Limitations in Traditional Goal-based Binary Evaluations
+
+Over the past decade, as smartphones and wearables have become widely used, a variety of mobile applications have been released to help users change their behavior. Particularly, Digital Therapeutics, rising stars in the mobile health field and targeting mental health and chronic diseases, also utilizes behavior change and habit formation as their key strategies to deal with the symptoms. They typically guide the goal-setting process and check whether the users achieve their goals, thereby enabling them to succeed in behavior change.
+
+However, traditional goal-setting based behavior change systems have provided feedback according to goal-based binary evaluations, and users will receive either a success or failure message simply based on whether the goal has been achieved. This binary judgment may be less proper for supporting users since it does not carefully consider whether the user is in the early stage of behavior change or if there are any practical issues the user might encounter during their goal achievement. Sometimes, users can feel too much pressure from the evaluation itself and give up on pursuing their change. Therefore, behavior change systems should consider not only how to set an appropriate goal but also how to evaluate the user's performance.
+
+
+
+---
+
+## Statistical Process Control in Human Behavior Change
+
+In the study, the research team applied the concept of statistical process control (SPC), which is widely used in industrial engineering, to evaluate the user's performance in goal achievement. As minor errors are permitted in the general quality control process, small failures in achieving the behavior change goals can be tolerated if the failure remains within a certain boundary (i.e., “margin”). In other words, even if the user does not completely meet the goal, the user's performance will not be assessed as a simple failure but rather as “good enough” so long as the difference in performance is smaller than the margin (Fig 1).
+
+![](/posts/00005_001.png)Fig 1. An example of the SPC-adopted flexible evaluation method. If the user's performance is within the “Good-enough Zone”, the system does not evaluate the result as a simple failure even if the goal was not completely achieved.
+
+The research team first conducted a vignette study based on a realistic scenario and found that the SPC-adopted flexible evaluation method caused the participants to evaluate themselves more positively, even if they did not fulfill the goal. Furthermore, participants did not devaluate their goal despite the evaluation being slightly relaxed.
+
+
+
+---
+
+## FlexCoach, a Digital Health Application with Flexible Evaluation
+
+Using the same evaluation method, the team developed FlexCoach, a mobile application that promotes physical activity (Fig 2). FlexCoach provides a flexible evaluation based on the step count goal and margin and supports the goal achievement (Fig 3).
+
+![](/posts/00005_002.png)  
+
+
+Fig 2. “FlexCoach”, a mobile application for promoting physical activity using the flexible evaluation method. FlexCoach calculates the margin based on the user's target step counts and provides a mission which is the target minus the margin.
+
+![](/posts/00005_003.png)  
+
+
+Fig 3. The FlexCoach's evaluation of the user's physical activity. FlexCoach assesses the performance based on the mission, not the goal. Also, it provides different messages and badges between the complete goal achievement (a) and the good-enough state (b), preventing users from being confused about the goal and the mission.
+
+From a field experiment, the team found several benefits of FlexCoach, such as reduced stress and pressure. Furthermore, the participants appreciated the recognition of the user's efforts toward the goal, and flexible evaluation served as a stepping stone in accomplishing the goal.
+
+In particular, this approach prevents users from giving up entirely when they experience failure and supports them in continuing their behavior change, owing to the positive and motivating evaluation. Based on the results, the team discussed design implications for improving the evaluation method and suggested several approaches to better support the user's behavior change.
+
+Professor Lee said, “This study showed the feasibility of improving receptivity of the digital health services by applying human-like flexible evaluation techniques that can be used in designing new AI agent-based health services.” He added, “There should be further studies in the future on engineering the receptivity to digital health services.”
+
+
+
+---
+
+## Reference
+
+Gyuwon Jung, Jio Oh, Youjin Jung, Juho Sun, Ha-Kyung Kong, and Uichin Lee. 2021.**“Good Enough!”: Flexible Goal Achievement with Margin-based Outcome Evaluation**. In Proceedings of the 2021 CHI Conference on Human Factors in Computing Systems (CHI ‘21). Association for Computing Machinery, New York, NY, USA, Article 222, 1-15. [https://doi.org/10.1145/3411764.3445608](https://dl.acm.org/doi/10.1145/3411764.3445608)
+
+

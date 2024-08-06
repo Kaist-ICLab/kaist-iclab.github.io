@@ -1,0 +1,123 @@
+---
+type: 'post'
+writer: JoonyoungPark
+title: "Tiny Money for Health"
+created: "2023-05-31"
+lastModified: "2023-05-31"
+tags: ['HCI', 'research', 'health']
+image: "posts/00014_001.png"
+publish: True
+pinned: False
+---
+
+
+> How can tiny monetary rewards motivate  
+> behavior change for health and well-being?
+
+## **Intro**
+
+Professor Uichin Lee's research team studied the just-in-time intervention mechanism that can promote user engagement in health and well-being by utilizing micro-financial incentives.
+
+This study was presented at ACM CHI 2021, the most prestigious academic conference in the field of human-computer interaction, held online from May 8-13, 2021.
+
+\<GoldenTime: Exploring System-Driven Timeboxing and Micro-Financial Incentives for Self-Regulated Phone Use. This video introduces the research findings of the research team presented at ACM CHI 2021.\> ([YouTube](https://youtu.be/oVSeVFfBhQE))
+
+## **Changes in the payment method of financial incentives**
+
+Is there anyone who hates money? Probably not. In our present society, there's a belief that money makes everything possible. Money has the power to move people. Hence, money has been utilized in various prior studies on behavioral change, including behavioral psychology. There were various incentives for behavioral change, such as badges[1], levels[2], and reward points[3], but using financial incentives was one of the most attractive and popular strategies to lead people to change their behavior[4].
+
+The research team explored a new attempt at using financial incentives for behavior change. Unlike traditional approaches, the team leveraged “micro-financial incentives” to promote behavioral changes, by immediately giving micro rewards after successfully making small changes.
+
+### **(1) The emergence of the 'Micro-Incentives' concept**
+
+Despite the well-known benefits of financial incentives, previous studies have mainly focused on methods of providing large amounts of incentives at specific times (e.g., at the end of an experiment) or events (e.g., goal achievements after a month-long participation)[5]. One limitation of this approach is that it is difficult to immediately provide rewards when a user achieves a goal or performs an intended behavior. In the past, there was a lack of technical support that enable fine-grained tracking of user behaviors in real-time. That's why prior studies on financial incentives were not able to explore micropayments based on tracking small behavior changes.  
+
+![](/posts/00014_001.png)Figure 1. Positive behavior change process to achieve goalsIt is widely known that achieving goals begins with small steps[6] (see Figure 1), and thus, previous studies on behavior change have emphasized that immediate feedback on such small changes is important to sustain goal achievement[7,8]. It's important to explore a mechanism that can pay micro incentives for small behavior changes by closely tracking user behaviors in real-time (see Figure 2).  
+
+![](/posts/00014_002.png)Figure 2. Providing instant feedback for positive changes with micro-incentivesThe 'micro-incentive mechanism' refers to a strategy that tracks real-time changes in behavior and sets incentives adaptively and flexibly according to the behavioral results. This approach encourages and rewards people for reaching the next milestone by setting several milestones for target behaviors in the context of system-driven just-in-time (JIT) interventions where the mobile systems track user behaviors in real-time. Here, system-driven means that the system takes the initiative and provides interventions to the user, and JIT intervention refers to proactively delivering interventions by detecting the user's problematic behavior or situation in real-time. For example, system-driven JIT interventions can detect smoking-related problem behaviors or signs in real-time in smokers and proactively provide interventions before smoking behaviors occur.
+
+### **(2) Unexplored micro-incentive payment method: Loss framing**
+
+A strategy that utilizes financial incentives for achieving goals is based on behavior psychology theory[9]. The theory explains that a behavior can be manipulated to increase or decrease the probability that it will occur by providing or removing certain stimuli (e.g., rewards) after it has occurred[9]. The theory defined this process of learning behavior as 'operant conditioning.' In operant conditioning, a strategy that increases the probability of a behavior is called reinforcement, and a strategy that decreases the probability is called punishment (see Figure 3).  
+
+![](/posts/00014_003.png)Figure 3. Type of operant conditioning\*Source: [https://mentalhealthathome.org/2018/11/23/what-is-operant-conditioning/](https://mentalhealthathome.org/2018/11/23/what-is-operant-conditioning/)
+
+Operant conditioning can provide or remove stimuli for behavioral outcomes to increase or decrease the likelihood of the behavior occurring. Accordingly, there are four types of operant conditioning that are possible; i.e., positive reinforcement, negative reinforcement, positive punishment, and negative punishment. (For more information about operant conditioning, see the link below)
+
+[https://en.wikipedia.org/wiki/Operant_conditioning](https://en.wikipedia.org/wiki/Operant_conditioning)
+
+Offering financial incentives for achieving a goal is an example of 'positive reinforcement' in operant conditioning. It increases the probability of the target behavior by providing a stimulus called a financial incentive after the behavior is performed. In research on incentives, this incentive payment frame is called Gain. The Gain frame provides incentives whenever target behavior is performed.
+
+In contrast, we can consider an alternative method of operant conditioning; 'negative punishment.' The 'negative punishment' strategy reduces the probability of behavior failure by removing financial incentives for failure to perform the target behavior. In studies of financial incentives, this payment frame is called Loss. The Loss frame removes the incentives as a penalty whenever target behavior is failed. It is important to note that in the Loss frame, the total incentive amount must be paid in advance to remove the incentives when a user fails to do the target behavior.
+
+Although the two frames differ, the monetary value for achieving/missing a goal is the same. That's why we used the term `frame' to represent a method for using financial incentives. Let's take a look at an example. Suppose you are designing an incentive system that pays users $0.10 every hour they walk 5 minutes or longer. The system operates from 9 a.m. to 7 p.m., for a total of 10 hours a day. If the incentive is paid by the Gain frame, the system will pay $0.1 every hour the user walks for more than 5 minutes. Incentives are not paid for walking for less than 5 minutes.
+
+Let's take a look at the Loss frame. Unlike the Gain frame, in the Loss frame, the system pays the maximum amount of incentives that can be paid to the user in advance. In this example, the user can earn $0.1 every hour, and the system runs for a total of 10 hours (9 AM to 6 PM), so $1 ($0.1 \* 10 hours) is prepaid to the user. After that, the system deducts $0.1 for every hour the user fails to walk for more than 5 minutes. Incentives are not deducted for walking more than 5 minutes. Here, the monetary value of walking for more than 5 minutes is equal to $0.1. In both incentive payment methods, $1 is paid when the user achieves all walking behaviors of at least 5 minutes for 10 hours.
+
+The two frames have the same purpose: they are strategies that ultimately lead to behavior to achieve a goal, but the methods differ in incentive payment.
+
+According to behavioral economics, it can be hypothesized that the Loss method can lead to the desired behavioral change better than the Gain method[10]. The Loss payment mechanism consists of 'advance payment of the total incentives that can be received and deduction in case of failure to achieve the target.' From a behavioral economics point of view, the two configurations can be seen as combining the 'Endowment effect' and 'Loss aversion.'
+
+![](/posts/00014_004.png)Figure 4. The concept of the Endowment effect\*Source: [https://twitter.com/BVANudgeConsult/status/1468898243476082692](https://twitter.com/BVANudgeConsult/status/1468898243476082692)
+
+![](/posts/00014_005.png)Figure 5. The concept of Loss aversion\*Source: [https://fqmom.com/loss-aversion-affects-love-life/01-loss-aversion-principle/](https://fqmom.com/loss-aversion-affects-love-life/01-loss-aversion-principle/)
+
+The endowment effect refers to the phenomenon of placing a higher value on what one owns (see Figure 4). This is a concept that describes the tendency to value things you own more than things you do not own. Loss aversion is a phenomenon in which losses are perceived as greater than gains for the same amount or cost (see Figure 5). This explains the psychological phenomenon in which the pain from a loss is greater than the pleasure from a gain, although the monetary value is the same. The Loss payment mechanism combines the endowment effect of the total amount of incentives paid in advance with the loss aversion due to incentives deducted whenever the goal is not achieved, making users perceive even 'small incentive deductions' as large losses and thereby promoting goal achievement. (You can also refer to the detailed concept of the endowment effect and loss aversion through the link below.)  
+
+Endowment effect: [https://en.wikipedia.org/wiki/Endowment_effect](https://en.wikipedia.org/wiki/Endowment_effect)
+
+Loss aversion: [https://en.wikipedia.org/wiki/Loss_aversion](https://en.wikipedia.org/wiki/Loss_aversion)
+
+## **GoldenTime: An Application of Micro-financial Incentives for 'Digital Well-being'**
+
+The research team conducted a user study to evaluate the effectiveness of different micro-financial incentive payment mechanisms in digital well-being scenarios. They designed and evaluated a JIT intervention mechanism utilizing micro-financial incentives to promote phone use regulation. The just-in-time intervention mechanism is designed to operate under system-driven timeboxing. Timeboxing is a time management strategy that schedules tasks by establishing a fixed time slot. System-driven timeboxing starts the timebox on the hour every hour, calculates the user's cumulative phone usage time in units of the timebox (1 hour), and regards usage behaviors exceeding 10 minutes as a regulation failure (see Figure 6).  
+
+![](/posts/00014_006.png)Figure 6. System-driven Timeboxing operationA JIT intervention mechanism provides a small incentive for phone use behaviors of 10 minutes or less per hour. The research team designed two incentive payment methods, the Gain and Loss frames (see Figure 7). In the Gain frame, a small incentive is given for each success of regulation, and in the Loss frame, a small incentive is deducted for each failure of self-regulation. In order to set the same incentive cost for both frames, the maximum incentive amount that can be received during the experiment period was paid in advance in the Loss frame.  
+
+![](/posts/00014_007.png)Figure 7. Two different micro-financial incentives mechanismsUnder system-driven timeboxing, the intervention system delivers a warning message for phone usage behavior. Specifically, when the cumulative phone usage time reaches 9 minutes every hour, a warning notification about getting or losing the incentive amount is provided. When the usage time reaches 10 minutes, a notification that the intervention action has failed due to 10 minutes of usage is provided. Due to the different incentive payment mechanisms, the intervention messages presented to users in the two systems were also designed differently (see Figure 8).  
+
+![](/posts/00014_008.png)Figure 8. Two different intervention message frames (Top: warning, Bottom: regulation failure)The research team then conducted a 4-week user study with 210 college students to investigate the effectiveness of the proposed system based on different incentive payment mechanisms. Through the between-group design, two experimental groups, Gain and Loss, and one control group were designed to experience different incentive payment mechanisms. Phone usage time data was collected. In addition, a qualitative analysis was performed on how the two financial incentive mechanisms affected users' phone regulation behavior and user experience over time. At the end of the experiment, interviews were conducted to investigate the user experience of intervention mechanisms.
+
+## **Different behavioral changes according to the different mental models of two incentive mechanisms**
+
+The research team's experiment showed that the time spent using the phone in the Loss group significantly changed during the intervention periods. During the intervention period, the Loss group's average daily phone use time decreased significantly compared to the other two groups.
+
+In interviews, the majority of users in the Loss group noted that through self-reflection on the incentives lost to abstinence failures, they perceived monetary value for regulation over time. The Gain group also recognized the monetary value of regulation through a sense of achievement for obtained incentives due to the regulation's success, but on the other hand, they devaluated the monetary value of regulation by recognizing the small incentive as an infinite opportunity in the repetitive micro-financial incentives mechanism.
+
+In-depth analysis through interviews revealed that the conflicting behavioral results of the two groups resulted from different understandings of incentive payment mechanisms (known as mental models of incentive systems). The Loss frame formed a mental model of 'usage fee' for the deduction of small incentives, whereas the Gain frame formed a mental model of 'unlimited opportunities' for the small incentives missed.
+
+## **Towards a mechanism for sustaining health and well-being in the long term**
+
+Dr. Joonyoung Park, the lead author, said, “The proposed micro-financial incentives mechanism can be applied to various health and well-being services to lead to positive behavioral changes in people effectively.” He further noted, “To support long-term behavior engagement with health and well-being, follow-up studies on context-aware micro-incentive mechanisms that adaptively set optimal incentive amounts in various contexts for individuals should be conducted.”
+
+In addition, he pointed out that sustaining behavior change for health and well-being depends on the user's receptivity to the intervention and emphasized the need for exploratory research on various personality traits and factors that affect engagement for JIT interventions.
+
+
+
+---
+
+Written by Joonyoung Park (jypark@kse.kaist.ac.kr)
+
+## Reference
+
+[1] D. Gibson, N. Ostashewski, K. Flintoff, S. Grant, and E. Knight, “Digital badges in education,” Education and Information Technologies, vol. 20, no. 2, pp. 403-410, 2015.
+
+[2] J. Hamari and J. Koivisto, “working out for likes”: An empirical study on social influence in exercise gamification,” Computers in Human Behavior, vol. 50, pp. 333-347, 2015.
+
+[3] J. A. Cafazzo, M. Casselman, N. Hamming, D. K. Katzman, and M. R. Palmert, “Design of an mhealth app for the self-management of adolescent type 1 diabetes: a pilot study,” Journal of medical Internet research, vol. 14, no. 3, p. e2058, 2012.
+
+[4] H. Jee, “Review of researches on smartphone applications for physical activity promotion in healthy adults,” Journal of exercise rehabilitation, vol. 13, no. 1, p. 3, 2017.
+
+[5] M. Musthag, A. Raij, D. Ganesan, S. Kumar, and S. Shiffman, “Exploring micro-incentive strategies for participant compensation in high-burden studies,” in Proceedings of the 13th international conference on Ubiquitous computing, pp. 435-444, 2011.
+
+[6] B. J. Fogg, Tiny Habits: The Small Changes That Change Everything. 125 High St, Boston, MA 02110: Houghton Mifflin Harcourt, 2019.
+
+[7] I. Haapala, N. C. Barengo, S. Biggs, L. Surakka, and P. Manninen, “Weight loss by mobile phone: a 1-year effectiveness study,” Public health nutrition, vol. 12, no. 12, pp. 2382-2391, 2009.
+
+[8] S. Darby et al., “The effectiveness of feedback on energy consumption,” A Review for DEFRA of the Literature on Metering, Billing and direct Displays, vol. 486, no. 2006, p. 26, 2006.
+
+[9] Skinner, Burrhus F. “Operant behavior.” American psychologist 18.8 (1963): 503.
+
+[10] Kahneman, Daniel, Jack L. Knetsch, and Richard H. Thaler. “Anomalies: The endowment effect, loss aversion, and status quo bias.” Journal of Economic perspectives 5.1 (1991): 193-206.
+
+
