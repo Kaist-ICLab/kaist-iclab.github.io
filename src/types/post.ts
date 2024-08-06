@@ -6,6 +6,7 @@ export interface PostProp {
     lastModified?: string,
     title: string,
     image: string,
+    text: string,
     publish: boolean,
     tags?: string[],
     content: string,

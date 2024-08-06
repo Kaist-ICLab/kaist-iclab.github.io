@@ -21,7 +21,7 @@ const Post: React.FC<PostProp> = (post) => {
                     ))}
                 </div>
                 <p className="text-base font-normal text-gray-500 eCx_6PNzncAD5yo7Qcic mt-3 line-clamp-2">
-                    {post.content}
+                    {post.text}
                 </p>
                 <a href={`/posts/${post.id}`} className="mt-3 block text-base font-medium leading-6 text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                     Read more →
