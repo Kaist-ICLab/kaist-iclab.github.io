@@ -25,7 +25,7 @@ const Project: React.FC<ProjectProp> = (project) => {
                         }
                     </div>
                     <p className="text-base font-normal text-gray-500 eCx_6PNzncAD5yo7Qcic mt-3 line-clamp-3">
-                        {project.content}
+                        {project.text}
                     </p>
                 </div>
 
