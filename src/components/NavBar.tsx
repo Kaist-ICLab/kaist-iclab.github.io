@@ -13,7 +13,7 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
     const currentPath = usePathname();
     const [showMobileNav, changeMobileNav] = useState(false);
 
-    const [isDark, setTheme] = useState(false);
+    const [isDark, setTheme] = useState(localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches));
 
     const [position, setPosition] = useState(0);
 
@@ -30,8 +30,10 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
     useEffect(() => {
         if (isDark) {
             document.documentElement.classList.add('dark');
+            localStorage.theme = 'dark'
         } else {
             document.documentElement.classList.remove('dark');
+            localStorage.theme = 'light'
         }
     }, [isDark]);
 

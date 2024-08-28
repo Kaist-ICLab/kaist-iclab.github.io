@@ -3,7 +3,7 @@ import { ProjectProp } from "@/types/post"
 const Project: React.FC<ProjectProp> = (project) => {
     return (
         <div className="not-format no-underline hover:no-underline gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row lg:items-center">
-            <a href={`/projects/${project.id}`} className="h-[240px] basis-[300px] shrink-0 rounded-lg shadow" >
+            <a href={`/projects/${project.id}`} className="h-[240px] basis-[300px] shrink-0 rounded-lg shadow bg-white" >
                 <img className="object-contain w-full h-full" src={project.image} alt="" />
             </a>
             {/* <img className="object-contain lg:w-2/5 lg:h-full rounded-lg shadow" src={project.image} /> */}
@@ -24,7 +24,7 @@ const Project: React.FC<ProjectProp> = (project) => {
                             ))
                         }
                     </div>
-                    <p className="text-base font-normal text-gray-500 eCx_6PNzncAD5yo7Qcic mt-3 line-clamp-3">
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400 mt-3 line-clamp-3">
                         {project.text}
                     </p>
                 </div>

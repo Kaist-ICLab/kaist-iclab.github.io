@@ -6,7 +6,7 @@ const Lecture: React.FC<LectureProp> = (lecture) => {
             <div className="not-format w-full max-screen-xl flex flex-col gap-10 pt-12 lg:flex-row lg:items-center">
                 <img className="self-center aspect-[4/3] w-full lg:w-auto lg:h-[300px] flex object-fit lg:rounded-lg" src={lecture.img} alt="" />
                 <div className="self-center sm:self-auto lg:items-start flex-auto flex flex-col gap-1">
-                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                    <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
                         {`${lecture.name} - ${lecture.code}`}
                     </h3>
                     <p className="text-base leading-7 text-gray-400 dark:text-gray-500">{lecture.audience}</p>

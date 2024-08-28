@@ -15,8 +15,8 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
         <div className="not-format flex flex-col sm:gap-12 sm:flex-row">
             <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={member.image} alt={member.name} />
             <div className="mt-5 self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
-                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</h3>
-                <p className="text-base leading-7 text-gray-600">{member.role}</p>
+                <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">{member.name}</h3>
+                <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{member.role}</p>
                 {member.research_interests &&
                     <div className="text-center sm:text-start mt-4 text-base leading-7 text-gray-600">
                         <strong className="font-semibold text-gray-600 dark:text-white">Research Interest</strong>
@@ -32,17 +32,17 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
                             <a 
                                 href={member[type as keyof CurrentMemberProp] as string} 
                                 className="relative text-gray-400"
-                                onClick={(event) => { type === "email" ? emailClick(event) : null }}
+                                onClick={(event) => {setIsHovered(false); type === "email" ? emailClick(event): null }}
                                 onMouseEnter={() => {setIsHovered(true); setTarget(type);}}
                                 onMouseLeave={() => {setIsHovered(false); setTarget("");}}
                             >
-                                <Icon icon={type as string} className="w-7 h-7 hover:text-blue-600 text-gray-400" />
-                                {type === "email" ? <div id="toast-success" className="z-10 bg-white opacity-100 absolute top-0 left-6 w-44 hidden">
+                                <Icon icon={type as string} className="w-7 h-7 hover:text-blue-600 text-gray-400 dark:text-gray-500" />
+                                {type === "email" ? <div id="toast-success" className="z-10 bg-transparent opacity-100 absolute top-0 left-6 w-44 hidden">
                                     <Toast />
                                 </div> : null}
                             </a>
                             {isHovered && target===type && 
-                                <span className="absolute bg-gray-400 text-white px-3 py-2 rounded-lg transition-opacity duration-300 z-50 text-sm tooltip">{type.replace("_"," ")}</span>
+                                <span className="absolute bg-gray-400 text-white p-2 rounded-lg transition-opacity duration-300 z-50 text-xs tooltip">{type.replace("_"," ")}</span>
                             }
                         </li>
                     ))}
@@ -60,14 +60,14 @@ const Alumni: React.FC<AlumniProp> = (member) => {
                 className="relative text-gray-400" 
                 onClick={(event) => { emailClick(event) }}
             >
-                <Icon icon="email" className="w-7 h-7 hover:text-blue-600 text-gray-500" />
-                <div id="toast-success" className="absolute top-0 left-6 w-44 hidden bg-white opacity-100">
+                <Icon icon="email" className="w-7 h-7 hover:text-blue-600 text-gray-500 dark:text-gray-400" />
+                <div id="toast-success" className="absolute top-0 left-6 w-44 hidden opacity-100 bg-transparent">
                     <Toast />
                 </div>
             </a>
-            <div className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</div>
+            <div className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-50">{member.name}</div>
         </div>
-        <div className="text-base leading-7 text-gray-600">{member.affiliation ?? ""}</div>
+        <div className="text-base leading-7 text-gray-600 dark:text-gray-300">{member.affiliation ?? ""}</div>
     </div>
     )
 }
@@ -85,7 +85,7 @@ const emailClick = async (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
 }
 
 const Toast = () => {
-    return <div className="z-10 flex items-center w-full max-w-xs p-2 mb-4 text-gray-700 bg-green-50 rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+    return <div className="z-10 flex items-center w-full max-w-xs p-2 mb-4 text-gray-700 bg-green-50 rounded-lg shadow dark:text-gray-200 dark:bg-green-900" role="alert">
         <div className="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
             <Icon icon="check" className="w-5 h-5"/>
             <span className="sr-only">Check icon</span>

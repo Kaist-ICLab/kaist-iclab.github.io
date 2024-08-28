@@ -6,9 +6,9 @@ const Publication: React.FC<PublicationProp> = (publication) => {
     const slide = publication.slide ? ("/publications/slides/" + publication.slide) : undefined;
     return (
         <div className="not-format w-full max-w-screen-xl flex flex-col">
-            <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{publication.title}</h3>
-            <p className="text-sm leading-7 text-gray-600">{formatAuthors(publication.authors)}</p>
-            <p className="italic text-base leading-7 text-gray-600">{publication.venue + (publication.published === undefined || publication.published ? "" : " (To be appear)")}</p>
+            <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">{publication.title}</h3>
+            <p className="text-sm leading-7 text-gray-600 dark:text-gray-300">{formatAuthors(publication.authors)}</p>
+            <p className="italic text-base leading-7 text-gray-600 dark:text-gray-300">{publication.venue + (publication.published === undefined || publication.published ? "" : " (To be appear)")}</p>
             <div className="flex mt-1">
                 {[[paper, "paper", "blue"],
                 [slide, "slide", "yellow"],
