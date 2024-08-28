@@ -58,8 +58,8 @@ let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
         "email": "gyuna.kim@kaist.ac.kr",
         "github": "https://github.com/gn0219",
         "research_interests": [
-            "Human-Computer Interaction",
-            "Mental Health"
+            "Interactive System",
+            "Multimodal Data Analysis"
         ],
         "histories": [
             {
