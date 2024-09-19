@@ -5,6 +5,7 @@ import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeKatex from 'rehype-katex';
+import { MDXComponents } from 'mdx/types';
 
 const MDX: React.FC<{source: string}> = ({ source }) => {
     const config: MDXRemoteProps = {
@@ -25,8 +26,13 @@ const MDX: React.FC<{source: string}> = ({ source }) => {
             }
         }
     }
+    const components:MDXComponents = {
+        img: (props) => <div className="flex justify-center my-6">
+        <img {...props} className="max-w-full h-auto" />
+      </div>
+    }
     return (
-        <MDXRemote {...config} source={source}/>
+        <MDXRemote {...config} source={source} components={components}/>
     );
 };
 

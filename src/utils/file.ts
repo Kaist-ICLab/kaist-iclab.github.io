@@ -33,6 +33,7 @@ export const readMDXDir = (path: string): PostProp[] => {
     const files = fs.readdirSync(path)
     return files.map((file) => (readMDFileByPath(`${path}/${file}`)))
         .filter((post) => (post.publish))
+        .sort((a, b) => (new Date(b.lastModified).getTime() - new Date(a.lastModified).getTime()))
 }
 
 

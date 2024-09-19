@@ -3,7 +3,7 @@ export interface PostProp {
     type: "news" | "blog" | "project",
     writer: string,
     created: string,
-    lastModified?: string,
+    lastModified: string,
     title: string,
     image: string,
     text: string,
