@@ -1,6 +1,22 @@
 import { PublicationProp } from "@/components/Publication";
 
-const publications: {[key: string]: PublicationProp} = {
+const publications: { [key: string]: PublicationProp } = {
+    lee2024supporting: {
+        year: 2024,
+        title: "Supporting Interpersonal Emotion Regulation of Call Center Workers via Customer Voice Modulation",
+        doi: "https://doi.org/10.1145/3613905.3650968",
+        authors: ["Duri Lee", "Kyungmin Nam", "Uichin Lee"],
+        venue: "Extended Abstracts of the CHI Conference on Human Factors in Computing Systems",
+        paper: "lee2024supporting.pdf"
+    },
+    park2024hide: {
+        year: 2024,
+        title: "Hide-and-seek: Detecting Workers' Emotional Workload in Emotional Labor Contexts Using Multimodal Sensing",
+        doi: "https://doi.org/10.1145/3678593",
+        authors: ["Eunji Park", "Duri Lee", "Yunjo Han", "James Diefendorff", "Uichin Lee"],
+        venue: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+        paper: "park2024hide.pdf"
+    },
     kim2024navigating: {
         year: 2024,
         title: "Navigating User-System Gaps: Understanding User-Interactions in User-Centric Context-Aware Systems for Digital Well-being Intervention",
@@ -74,7 +90,7 @@ const publications: {[key: string]: PublicationProp} = {
         paper: "jung2024tutorial.pdf"
     },
     kobiljon2024SOSW: {
-        year: 2024, 
+        year: 2024,
         title: "SOSW: Stress Sensing with Off-the-Shelf Smartwatches in the Wild",
         authors: ["Kobiljon Toshnazarov, Varun Mishra, Byung Hyung Kim, Uichin Lee, Lismer Andres Caceres Najarro, Youngtae Noh"],
         doi: "https://doi.org/10.1109/JIOT.2024.3375299",
