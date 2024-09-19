@@ -60,7 +60,14 @@ const NavBar: React.FC<NavBarProps> = ({ navs }) => {
                 <div className={"w-full lg:flex lg:flex-row lg:items-center lg:gap-4 lg:w-auto lg:top-0 lg:p-0 lg:static " + (showMobileNav ? "block absolute top-14 left-0 z-10 px-4" : "hidden")}>
                     <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
                         {navs.map((nav) => (
+                            nav==="blog"?
                             <li key={nav}>
+                                <a href="https://brunch.co.kr/@kaisticlab" className={inactiveTheme + " flex"} aria-current="page">
+                                    {nav}
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="w-3 h-3" width="1em" height="1em" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M22 3h7v7m-1.5-5.5L20 12m-3-7H8a3 3 0 0 0-3 3v16a3 3 0 0 0 3 3h16a3 3 0 0 0 3-3v-9"></path></svg>
+                                </a>
+                            </li>
+                            :<li key={nav}>
                                 <a href={`/${nav}`} className={currentPath === `/${nav}` ? activeTheme : inactiveTheme} aria-current="page">{nav}</a>
                             </li>
                         ))}

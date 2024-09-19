@@ -39,4 +39,5 @@ export const meta: Metadata = {
 
 }
 
-export const navs = ["projects", "publications", "members", "lectures", "galleries", "posts"]
+// export const navs = ["projects", "publications", "members", "lectures", "galleries", "posts"]
+export const navs = ["publications", "members", "lectures", "galleries", "blog"]
