@@ -1,7 +1,7 @@
 {
-  "name": "iclab-renewal",
+  "name": "kaist-iclab.github.io",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "NODE_ENV=development next dev",
     "build": "NODE_ENV=production next build",

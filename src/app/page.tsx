@@ -1,6 +1,4 @@
 import Announcement from "@/components/Announcement";
-import { AnnouncementProp } from "@/types/post";
-import { readMDXDir } from "@/utils/file";
 import main from "@data/main";
 import Image from "next/image";
 
@@ -71,12 +69,6 @@ const announcements = [
 ]
 
 const Home: React.FC = () => {
-
-  //   const announcements = (readMDXDir("data/posts")
-  //     .filter((post) => post.type === "news") as AnnouncementProp[])
-  //     .sort((a, b) => (a.pinned ? -1 : 1) - (b.pinned ? -1 : 1))
-  // console.log(announcements);
-
   return (
     <div className="m-auto w-full max-w-screen-xl bg-white dark:bg-gray-900">
       <section id="hero" className="not-format">
