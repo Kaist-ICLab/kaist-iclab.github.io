@@ -1,10 +1,18 @@
 import { LectureProp } from "@/types/lecture"
+import Image from "next/image"
 
 const Lecture: React.FC<LectureProp> = (lecture) => {
     if (lecture.type === "Main") {
         return (
             <div className="not-format w-full max-screen-xl flex flex-col gap-10 pt-12 lg:flex-row lg:items-center">
-                <img className="self-center aspect-[4/3] w-full lg:w-auto lg:h-[300px] flex object-fit lg:rounded-lg" src={lecture.img} alt="" />
+                <Image
+                    className="lg:rounded-lg w-full lg:w-auto lg:h-[300px]"
+                    src = {lecture.img ?? ""}
+                    alt = {lecture.name}
+                    height = {300}
+                    width = {300}
+                    objectFit="fit"
+                />
                 <div className="self-center sm:self-auto lg:items-start flex-auto flex flex-col gap-1">
                     <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
                         {`${lecture.name} - ${lecture.code}`}

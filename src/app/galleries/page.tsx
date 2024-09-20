@@ -1,4 +1,5 @@
 import galleries from "@data/galleries"
+import Image from "next/image"
 
 const Galleries: React.FC = () => {
 
@@ -8,7 +9,14 @@ const Galleries: React.FC = () => {
                 <div key={idx} className="flex flex-col w-full lg:max-w-1/2 px-2">
                     {galleries.filter((_, i) => i % 2 === idx).map((gallery, jdx) => (
                         <div key={jdx} className="mt-2">
-                            <img className="h-auto w-full rounded-lg" src={gallery.path} alt={gallery.name} />
+                            <Image
+                                    className="rounded-lg w-full"
+                                    width = {400}
+                                    height={400}
+                                    src={"/" + gallery.path}
+                                    alt={gallery.name}
+                                    objectFit="contain"
+                                />
                             <p className="text-center text-sm mb-1">{gallery.name}</p>
                         </div>
                     ))}

@@ -1,10 +1,17 @@
 import { ProjectProp } from "@/types/post"
+import Image from "next/image"
 
 const Project: React.FC<ProjectProp> = (project) => {
     return (
         <div className="not-format no-underline hover:no-underline gap-8 mx-auto max-w-screen-xl flex flex-col lg:flex-row lg:items-center">
-            <a href={`/projects/${project.id}`} className="h-[240px] basis-[300px] shrink-0 rounded-lg shadow bg-white" >
-                <img className="object-contain w-full h-full" src={project.image} alt="" />
+            <a href={`/projects/${project.id}`} className="relative h-[240px] basis-[300px] shrink-0 rounded-lg shadow bg-white" >
+                <Image
+                    className="object-contain w-full h-full"
+                    src= {project.image}
+                    alt = {project.title}
+                    fill
+                />
+                {/* <img className="object-contain w-full h-full" src={project.image} alt="" /> */}
             </a>
             {/* <img className="object-contain lg:w-2/5 lg:h-full rounded-lg shadow" src={project.image} /> */}
             <div>

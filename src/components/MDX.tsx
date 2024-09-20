@@ -6,8 +6,9 @@ import remarkGfm from 'remark-gfm';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeKatex from 'rehype-katex';
 import { MDXComponents } from 'mdx/types';
+import Image from 'next/image';
 
-const MDX: React.FC<{source: string}> = ({ source }) => {
+const MDX: React.FC<{ source: string }> = ({ source }) => {
     const config: MDXRemoteProps = {
         source,
         options: {
@@ -18,7 +19,7 @@ const MDX: React.FC<{source: string}> = ({ source }) => {
                     remarkGfm
                 ],
                 rehypePlugins: [
-                    [rehypePrettyCode, { }],
+                    [rehypePrettyCode, {}],
                     rehypeSlug,
                     rehypeAutolinkHeadings,
                     rehypeKatex
@@ -26,13 +27,13 @@ const MDX: React.FC<{source: string}> = ({ source }) => {
             }
         }
     }
-    const components:MDXComponents = {
-        img: (props) => <div className="flex justify-center my-6">
-        <img {...props} className="max-w-full h-auto" />
-      </div>
+    const components: MDXComponents = {
+        img: (props) => <div className="relative flex justify-center my-6 max-w-full">
+            <Image className="w-full h-auto" src={props.src ?? ""} alt={props.alt ?? ""} width={300} height={300} />
+        </div>
     }
     return (
-        <MDXRemote {...config} source={source} components={components}/>
+        <MDXRemote {...config} source={source} components={components} />
     );
 };
 

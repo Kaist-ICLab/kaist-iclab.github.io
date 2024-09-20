@@ -2,6 +2,7 @@ import Announcement from "@/components/Announcement";
 import { AnnouncementProp } from "@/types/post";
 import { readMDXDir } from "@/utils/file";
 import main from "@data/main";
+import Image from "next/image";
 
 const Home: React.FC = () => {
   const announcements = (readMDXDir("data/posts")
@@ -20,8 +21,13 @@ const Home: React.FC = () => {
               {main.description}
             </p>
           </div>
-          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="/wordcloud.png" alt="wordcloud" />
+          <div className="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <Image 
+              src="/wordcloud.png"
+              fill
+              alt="wordcloud of Interactive Computing Lab"
+              objectFit="contain"
+               />
           </div>
         </div>
       </section>

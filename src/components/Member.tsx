@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { MemberRole, MemberProp, CurrentMemberProp, AlumniProp } from "@/types/member";
 import Icon from "@/components/Icon";
+import Image from "next/image";
 
 const Member: React.FC<MemberProp> = (member) => (
     member.role === "Alumni" ? <Alumni {...(member as AlumniProp)} /> : <CurrentMember {...(member as CurrentMemberProp)} />
@@ -12,8 +13,16 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
     const [isHovered, setIsHovered] = useState<boolean>(false)
 
     return (
-        <div className="not-format flex flex-col sm:gap-12 sm:flex-row">
-            <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={member.image} alt={member.name} />
+        <div className="not-format flex flex-col sm:gap-12 sm:flex-row relative">
+            <Image 
+                className="w-52 rounded-2xl object-cover aspect-[4/5]"
+                src= {member.image}
+                alt = {member.name}
+                width={208}
+                height={400}
+                objectFit="cover"/>
+
+            {/* <img className="self-center aspect-[4/5] w-52 flex rounded-2xl object-cover" src={member.image} alt={member.name} /> */}
             <div className="mt-5 self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
                 <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">{member.name}</h3>
                 <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{member.role}</p>
