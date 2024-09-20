@@ -2,7 +2,6 @@ import galleries from "@data/galleries"
 import Image from "next/image"
 
 const Galleries: React.FC = () => {
-
     return (<div className="not-format mx-auto max-w-screen-xl">
         <div className="flex flex-wrap">
             {Array.from({ length: 4 }).map((_, idx) => (
