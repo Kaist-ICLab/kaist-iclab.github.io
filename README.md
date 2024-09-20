@@ -26,9 +26,29 @@ This website keeps data, features, and UI as separate as possible for code manag
     * `/src/app`: In most cases, layout and spacing among components are defined.  
 
 
-* CI & CD: 
+* CI & CD: `/.github` contains yaml file for Github Action
 
 ## How to update/change the data?
 
 
 ## How to run locally?
+
+* Please run following codes after cloning
+```shell
+npm install
+npm run dev
+```
+
+## Things to do
+
+- [ ] Add 2024 Fall Newcomers' profile
+- [ ] Refactoring Main page
+- [ ] Refactoring Publication page
+- [ ] Use Bibtex and 7th APA style for publication
+  - [ ] supplementary will be maintained using current format
+- [ ] Refactoring Members page
+- [ ] Refactoring Galleries page
+- [ ] Refactoring Lectures page
+- [ ] Adding Post page
+  - [ ] Post Layout
+  - [ ] Post List Page
