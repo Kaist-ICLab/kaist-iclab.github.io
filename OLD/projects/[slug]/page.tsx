@@ -1,6 +1,6 @@
 import MDX from '@/components/MDX';
 import Member from '@/components/Member';
-import Writer from '@/components/Writer';
+import Writer from '@/OLDS/Writer';
 import { readMDFileByPath, readMDXDir } from '@/utils/file';
 import members from '@data/members';
 

@@ -15,7 +15,7 @@ const CurrentMember: React.FC<CurrentMemberProp> = (member) => {
     return (
         <div className="not-format flex flex-col sm:gap-12 sm:flex-row relative">
             <Image 
-                className="w-52 rounded-2xl object-cover aspect-[4/5]"
+                className="self-center w-52 rounded-2xl object-cover aspect-[4/5]"
                 src= {member.image}
                 alt = {member.name}
                 width={208}

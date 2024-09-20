@@ -1,5 +1,5 @@
 import MDX from '@/components/MDX';
-import Writer from '@/components/Writer';
+import Writer from '@/OLDS/Writer';
 import { readMDFileByPath, readMDXDir } from '@/utils/file';
 
 export async function generateStaticParams() {

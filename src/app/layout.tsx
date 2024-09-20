@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
-        <NavBar navs={navs} />
+        <NavBar/>
         <main className="relative m-auto min-h-screen px-4 pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 w-full max-w-screen-xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
           {children}
           <TopButton />
