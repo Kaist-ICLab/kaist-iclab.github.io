@@ -59,8 +59,7 @@ const lectures: LectureProp[] = [
         img: "/lectures/CS584.png",
         name: "Human-Computer Interaction",
         code: "CS584",
-        description: "This course overviews theories and design practices in HCI fields for those graduate students who are interested in conducting HCI research. "+
-            "This course covers basic principle of HCI, such as needfinding and design.",
+        description: "This course overviews theories and design practices in HCI fields for the graduate students interested in conducting HCI research. This course covers HCI research topics and research methods.",
         audience: "For Graduate Students",
         syllabuses: [
             {

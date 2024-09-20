@@ -1,5 +1,4 @@
 import { LectureProp } from "@/types/lecture"
-import Image from "next/image"
 
 const Lecture: React.FC<LectureProp> = (lecture) => {
     if (lecture.type === "Main") {
@@ -26,7 +25,7 @@ const Lecture: React.FC<LectureProp> = (lecture) => {
                         {lecture.description}
                     </p>
                     <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">
-                        To look detailed contents we cover, please take a look for syllabuses of previous years:
+                        To look for detailed contents we cover, please take a look at the syllabuses of previous years:
                     </p>
                     <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
                         {lecture.syllabuses.map((syllabus, idx) => (
