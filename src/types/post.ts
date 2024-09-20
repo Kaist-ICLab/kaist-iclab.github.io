@@ -1,6 +1,7 @@
 export interface PostProp {
     id: string,
-    type: "news" | "blog" | "project",
+    type: string,
+    // type: "news" | "blog" | "project",
     writer: string,
     created: string,
     lastModified: string,
@@ -10,11 +11,12 @@ export interface PostProp {
     publish: boolean,
     tags?: string[],
     content: string,
-    [key: string]: any
+    [key: string]: any,
+    path: string
 }
 
 export interface AnnouncementProp extends PostProp {
-    type: "news",
+    // type: "news",
     pinned: boolean
 }
 

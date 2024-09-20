@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://ic.kaist.ac.kr
-
-# Sitemaps
-Sitemap: https://ic.kaist.ac.kr/sitemap.xml

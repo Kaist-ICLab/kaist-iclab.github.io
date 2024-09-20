@@ -1,6 +1,6 @@
 const main = {
-  title: "Ubiquitous Computing for Emotional Supports",
-  description: "Using mobile devices and wearables to provide emotional supports based on context-aware computing.",
+  title: "Ubiquitous Computing to Support Wellbeing",
+  description: "Using mobile devices and wearables to provide support for wellbeing based on context-aware computing.",
   researhAreaDescription: "We are studying Human-Computer Interaction(HCI), especially affective computing on mobile devices. We always strive to make not only scholarly contributions but also social impact by making our findings and service available.",
   features: [{
     title: "Sense & Collect",
