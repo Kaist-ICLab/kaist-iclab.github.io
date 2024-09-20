@@ -49,6 +49,3 @@ npm run dev
 - [ ] Refactoring Members page
 - [ ] Refactoring Galleries page
 - [ ] Refactoring Lectures page
-- [ ] Adding Post page
-  - [ ] Post Layout
-  - [ ] Post List Page
