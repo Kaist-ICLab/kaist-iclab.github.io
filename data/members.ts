@@ -15,6 +15,42 @@ let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "YoungseokSeo": {
+        "name": "Youngseok Seo",
+        "role": "M.S. Student",
+        "email": "ysseo0910@kaist.ac.kr",
+        "github": "https://github.com/komaseo",
+        "google_scholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&user=hzANqAEAAAAJ",
+        "research_interests": [
+            "Digital wellbeing",
+            "Behavior change"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2024.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/YoungseokSeo.jpg"
+    },
+    "DejiangZheng": {
+        "name": "Dejiang Zheng",
+        "role": "Ph.D. Student",
+        "email": "deok-kang@kaist.ac.kr",
+        "research_interests": [
+            "Mobile Computing",
+            "Human Computer Interaction"
+        ],
+        "histories": [
+            {
+                "role": "Ph.D. Student",
+                "enterance": "2024.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/DejiangZheng.jpg"
+    },
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
         "role": "M.S. Student",
@@ -898,9 +934,9 @@ let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
 
 const sortMemberByEntrance = (a: MemberProp, b: MemberProp) => {
     const findEntranceYear = (member: MemberProp) => {
-        for(let role of memberRoles){
+        for (let role of memberRoles) {
             const idx = member.histories.findIndex((history) => history.role === role);
-            if(idx !== -1)
+            if (idx !== -1)
                 return member.histories[idx].enterance;
         }
         throw new Error("Member does not have entrance year");
