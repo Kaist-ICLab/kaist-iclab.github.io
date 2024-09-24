@@ -5,7 +5,7 @@ import publications from "@data/publications";
 const Publications: React.FC = () =>  {
   const years = getYears()
   return (
-    <div className="max-w-screen-xl w-full m-auto flex flex-col items-center">
+    <div className="max-w-screen-xl pt-8 pb-16 lg:pt-16 lg:pb-24 w-full m-auto flex flex-col items-center">
       <h2>Publications</h2>
       <div className="w-full flex flex-col gap-12">
         {years.map((year) => {

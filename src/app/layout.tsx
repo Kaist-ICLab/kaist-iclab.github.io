@@ -22,7 +22,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className} suppressHydrationWarning={true}>
         <NavBar/>
-        <main className="relative m-auto min-h-screen px-4 pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 w-full max-w-screen-xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+        {/* <main className="relative m-auto min-h-screen px-4 pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 w-full max-w-screen-xl format format-sm sm:format-base lg:format-lg format-blue dark:format-invert"> */}
+        <main className={["relative min-h-screen w-full m-auto max-w-screen-xl px-4"
+          ,"format format-sm sm:format-base md:format-lg lg:format-xl xl:format-2xl format-blue dark:format-invert"
+        ].join(" ")}> 
           {children}
           <TopButton />
         </main>

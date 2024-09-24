@@ -2,7 +2,7 @@ import galleries from "@data/galleries"
 import Image from "next/image"
 
 const Galleries: React.FC = () => {
-    return (<div className="not-format mx-auto max-w-screen-xl">
+    return (<div className=" pt-8 pb-16 lg:pt-16 lg:pb-24 not-format mx-auto max-w-screen-xl">
         <div className="flex flex-wrap">
             {Array.from({ length: 4 }).map((_, idx) => (
                 <div key={idx} className="flex flex-col w-full lg:max-w-1/2 px-2">

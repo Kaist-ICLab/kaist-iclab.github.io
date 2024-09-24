@@ -70,53 +70,70 @@ const announcements = [
 
 const Home: React.FC = () => {
   return (
-    <div className="m-auto w-full max-w-screen-xl bg-white dark:bg-gray-900">
-      <section id="hero" className="not-format">
-        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div className="mr-auto place-self-center lg:col-span-7">
-            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-black dark:text-white">
-              {main.title}
+    <div className="m-auto w-full not-format flex flex-col gap-20 pt-12">
+      <section id="hero">
+        <div className="grid max-w-screen-xl mx-auto lg:gap-8 xl:gap-0 lg:grid-cols-12">
+          <div className="m-auto place-self-center lg:col-span-7">
+            <h1 className="mb-4 
+              text-4xl md:text-5xl xl:text-6xl
+              font-extrabold tracking-tight leading-none 
+              text-black dark:text-white">
+              Ubiquitous Computing to Support Wellbeing
             </h1>
-            <p className="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
-              {main.description}
+            <p className="mb-6 lg:mb-8 
+              md:text-lg lg:text-xl
+              text-gray-500 dark:text-gray-400">
+              Providing personalized wellbeing support through context-aware computing and machine learning, leveraging mobile, wearable, and IoT technologies.
             </p>
           </div>
           <div className="relative hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <Image 
+            <Image
               src="/wordcloud.png"
-              fill
-              alt="wordcloud of Interactive Computing Lab"
-              objectFit="contain"
-               />
+              className="not-format lg:mt-0 w-full h-full object-contain"
+              width={624}
+              height={400}
+              alt="The Wordcloud of Interactive Computing Lab"
+            />
           </div>
         </div>
       </section>
-      <section id="research-area" className="not-format mt-10">
-        <div className="py-8 px-4 mx-auto max-w-screen-xl text-center sm:py-16 sm:px-6">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Our Research Area</h2>
-          <p className="text-gray-500 sm:text-xl dark:text-gray-400">
-            {main.researhAreaDescription}
-          </p>
-          <div className="mt-8 sm:mt-12 md:grid lg:grid-cols-3 sm:gap-12">
-            {
-              main.features.map((feature, idx) => <div key={idx} className="mt-4">
-                <svg className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  {feature.icon}
-                </svg>
-                <h3 className="mb-2 text-xl font-bold dark:text-white text-black">{feature.title}</h3>
-                <p className="m-auto max-w-96 mb-4 text-base text-gray-500 dark:text-gray-400">
-                  {feature.description}
-                </p>
-              </div>)
-            }
-          </div>
+      <section id="research-area" className="text-center">
+        <h2 className="mb-4
+             text-2xl md:text-3xl xl:text-4xl
+             tracking-tight font-extrabold 
+             text-black dark:text-white">
+          Our Research Area
+        </h2>
+        <p className="mb-6 lg:mb-8 
+            md:text-lg lg:text-xl 
+            text-gray-500 dark:text-gray-400">
+          Our research focuses on Human-Computer Interaction (HCI) and Ubiquitous Computing (UbiComp).
+          <br />
+          Major research areas include (1) Cognitive and Affective Computing, (2) IoT Data Science and Platform Research, and (3) Digital Health and Wellbeing Interventions.  We strive not only to make scholarly contributions but also to create a social impact by making our findings and services accessible.
+        </p>
+        <div className="mt-8 sm:mt-12 md:grid lg:grid-cols-3 sm:gap-12">
+          {
+            main.features.map((feature, idx) => <div key={idx} className="mt-4">
+              <svg className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                {feature.icon}
+              </svg>
+              <h3 className="mb-2 text-xl font-bold dark:text-white text-black">{feature.title}</h3>
+              <p className="m-auto max-w-96 mb-4 text-base text-gray-500 dark:text-gray-400">
+                {feature.description}
+              </p>
+            </div>)
+          }
         </div>
       </section>
-      <section id="announcement" className="mt-10 bg-white dark:bg-gray-900 max-w-screen-xl px-4 py-8 mx-auto lg:px-6 sm:py-16">
-        <h2 className="text-center">
+      <section id="announcement" className="mt-20 mb-20 text-center">
+        <h2 className="mb-4
+             text-2xl md:text-3xl xl:text-4xl
+             tracking-tight font-extrabold 
+             text-black dark:text-white">
           Announcement
         </h2>
-        <div className="border-y px-4 pt-5 pb-8 gap-5 mx-auto mt-8 flex flex-col">
+        <div className="mx-auto mt-8 flex flex-col
+          border-y px-4 py-5 gap-5">
           {announcements.map((announcement, idx) => <Announcement {...announcement} key={idx} />)}
         </div>
       </section>

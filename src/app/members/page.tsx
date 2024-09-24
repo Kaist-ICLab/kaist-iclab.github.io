@@ -4,7 +4,7 @@ import { memberRoles } from "@/types/member";
 
 const Members: React.FC = () => {
     return (
-        <div className="max-w-screen-xl w-full m-auto flex flex-col items-center md:items-start">
+        <div className="max-w-screen-xl pt-8 pb-16 lg:pt-16 lg:pb-24 w-full m-auto flex flex-col items-center md:items-start">
             <h2>Members</h2>
             <div className="pt-8 flex flex-col gap-4">
                 {
