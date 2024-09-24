@@ -1,6 +1,14 @@
 import { PublicationProp } from "@/components/Publication";
 
 const publications: { [key: string]: PublicationProp } = {
+    zhang2024reproducible: {
+        year: 2024,
+        title: "A Reproducible Stress Prediction Pipeline with Mobile Sensor Data",
+        doi:  "https://doi.org/10.1145/3678578",
+        authors: ["Panyu Zhang", "Gyuwon Jung", "Jumabek Alikhanov", "Uzair Ahmed", "Uichin Lee"],
+        venue: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+        paper: "zhang2024reproducible.pdf"
+    },
     lee2024supporting: {
         year: 2024,
         title: "Supporting Interpersonal Emotion Regulation of Call Center Workers via Customer Voice Modulation",
