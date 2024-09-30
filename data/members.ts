@@ -1,6 +1,33 @@
-import { AlumniProp, CurrentMemberProp, MemberProp, memberRoles } from "@/types/member";
+export const memberRoles = [
+    "Professor", 
+    "Post Doctoral Researcher", 
+    "Ph.D. Student", 
+    "M.S. Student", 
+    "Alumni"
+] as const;
 
-let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
+export type MemberRole = typeof memberRoles[number];
+
+const currentMemberRole = memberRoles.filter((role) => role !== "Alumni")
+
+export interface MemberInfo {
+    name: string;
+    role: MemberRole;
+    email: string;
+    image?: string;
+    research_interests?: string[];
+    google_scholar?: string;
+    github?: string;
+    homepage?: string;
+    affiliation?: string;
+    histories: {
+        role: string;
+        enterance: string;
+        graduation?: string;
+    }[];
+}
+
+let members: { [key: string]: MemberInfo } = {
     "UichinLee": {
         "name": "Uichin Lee",
         "role": "Professor",
@@ -932,8 +959,8 @@ let members: { [key: string]: AlumniProp | CurrentMemberProp } = {
     }
 }
 
-const sortMemberByEntrance = (a: MemberProp, b: MemberProp) => {
-    const findEntranceYear = (member: MemberProp) => {
+const sortMemberByEntrance = (a: MemberInfo, b: MemberInfo) => {
+    const findEntranceYear = (member: MemberInfo) => {
         for (let role of memberRoles) {
             const idx = member.histories.findIndex((history) => history.role === role);
             if (idx !== -1)
@@ -944,6 +971,9 @@ const sortMemberByEntrance = (a: MemberProp, b: MemberProp) => {
     return findEntranceYear(a).localeCompare(findEntranceYear(b));
 }
 
-members = Object.fromEntries(Object.entries(members).sort((a, b) => sortMemberByEntrance(a[1], b[1])));
+const alumnis = Object.values(members).filter(member => member.role === "Alumni")
+    .sort((a,b) => sortMemberByEntrance(a, b));
+const currentMembers = Object.values(members).filter(member => member.role !== "Alumni")
+    .sort((a,b) => sortMemberByEntrance(a, b));
 
-export default members;
+export { alumnis, currentMembers, currentMemberRole};

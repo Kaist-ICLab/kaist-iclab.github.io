@@ -14,12 +14,13 @@ const isExternalLink = (href: string): Boolean => {
 
 const Link: React.FC<{
     href: string;
+    newpage?: boolean;
     className?: string;
     children: React.ReactNode;
-}> = ({ href, children, className }) => (
+}> = ({ href, children, className, newpage }) => (
     isExternalLink(href) ?
         <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{children}</a>:
-        <a href={href} className={className}>{children}</a>
+        <a href={href} target={newpage? "_blank": "_self"} className={className}>{children}</a>
 )
 
 

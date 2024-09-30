@@ -40,14 +40,11 @@ npm run dev
 ```
 
 ## Things to do
-
-- [ ] Add 2024 Fall Newcomers' profile
 - [ ] Refactoring Main page
 - [ ] Refactoring Publication page
 - [ ] Use Bibtex and 7th APA style for publication
   - [ ] supplementary will be maintained using current format
 - [ ] Refactoring Members page
-- [ ] Gallery does not hold
 
 ## How to add data?
 
@@ -63,3 +60,9 @@ The path should be `/galleries/[Name]` (i.e., omit `/public`), and you should ad
 
 The metadata of lectures are stored as a list in `/data/lectures.ts`.
 Please update syllabus of the recent semester of the course you want to update.
+You should add the recent syllabus as a first item of list because syllabus will be displayed based on the order of list.
+
+### Update/Add Members
+
+
+The metadata of gallery images are stored as a list in `/data/galleries.ts`.

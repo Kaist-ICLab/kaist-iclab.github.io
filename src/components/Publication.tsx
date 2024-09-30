@@ -1,5 +1,6 @@
 import { PublicationProp } from "@/types/publication";
 import { formatAuthors } from "@/utils/process";
+import Link from "@/components/Link";
 
 const Publication: React.FC<PublicationProp> = (publication) => {
     const paper = publication.paper ? ("/publications/papers/" + publication.paper) : undefined;
@@ -14,9 +15,9 @@ const Publication: React.FC<PublicationProp> = (publication) => {
                 [slide, "slide", "yellow"],
                 [publication.code, "code", "gray"],
                 [publication.video, "video", "red"]].map(([link, type, color]) => (
-                    link && <a target="_blank" href={link} key={type} className={`bg-${color}-100 text-${color}-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-${color}-900 dark:text-${color}-300`}>
+                    link && <Link href={link} newpage key={type} className={`bg-${color}-100 text-${color}-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-${color}-900 dark:text-${color}-300`}>
                         {type}
-                    </a>
+                    </Link>
                 ))}
             </div>
         </div>
