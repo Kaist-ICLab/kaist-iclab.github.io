@@ -47,5 +47,15 @@ npm run dev
 - [ ] Use Bibtex and 7th APA style for publication
   - [ ] supplementary will be maintained using current format
 - [ ] Refactoring Members page
-- [ ] Refactoring Galleries page
 - [ ] Refactoring Lectures page
+- [ ] Gallery does not hold
+
+## How to add data?
+
+To add data, you can follow the instructions below directly on github, but I recommend you to run it locally to check whether it is added as you intended.
+
+### Adding Gallery Image
+
+The metadata of gallery images are included as a list in `/data/galleries.ts`.
+Please (1) add image in `/public/galleries/[NAME]` and (2) add name and its path in `/data/galleries.ts`.
+The path should be `/galleries/[Name]` (i.e., omit `/public`)
