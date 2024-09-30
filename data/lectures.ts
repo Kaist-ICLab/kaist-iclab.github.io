@@ -1,9 +1,18 @@
-import { LectureProp } from "@/types/lecture";
+export interface SyllabusInfo {
+    link: string;
+    semester: string;
+}
 
-const lectures: LectureProp[] = [
-    {
-        type: "Main",
-        img: "/lectures/CS374.png",
+export interface LectureInfo {
+    name: string;
+    code: string;
+    description: string;
+    audience: string;
+    syllabuses: SyllabusInfo[];
+}
+
+const lectures: LectureInfo[] = [
+    { 
         name: "Introduction to Human-Computer Interaction",
         code: "CS374",
         description: "HCI deals with the design of systems to support the ways people communicate with computers. " + 
@@ -21,8 +30,6 @@ const lectures: LectureProp[] = [
         ]
     },
     {
-        type: "Main",
-        img: "/lectures/CS481.png",
         name: "Data Visualization",
         code: "CS481",
         description: "Data visualization helps scientists interact with data and supports extract insights, test hypotheses, and tell data stories for decision making."+
@@ -36,8 +43,6 @@ const lectures: LectureProp[] = [
         ]
     },
     {
-        type: "Main",
-        img: "/lectures/CS565.png",
         name: "IoT Data Science",
         code: "CS565/DS565",
         description: "Computer is in everywhere (i.e., IoT), and able to sense users through various sensors. " +
@@ -55,8 +60,6 @@ const lectures: LectureProp[] = [
         ]
     },
     {
-        type: "Main",
-        img: "/lectures/CS584.png",
         name: "Human-Computer Interaction",
         code: "CS584",
         description: "This course overviews theories and design practices in HCI fields for the graduate students interested in conducting HCI research. This course covers HCI research topics and research methods.",

@@ -47,7 +47,6 @@ npm run dev
 - [ ] Use Bibtex and 7th APA style for publication
   - [ ] supplementary will be maintained using current format
 - [ ] Refactoring Members page
-- [ ] Refactoring Lectures page
 - [ ] Gallery does not hold
 
 ## How to add data?
@@ -56,6 +55,11 @@ To add data, you can follow the instructions below directly on github, but I rec
 
 ### Adding Gallery Image
 
-The metadata of gallery images are included as a list in `/data/galleries.ts`.
+The metadata of gallery images are stored as a list in `/data/galleries.ts`.
 Please (1) add image in `/public/galleries/[NAME]` and (2) add name and its path in `/data/galleries.ts`.
-The path should be `/galleries/[Name]` (i.e., omit `/public`)
+The path should be `/galleries/[Name]` (i.e., omit `/public`), and you should add the recent image as a first item of list because gallery will be displayed based on the order of list.
+
+### Update Syllabus of Lecture
+
+The metadata of lectures are stored as a list in `/data/lectures.ts`.
+Please update syllabus of the recent semester of the course you want to update.
