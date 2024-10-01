@@ -1,5 +1,8 @@
-import main from "@data/main";
+import Link from "@/components/Link";
+import announcements from "@data/announcements";
+import { Icon } from "@iconify/react";
 import Image from "next/image";
+import React from "react";
 
 const Announcement: React.FC<{
   pinned: boolean,
@@ -8,86 +11,33 @@ const Announcement: React.FC<{
   created: string,
 }> = (announcement) => {
   return (
-      <div className="not-format inline-flex gap-2 lg:flex-row justify-between items-center">
-          {/* <a href={`/posts/${announcement.id}`} className={"not-format no-underline hover:no-underline " + (announcement.pinned? "":"ml-6")}> */}
-          <a href={announcement.path} className={"not-format no-underline hover:no-underline " + (announcement.pinned? "":"ml-6")}>
-             
-              <h3 className="text-lg text-gray-700 dark:text-white line-clamp-1">
-                  {announcement.pinned &&
-                      <svg xmlns="http://www.w3.org/2000/svg" className="float-left m-1 ml-0 h-5 w-5 text-gray-400 dark:text-gray-500" viewBox="0 0 24 24"><path fill="currentColor" d="M16 12V4h1V2H7v2h1v8l-2 2v2h5.2v6h1.6v-6H18v-2z" /></svg>
-                  }
-                  {announcement.title}
-              </h3>
-          </a>
-          <span className="hidden sm:block flex-shrink-0 text-base text-gray-600 dark:text-gray-300 font-light">{announcement.created}</span>            
-      </div>
+    <div className="not-format inline-flex gap-2 lg:flex-row justify-between items-center">
+      <Link href={announcement.path} className={"not-format no-underline hover:no-underline " + (announcement.pinned ? "" : "ml-6")}>
+        <h3 className="text-lg text-gray-700 dark:text-white line-clamp-1">
+          {announcement.pinned &&
+            <Icon icon="mdi:pin" className="float-left m-1 ml-0 h-5 w-5 text-gray-400 dark:text-gray-500" />
+          }
+          {announcement.title}
+        </h3>
+      </Link>
+      <span className="hidden sm:block flex-shrink-0 text-base text-gray-600 dark:text-gray-300 font-light">{announcement.created}</span>
+    </div>
   );
 };
 
-const announcements = [
-  {
-    type: "news",
-    writer: 'UichinLee',
-    title: '석박사&인턴모집: Prospective Students',
-    created: '2023-11-13',
-    lastModified: '2023-11-13',
-    tags: ['대학원'],
-    image: 'posts/00003_001.png',
-    publish: true,
-    pinned: true,
-    content: '\n' +
-      '# MS & PhD Programs\n' +
-      '\n' +
-      "We're looking for MS or PhD students for Fall 2024. If you're interested in pursuing MS or PhD please send an email to Prof. Lee (uclee@kaist.ac.kr) — please attach a short description of your interests, a transcript, and a resume. \n" +
-      '\n' +
-      '2024년도 석사 또는 박사과정 학생 선발합니다. (KAIST 장학생 및 국비로 선발 가능). 실험실에 관심이 있는 학생은 관심사, 성적표, 레주메를 이메일로 보내주세요. 2024년도 봄학기는 선발이 완료가 되서, 가을학기 입학 대상 학생을 고려하고 있습니다. \n' +
-      '\n' +
-      '# Internship Programs\n' +
-      '\n' +
-      "We're looking for research interns for Winter 2024. \n" +
-      '\n' +
-      'Deadline: (Extended) Monday, April 29, 2024 \n' +
-      '\n' +
-      'Internship Period: July 1-August 23, 2024\n' +
-      '\n' +
-      'Please check out our “Call for Interns” and submit your application via the Google form in the slides.\n' +
-      '\n' +
-      '2024년도 여름방학 학부생 인턴을 모집합니다. 관심있는 학생은 슬라이드에 있는 주제를 참고하셔서 온라인 신청해 주시기 바랍니다. 인턴십 토픽은 아래서 확인 가능합니다. \n' +
-      '\n' +
-      '### Summer 2024 Internship Topics\n' +
-      '\n' +
-      '[**KAIST ICLab Summer 2024 Interns - Topics**](https://docs.google.com/presentation/d/14725ju9B4f71FHOlpxqstk8ejpGCGfqBIlrbHFWjjXc/edit?usp=sharing)\n' +
-      '\n' +
-      '![](/posts/00003_001.png)  \n' +
-      '\n' +
-      '\n' +
-      '\n',
-    text: 'MS & PhD Programs\n' +
-      '\n' +
-      "We're looking for MS or PhD students for Fall 2024. If you're interested in pursuing MS or PhD please send an email to Prof. Lee (uclee@kaist.ac.kr) — please attach a short description of your interests, a transcript, and a resume.\n" +
-      '\n' +
-      '2024년도 석사 또는 박사과정 학생 선발합니다. (KAIST 장학생 및 국비로 선발 가능). 실험실에 관심이 있는 학생은 관심사, 성적표, 레주메를 이메일로 보내주세요. 2024년도 봄학기는 선발이 완료가 되서, 가을학기 입학 대상 학생을 고려하고 있습니다.\n' +
-      '\n' +
-      'Internship Programs\n' +
-      '\n' +
-      "We're looking for research interns for Winter 2024.\n" +
-      '\n' +
-      'Deadline: (Extended) Monday, April 29, 2024\n' +
-      '\n' +
-      'Internship Period: July 1-August 23, 2024\n' +
-      '\n' +
-      'Please check out our “Call for Interns” and submit your application via the Google form in the slides.\n' +
-      '\n' +
-      '2024년도 여름방학 학부생 인턴을 모집합니다. 관심있는 학생은 슬라이드에 있는 주제를 참고하셔서 온라인 신청해 주시기 바랍니다. 인턴십 토픽은 아래서 확인 가능합니다.\n' +
-      '\n' +
-      'Summer 2024 Internship Topics\n' +
-      '\n' +
-      'KAIST ICLab Summer 2024 Interns - Topics\n' +
-      '\n',
-    id: '00003',
-    path: "https://brunch.co.kr/@kaisticlab/3"
-  }
-]
+const Feature: React.FC<{
+  icon: string;
+  title: string;
+  description: string;
+}> = ({ icon, title, description }) => (
+  <div className="mt-4">
+    <Icon icon={icon} className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500" />
+    <h3 className="mb-2 text-xl font-bold dark:text-white text-black">{title}</h3>
+    <p className="m-auto max-w-96 mb-4 text-base text-gray-500 dark:text-gray-400">
+      {description}
+    </p>
+  </div>
+)
 
 const Home: React.FC = () => {
   return (
@@ -131,19 +81,25 @@ const Home: React.FC = () => {
           Our research focuses on Human-Computer Interaction (HCI) and Ubiquitous Computing (UbiComp).
           <br />
           Major research areas include (1) Cognitive and Affective Computing, (2) IoT Data Science and Platform Research, and (3) Digital Health and Wellbeing Interventions.  We strive not only to make scholarly contributions but also to create a social impact by making our findings and services accessible.
+          <br/>
+          We are conducting research with an interest in all of the following steps.
         </p>
         <div className="mt-8 sm:mt-12 md:grid lg:grid-cols-3 sm:gap-12">
-          {
-            main.features.map((feature, idx) => <div key={idx} className="mt-4">
-              <svg className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                {feature.icon}
-              </svg>
-              <h3 className="mb-2 text-xl font-bold dark:text-white text-black">{feature.title}</h3>
-              <p className="m-auto max-w-96 mb-4 text-base text-gray-500 dark:text-gray-400">
-                {feature.description}
-              </p>
-            </div>)
-          }
+          <Feature
+            title="Sense & Collect"
+            icon="material-symbols:sensors"
+            description="We work on sensing user behavior and contextual data using smartphones, wearables, and IoT devices"
+          />
+          <Feature
+            title="Explore & Analyze"
+            icon="icon-park-solid:market-analysis"
+            description="We analyze the collected data to understand wellbeing states and build predictive models through machine learning"
+           />
+          <Feature
+            title="Act & Service"
+            icon="flowbite:badge-check-solid"
+            description="We develop, evaluate, and deploy data-driven personalized wellbeing support services in the wild"
+          />
         </div>
       </section>
       <section id="announcement" className="mt-20 mb-20 text-center">
