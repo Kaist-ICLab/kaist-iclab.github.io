@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 
 export const meta: Metadata = {
     title: 'ICLab',
-    description: 'We are studying HCI, especially interest in affective computing on mobile devices.',
+    description: 'Welcome to our lab homepage! We are studying for ubiquitous computing to support personalized wellbeing through context-aware computing and machine learning, leveraging mobile, wearable, and IoT technologies.',
     keywords: ["HCI",
         "Ubiquitous Computing",
         "Affective Computing",
@@ -20,7 +20,7 @@ export const meta: Metadata = {
         locale: 'en_US',
         url: 'https://ic.kaist.ac.kr/',
         title: 'Interactive Computing Lab at KAIST',
-        description: 'We are studying HCI, especially interest in affective computing on mobile devices.',
+        description: 'Welcome to our lab homepage! We are studying for ubiquitous computing to support personalized wellbeing through context-aware computing and machine learning, leveraging mobile, wearable, and IoT technologies.',
         images: [
             {
                 url: 'https://ic.kaist.ac.kr/og-image.png',
@@ -33,11 +33,10 @@ export const meta: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: "Interactive Computing Lab at KAIST",
-        description: "We are studying HCI, especially interest in affective computing on mobile devices.",
+        description: "Welcome to our lab homepage! We are studying for ubiquitous computing to support personalized wellbeing through context-aware computing and machine learning, leveraging mobile, wearable, and IoT technologies.',",
         images: ['https://ic.kaist.ac.kr/og-image.png'],
     }
 
 }
 
-// export const navs = ["projects", "publications", "members", "lectures", "galleries", "posts"]
 export const navs = ["publications", "members", "lectures", "galleries", "blog"]
