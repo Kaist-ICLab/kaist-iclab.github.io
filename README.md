@@ -33,9 +33,6 @@ npm install
 npm run dev
 ```
 
-## Things to do
-- [ ] Refactoring Main page
-
 ## How to add data?
 
 To add data, you can follow the instructions below directly on github, but I recommend you to run it locally to check whether it is added as you intended.
@@ -61,5 +58,6 @@ For updating image, please change the image in `/pulbic/members/`.
 ### Update/Add Publications
 
 The metadata of publication will be processed from `/data/publication.bib`.
-The slide and paper should be located in `\public\publications\papers\` and `\public\publications\slides\` respectively named with citeKey.
-The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publications.ts` on `supplementaries` variable.
+Please include bibtex for new publication on there.
+The slide and paper should be located in `/public/publications/papers/` and `/public/publications/slides/` respectively named with citeKey.
+The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publicationSupplementary.ts` on `supplementaries` variable.
