@@ -15,18 +15,12 @@ The website is build based on [Next.js](https://nextjs.org/), [Tailwind CSS](htt
 This website keeps data, features, and UI as separate as possible for code management.
 
 * Data: For data that is easier to manage in a json or markdown file, such as keywords, paths, descriptions, etc are located in `/data`, and the images and files (i.e., pdf) are located in `/public`.
-    * Some data is preprocessed in `utils/preprocess.ts`
 
-* Type: For the data, we defined types on `/src/types`
-
-* Function: For the function that can be used to do formatting, loading data, and etc are defined in `/src/utils` and `/src/hooks`.
+* Function: For the function that can be used to do formatting, loading data, and etc are defined in `/src/hooks`.
 
 * UI: UI-related code can be found in the `/src/app` folder, which is used for Next.js's file system routing, and in the `/src/component` folder, where reusable components are located.
-    * `/src/components`: We haven't added any margin or padding to the top tag of the component to handle spacing among components only in `/src/app`.
-    * `/src/app`: In most cases, layout and spacing among components are defined.  
 
-
-* CI & CD: `/.github` contains yaml file for Github Action
+* CI & CD: `/.github` contains yaml file for Github Action.
 
 ## How to update/change the data?
 
@@ -41,10 +35,6 @@ npm run dev
 
 ## Things to do
 - [ ] Refactoring Main page
-- [ ] Refactoring Publication page
-- [ ] Use Bibtex and 7th APA style for publication
-  - [ ] supplementary will be maintained using current format
-- [ ] Refactoring Members page
 
 ## How to add data?
 
@@ -64,5 +54,12 @@ You should add the recent syllabus as a first item of list because syllabus will
 
 ### Update/Add Members
 
+The metadata of gallery images are stored as a list in `/data/members.ts`.
+Please update members of the newcomer or changes in metadata there.
+For updating image, please change the image in `/pulbic/members/`.
 
-The metadata of gallery images are stored as a list in `/data/galleries.ts`.
+### Update/Add Publications
+
+The metadata of publication will be processed from `/data/publication.bib`.
+The slide and paper should be located in `\public\publications\papers\` and `\public\publications\slides\` respectively named with citeKey.
+The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publications.ts` on `supplementaries` variable.
