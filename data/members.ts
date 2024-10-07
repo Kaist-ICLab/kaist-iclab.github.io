@@ -612,7 +612,7 @@ let members: { [key: string]: MemberInfo } = {
     "EugeneLee": {
         "name": "Eugene Lee",
         "role": "Alumni",
-        "email": "eugene.lee@kaist.ac.kr",
+        "email": "eugenelee@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
