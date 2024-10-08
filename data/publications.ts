@@ -74,8 +74,8 @@ const publications: {
         date,
         published: true,
         supplementary: {
-            paper: fs.existsSync(`public/publications/papers/${key}.pdf`) ? `${key}.pdf` : undefined,
-            slide: fs.existsSync(`public/publications/slides/${key}.pdf`) ? `${key}.pdf` : undefined,
+            paper: fs.existsSync(`public/publications/papers/${key}.pdf`) ? `/publications/papers/${key}.pdf` : undefined,
+            slide: fs.existsSync(`public/publications/slides/${key}.pdf`) ? `/publications/slides/${key}.pdf` : undefined,
             video: supplementaries[key]?.video,
             code: supplementaries[key]?.code,
         }
