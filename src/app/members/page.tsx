@@ -14,12 +14,12 @@ const CurrentMember: React.FC<MemberInfo> = (member) => (
             height={400}
         />
         <div className="mt-5 self-center sm:self-auto sm:items-start flex-auto max-w-lg flex flex-col items-center">
-            <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">{member.name}</h3>
-            <p className="text-base leading-7 text-gray-600 dark:text-gray-300">{member.role}</p>
+            <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</h3>
+            <p className="text-base leading-7 text-gray-600">{member.role}</p>
             {member.research_interests &&
                 <div className="text-center sm:text-start mt-4 text-base leading-7 text-gray-600">
-                    <strong className="font-semibold text-gray-600 dark:text-white">Research Interest</strong>
-                    <ul className="max-w-md space-y-1 text-gray-500 sm:list-disc sm:list-inside dark:text-gray-400">
+                    <strong className="font-semibold text-gray-600">Research Interest</strong>
+                    <ul className="max-w-md space-y-1 text-gray-500 sm:list-disc sm:list-inside">
                         {member.research_interests?.slice(0, 3).map((interest, idx) => (<li key={idx}>{interest}</li>))}
                     </ul>
                 </div>
@@ -39,9 +39,9 @@ const Alumni: React.FC<MemberInfo> = (member) => {
     return (<div className="border-l-2 border-blue-800 px-2 flex flex-col sm:flex-row gap-2 sm:items-center">
         <div className="flex flex-row items-center gap-2">
             <EmailBtn email={member.email} />
-            <div className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-gray-50">{member.name}</div>
+            <div className="text-lg font-semibold leading-8 tracking-tight text-gray-900">{member.name}</div>
         </div>
-        <div className="text-base leading-7 text-gray-600 dark:text-gray-300">{member.affiliation ?? ""}</div>
+        <div className="text-base leading-7 text-gray-600">{member.affiliation ?? ""}</div>
     </div>
     )
 }

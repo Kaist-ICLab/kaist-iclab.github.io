@@ -9,17 +9,17 @@ const Lecture: React.FC<LectureInfo> = (lecture) => (
           <span className="text-3xl font-bold text-white text-center">{lecture.name}</span>
       </div>
       <div className="self-center sm:self-auto lg:items-start flex-auto flex flex-col gap-1">
-          <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold leading-8 tracking-tight text-gray-900">
               {`${lecture.name} - ${lecture.code}`}
           </h3>
-          <p className="text-base leading-7 text-gray-400 dark:text-gray-500">{lecture.audience}</p>
-          <p className="text-base leading-7 text-gray-600 dark:text-gray-300">
+          <p className="text-base leading-7 text-gray-400">{lecture.audience}</p>
+          <p className="text-base leading-7 text-gray-600">
               {lecture.description}
           </p>
-          <p className="mt-2 text-base leading-7 text-gray-600 dark:text-gray-300">
+          <p className="mt-2 text-base leading-7 text-gray-600">
               To look for detailed contents we cover, please take a look at the syllabuses of previous years:
           </p>
-          <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+          <ul className="max-w-md space-y-1 text-gray-500 list-disc list-inside">
               {lecture.syllabuses.map((syllabus, idx) => (
                   <li key={idx}>
                       <Link href={syllabus.link} className="text-base text-blue-500 hover:underline">

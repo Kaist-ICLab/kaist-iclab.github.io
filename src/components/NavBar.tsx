@@ -20,8 +20,8 @@ const Menu: React.FC<{
     isActive: boolean;
 }> = ({ name, link, isActive }) => (
     <Link href={link ?? `/${name}`} className={
-        isActive ? "capitalize block py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 dark:text-white lg:dark:text-blue-500 flex"
-            : "capitalize block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 dark:text-white lg:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent flex"
+        isActive ? "capitalize block py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 flex"
+            : "capitalize block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 flex"
     }>
         {name}
         {link !== undefined ?
@@ -37,7 +37,7 @@ const IconButton: React.FC<{
     onClick: () => void;
     altText: string;
 }> = ({ children, onClick, altText }) => (
-    <button onClick={onClick} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 lg:hidden">
+    <button onClick={onClick} type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 lg:hidden">
         <span className="sr-only">{altText}</span>
         {children ?? null}
     </button>
@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
     const [yPosition, _] = useYPosition();
 
     return (
-        <nav className={"sticky top-0 bg-white border-gray-200 dark:bg-gray-900 z-[999]" + (yPosition > 0 ? " shadow-md" : "")}>
+        <nav className={"sticky top-0 bg-white border-gray-200 z-[999]" + (yPosition > 0 ? " shadow-md" : "")}>
             <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* TODO: Logo Change*/}
                 <Logo />
@@ -59,7 +59,7 @@ const NavBar: React.FC = () => {
                     </svg>
                 </IconButton>
                 <div className={"w-full lg:flex lg:flex-row lg:items-center lg:gap-4 lg:w-auto lg:top-0 lg:p-0 lg:static " + (navOpened ? "block absolute top-14 left-0 z-10 px-4" : "hidden")}>
-                    <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white">
                         {navs.map((nav) => (
                             <li key={nav.name}>
                                 <Menu name={nav.name} link={nav.link} isActive={currentPath === nav.link} />

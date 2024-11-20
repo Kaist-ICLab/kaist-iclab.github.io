@@ -23,7 +23,7 @@ export default function RootLayout({
       <body className={inter.className} suppressHydrationWarning={true}>
         <NavBar/>
         <main className={["relative min-h-screen w-full m-auto max-w-screen-xl px-4"
-          ,"format format-sm sm:format-base md:format-lg lg:format-xl xl:format-2xl format-blue dark:format-invert"
+          ,"format format-sm sm:format-base md:format-lg lg:format-xl xl:format-2xl format-blue"
         ].join(" ")}> 
           {children}
           <TopButton />

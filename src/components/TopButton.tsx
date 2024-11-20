@@ -37,7 +37,7 @@ const TopButton = () => {
             onClick={scrollToTop}
             className={[
                 'z-50 fixed bottom-5 right-5',
-                'bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800',
+                'bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300',
                 'font-medium rounded-full text-sm p-4 text-center inline-flex items-center',
                 'hidden xl:block'
             ].join(' ')}

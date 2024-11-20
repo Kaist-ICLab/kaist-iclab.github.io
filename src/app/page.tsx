@@ -13,14 +13,14 @@ const Announcement: React.FC<{
   return (
     <div className="not-format inline-flex gap-2 lg:flex-row justify-between items-center">
       <Link href={announcement.path} className={"not-format no-underline hover:no-underline " + (announcement.pinned ? "" : "ml-6")}>
-        <h3 className="text-lg text-gray-700 dark:text-white line-clamp-1">
+        <h3 className="text-lg text-gray-700 line-clamp-1">
           {announcement.pinned &&
-            <Icon icon="mdi:pin" className="float-left m-1 ml-0 h-5 w-5 text-gray-400 dark:text-gray-500" />
+            <Icon icon="mdi:pin" className="float-left m-1 ml-0 h-5 w-5 text-gray-400" />
           }
           {announcement.title}
         </h3>
       </Link>
-      <span className="hidden sm:block flex-shrink-0 text-base text-gray-600 dark:text-gray-300 font-light">{announcement.created}</span>
+      <span className="hidden sm:block flex-shrink-0 text-base text-gray-600 font-light">{announcement.created}</span>
     </div>
   );
 };
@@ -31,9 +31,9 @@ const Feature: React.FC<{
   description: string;
 }> = ({ icon, title, description }) => (
   <div className="mt-4">
-    <Icon icon={icon} className="mx-auto mb-4 w-12 h-12 text-blue-600 dark:text-blue-500" />
-    <h3 className="mb-2 text-xl font-bold dark:text-white text-black">{title}</h3>
-    <p className="m-auto max-w-96 mb-4 text-base text-gray-500 dark:text-gray-400">
+    <Icon icon={icon} className="mx-auto mb-4 w-12 h-12 text-blue-600" />
+    <h3 className="mb-2 text-xl font-bold text-black">{title}</h3>
+    <p className="m-auto max-w-96 mb-4 text-base text-gray-500">
       {description}
     </p>
   </div>
@@ -48,12 +48,12 @@ const Home: React.FC = () => {
             <h1 className="mb-4 
               text-4xl md:text-5xl xl:text-6xl
               font-extrabold tracking-tight leading-none 
-              text-black dark:text-white">
+              text-black">
               Ubiquitous Computing to Support Wellbeing
             </h1>
             <p className="mb-6 lg:mb-8 
               md:text-lg lg:text-xl
-              text-gray-500 dark:text-gray-400">
+              text-gray-500">
               Providing personalized wellbeing support through context-aware computing and machine learning, leveraging mobile, wearable, and IoT technologies.
             </p>
           </div>
@@ -72,12 +72,12 @@ const Home: React.FC = () => {
         <h2 className="mb-4
              text-2xl md:text-3xl xl:text-4xl
              tracking-tight font-extrabold 
-             text-black dark:text-white">
+             text-black">
           Our Research Area
         </h2>
         <p className="mb-6 lg:mb-8 
             md:text-lg lg:text-xl 
-            text-gray-500 dark:text-gray-400">
+            text-gray-500">
           Our research focuses on Human-Computer Interaction (HCI) and Ubiquitous Computing (UbiComp).
           <br />
           Major research areas include (1) Cognitive and Affective Computing, (2) IoT Data Science and Platform Research, and (3) Digital Health and Wellbeing Interventions.  We strive not only to make scholarly contributions but also to create a social impact by making our findings and services accessible.
@@ -106,7 +106,7 @@ const Home: React.FC = () => {
         <h2 className="mb-4
              text-2xl md:text-3xl xl:text-4xl
              tracking-tight font-extrabold 
-             text-black dark:text-white">
+             text-black">
           Announcement
         </h2>
         <div className="mx-auto mt-8 flex flex-col
