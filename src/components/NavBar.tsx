@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
                     <ul className="font-medium flex flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 lg:border-0 lg:bg-white">
                         {navs.map((nav) => (
                             <li key={nav.name}>
-                                <Menu name={nav.name} link={nav.link} isActive={currentPath === nav.link} />
+                                <Menu name={nav.name} link={nav.link} isActive={currentPath === "/" + nav.name} />
                             </li>
                         ))}
                     </ul>
