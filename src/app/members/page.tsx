@@ -53,7 +53,7 @@ const Members: React.FC = () => (
             <div className="pt-8 flex flex-col gap-4">
                 {currentMemberRole.map((role, _) => (
                     <div key={role} className="w-full flex flex-col items-center md:items-start mb-20">
-                        <h3>{role === "Professor" ? "Director" : role}</h3>
+                        <h3 className="sticky top-[72px] bg-white w-full z-10 py-4">{role === "Professor" ? "Director" : role}</h3>
                         <div className="pt-4 flex flex-col w-full gap-12">
                             {currentMembers
                                 .filter((member) => member.role === role)
@@ -62,7 +62,7 @@ const Members: React.FC = () => (
                     </div>
                 ))}
                 <div className="w-full flex flex-col items-center md:items-start">
-                    <h3>Alumni</h3>
+                    <h3 className="sticky top-[72px] bg-white w-full z-10 py-4">Alumni</h3>
                     <div className="pt-0 flex flex-col w-full gap-4">
                         {alumnis.map((alumni) => <Alumni key={alumni.name} {...alumni} />)}
                     </div>

@@ -49,7 +49,7 @@ const NavBar: React.FC = () => {
     const [yPosition, _] = useYPosition();
 
     return (
-        <nav className={"sticky top-0 bg-white border-gray-200 z-[999]" + (yPosition > 0 ? " shadow-md" : "")}>
+        <nav className={"sticky top-0 bg-white border-gray-200 z-50" + (yPosition > 0 ? " shadow-md" : "")}>
             <div className="relative max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 {/* TODO: Logo Change*/}
                 <Logo />
