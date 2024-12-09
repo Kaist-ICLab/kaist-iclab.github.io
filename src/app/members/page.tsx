@@ -61,7 +61,7 @@ const Members: React.FC = () => (
                         </div>
                     </div>
                 ))}
-                <div className="w-full flex flex-col items-center md:items-start mb-20">
+                <div className="w-full flex flex-col items-center md:items-start">
                     <h3>Alumni</h3>
                     <div className="pt-0 flex flex-col w-full gap-4">
                         {alumnis.map((alumni) => <Alumni key={alumni.name} {...alumni} />)}

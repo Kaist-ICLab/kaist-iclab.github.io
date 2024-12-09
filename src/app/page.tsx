@@ -102,7 +102,7 @@ const Home: React.FC = () => {
           />
         </div>
       </section>
-      <section id="announcement" className="mt-20 mb-20 text-center">
+      <section id="announcement" className="mb-20 text-center">
         <h2 className="mb-4
              text-2xl md:text-3xl xl:text-4xl
              tracking-tight font-extrabold 
