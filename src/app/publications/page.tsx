@@ -23,25 +23,25 @@ const Publication: React.FC<PublicationInfo> = (publication) => {
 }
 
 const Publications: React.FC = () => (
-  <MainContent>
-    <h2>Publications</h2>
-    <div className="w-full flex flex-col gap-12">
-      {publicationYears.map((year) => {
-        const filteredPublications = Object.values(publications)
-          .filter((publication) => Number(publication.date.split("-")[0]) === year)
-          .sort((a,b) => Number(b.date.split("-")[1]) - Number(a.date.split("-")[1]));
-        if (filteredPublications.length === 0) return null;
-        return <div key={year} className="mt-6 self-center w-full max-w-screen-xl flex flex-col items-start gap-4">
-          <h3>{year}</h3>
-          <div className="w-full flex flex-col gap-8">
-            {
-              filteredPublications.map((publication, index) => <Publication key={index} {...publication} />)
-            }
+    <MainContent>
+      <h2>Publications</h2>
+      <div className="w-full flex flex-col gap-12">
+        {publicationYears.map((year) => {
+          const filteredPublications = Object.values(publications)
+            .filter((publication) => Number(publication.date.split("-")[0]) === year)
+            .sort((a,b) => Number(b.date.split("-")[1]) - Number(a.date.split("-")[1]));
+          if (filteredPublications.length === 0) return null;
+          return <div key={year} className="self-center w-full max-w-screen-xl flex flex-col items-start gap-4">
+            <h3 className="sticky top-[72px] bg-white w-full z-10 py-4">{year}</h3>
+            <div className="w-full flex flex-col gap-8">
+              {
+                filteredPublications.map((publication, index) => <Publication key={index} {...publication} />)
+              }
+            </div>
           </div>
-        </div>
-      })}
-    </div>
-  </MainContent>
+        })}
+      </div>
+    </MainContent>
 )
 
 export default Publications
