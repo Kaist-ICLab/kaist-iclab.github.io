@@ -60,4 +60,4 @@ For updating image, please change the image in `/pulbic/members/`.
 The metadata of publication will be processed from `/data/publication.bib`.
 Please include bibtex for new publication on there.
 The slide and paper should be located in `/public/publications/papers/` and `/public/publications/slides/` respectively named with citeKey.
-The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publicationSupplementary.ts` on `supplementaries` variable.
+The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publicationSupplementary.ts` on `supplementaries` variable
