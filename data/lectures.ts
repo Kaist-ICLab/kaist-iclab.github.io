@@ -20,6 +20,10 @@ const lectures: LectureInfo[] = [
         audience: "For Undergraduate Students",
         syllabuses: [
             {
+                link: "https://docs.google.com/document/d/1ykBgdW2Lp-druXDzfi4O7M_vRynfPGdy5xG58bnOt6c/edit?tab=t.0",
+                semester: "2024 Fall"
+            },
+            {
                 link: "https://docs.google.com/document/d/1lylLVmO8svuXC5iiqjIMQOpX7eYtlo4XSCNgWqxy9Vc/edit?usp=sharing",
                 semester: "2023 Fall"
             },
@@ -27,10 +31,6 @@ const lectures: LectureInfo[] = [
                 link: "https://docs.google.com/document/d/1k6iAR_OIMbKWnH2xFG_k-A6wLcLoiIutYeal0ShGqtU/edit",
                 semester: "2022 Spring"
             },
-            {
-                link: "https://docs.google.com/document/d/1ykBgdW2Lp-druXDzfi4O7M_vRynfPGdy5xG58bnOt6c/edit?tab=t.0",
-                semester: "2024 Fall"
-            }
         ]
     },
     {
