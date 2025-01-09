@@ -48,6 +48,7 @@ The path should be `/galleries/[Name]` (i.e., omit `/public`), and you should ad
 The metadata of lectures are stored as a list in `/data/lectures.ts`.
 Please update syllabus of the recent semester of the course you want to update.
 You should add the recent syllabus as a first item of list because syllabus will be displayed based on the order of list.
+If number of syllabus is more than 3, delete oldest syllabus from list.
 
 ### Update/Add Members
 
