@@ -332,13 +332,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "EunkiJoung": {
         "name": "Eunki Joung",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "eunki@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
                 "enterance": "2023.03",
-                "graduation": ""
+                "graduation": "2025.02"
             }
         ],
         "github": "https://github.com/eunkiyomi",
@@ -350,13 +350,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "HeejeongLim": {
         "name": "Heejeong Lim",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "hj.lim@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
                 "enterance": "2023.03",
-                "graduation": ""
+                "graduation": "2025.02"
             }
         ],
         "github": "https://github.com/Heej99",
@@ -368,13 +368,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "HyesooPark": {
         "name": "Hyesoo Park",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "hyehye@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
                 "enterance": "2023.03",
-                "graduation": ""
+                "graduation": "2025.02"
             }
         ],
         "homepage": "https://hyesoopark.com",
@@ -389,12 +389,17 @@ let members: { [key: string]: MemberInfo } = {
     },
     "ChanheeLee": {
         "name": "Chanhee Lee",
-        "role": "M.S. Student",
+        "role": "Ph.D. Student",
         "email": "chanhee015@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
                 "enterance": "2023.09",
+                "graduation": "2025.02"
+            },
+            {
+                "role": "Ph.D. Student",
+                "enterance": "2025.02",
                 "graduation": ""
             }
         ],
