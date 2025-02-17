@@ -59,7 +59,7 @@ let members: { [key: string]: MemberInfo } = {
                 "graduation": ""
             }
         ],
-        "image": "/members/JunmoLee.jpg"
+        "image": "/members/SominPark.jpg"
     },
     "JunmoLee": {
         "name": "Junmo Lee",
