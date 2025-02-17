@@ -42,6 +42,24 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "JunmoLee": {
+        "name": "Junmo Lee",
+        "role": "M.S. Student",
+        "email": "junmo.lee@kaist.ac.kr",
+        "github": "https://github.com/BarkNMeow",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Motivation"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2025.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JunmoLee.jpg"
+    },
     "YoungseokSeo": {
         "name": "Youngseok Seo",
         "role": "M.S. Student",
