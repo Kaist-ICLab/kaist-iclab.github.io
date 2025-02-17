@@ -42,6 +42,25 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "SominPark": {
+        "name": "Somin Park",
+        "role": "M.S. Student",
+        "email": "som2n@kaist.ac.kr",
+        "github": "https://github.com/MIApark2355",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Healthcare",
+            "Mobile Sensing"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2025.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JunmoLee.jpg"
+    },
     "JunmoLee": {
         "name": "Junmo Lee",
         "role": "M.S. Student",
@@ -196,14 +215,14 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Ph.D. Student",
                 "enterance": "2018.09",
-                "graduation": ""
+                "graduation": "2025.02"
             }
         ],
         "image": "/members/HansooLee.jpg"
     },
     "GyuwonJung": {
         "name": "Gyuwon Jung",
-        "role": "Ph.D. Student",
+        "role": "Alumni",
         "email": "gwjung@kaist.ac.kr",
         "histories": [
             {
@@ -214,7 +233,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Ph.D. Student",
                 "enterance": "2020.03",
-                "graduation": ""
+                "graduation": "2025.02"
             }
         ],
         "homepage": "https://gw-jung.github.io/",
