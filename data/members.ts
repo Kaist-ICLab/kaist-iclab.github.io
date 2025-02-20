@@ -202,7 +202,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "HansooLee": {
         "name": "Hansoo Lee",
-        "role": "Ph.D. Student",
+        "role": "Alumni",
         "email": "hansoo@kaist.ac.kr",
         "google_scholar": "https://scholar.google.co.kr/citations?user=Ezt-IT0AAAAJ",
         "github": "https://github.com/hansoolee18",
