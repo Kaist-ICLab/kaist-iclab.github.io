@@ -54,7 +54,7 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "histories": [
             {
-                "role": "Ph.D. student",
+                "role": "Ph.D. Student",
                 "enterance": "2025.03",
                 "graduation": ""
             }
