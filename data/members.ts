@@ -42,6 +42,25 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "MinseoPark": {
+        "name": "Minseo Park",
+        "role": "Ph.D Student",
+        "email": "minseo726@kaist.ac.kr",
+        "github": "https://github.com/sympathize123",
+        "google_scholar": "https://scholar.google.co.kr/citations?hl=ko&user=eN7S23oAAAAJ",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Domain Adaptation",
+        ],
+        "histories": [
+            {
+                "role": "Ph.D student",
+                "enterance": "2025.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/MinseoPark.jpg"
+    },
     "SominPark": {
         "name": "Somin Park",
         "role": "M.S. Student",
