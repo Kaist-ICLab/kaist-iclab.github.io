@@ -44,7 +44,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "MinseoPark": {
         "name": "Minseo Park",
-        "role": "Ph.D Student",
+        "role": "Ph.D. Student",
         "email": "minseo726@kaist.ac.kr",
         "github": "https://github.com/sympathize123",
         "google_scholar": "https://scholar.google.co.kr/citations?hl=ko&user=eN7S23oAAAAJ",
