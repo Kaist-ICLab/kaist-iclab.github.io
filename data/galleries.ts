@@ -21,11 +21,11 @@ const galleries: ImageInfo[] = [
         name: "2025 Graduation Ceremony"
     },
     {
-        path: "/galleries/2024-Ubicomp-2.png",
+        path: "/galleries/2024-Ubicomp-2.jpg",
         name: "2024 UBICOMP Conference"
     },
     {
-        path: "/galleries/2024-Ubicomp-1.png",
+        path: "/galleries/2024-Ubicomp-1.jpg",
         name: "2024 UBICOMP - Distinguished Paper Award"
     },
     {
