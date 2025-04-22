@@ -13,6 +13,22 @@ const galleries: ImageInfo[] = [
         name: "2024 Year-end Party"
     },
     {
+        path: "/galleries/2024-graduation-2.png",
+        name: "2025 Graduation Ceremony"
+    },
+    {
+        path: "/galleries/2024-graduation-1.png",
+        name: "2025 Graduation Ceremony"
+    },
+    {
+        path: "/galleries/2024-Ubicomp-2.png",
+        name: "2024 UBICOMP Conference"
+    },
+    {
+        path: "/galleries/2024-Ubicomp-1.png",
+        name: "2024 UBICOMP - Distinguished Paper Award"
+    },
+    {
         path: "/galleries/2024-06-21.PNG",
         name: "Social events of 2024 Spring"
     },
