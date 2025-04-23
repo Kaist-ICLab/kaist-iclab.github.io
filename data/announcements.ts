@@ -7,16 +7,10 @@ export interface AnnouncementInfo {
 
 const announcements: AnnouncementInfo[] = [
     {
-        title: "25 겨울 인턴모집 Winter Internship",
-        created: "2024-10-29",
+        title: "25 여름 인턴모집 Summer Internship",
+        created: "2025-04-21",
         pinned: true,
-        path: "https://brunch.co.kr/@kaisticlab/29"
-    },
-    {
-        title: '석박사&인턴모집: Prospective Students',
-        created: '2023-11-13',
-        pinned: true,
-        path: "https://brunch.co.kr/@kaisticlab/3"
+        path: "https://brunch.co.kr/@kaisticlab/38"
     }
 ]
 
