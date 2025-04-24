@@ -177,9 +177,11 @@ let members: { [key: string]: MemberInfo } = {
         "email": "gyuna.kim@kaist.ac.kr",
         "github": "https://github.com/gn0219",
         "research_interests": [
-            "Interactive System",
+            "Digital Health",
+            "Human-AI Interaction",
             "Multimodal Data Analysis"
         ],
+        "homepage": "https://gyuna.me",
         "histories": [
             {
                 "role": "M.S. Student",
