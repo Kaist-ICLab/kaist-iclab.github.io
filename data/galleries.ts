@@ -5,6 +5,10 @@ interface ImageInfo {
 
 const galleries: ImageInfo[] = [
     {
+        path: "/galleries/2025-CHI-1.jpg",
+        name: "2025 CHI Conference"
+    },
+    {
         path: "/galleries/2025-strawberry.PNG",
         name: "2025 Strawberry Party"
     },

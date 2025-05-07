@@ -4,6 +4,9 @@ const supplementaries: {
         code?: string;
     }
 } = {
+    jang2025micro: {
+        video: 'https://www.youtube.com/watch?v=pIksCTegmLo',
+    },
     park2023charlie: {
         video: 'https://youtu.be/sNRkhhgoEHI',
     },
