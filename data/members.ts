@@ -197,6 +197,7 @@ let members: { [key: string]: MemberInfo } = {
         "role": "Post Doctoral Researcher",
         "google_scholar": "https://scholar.google.com/citations?user=ctglUjoAAAAJ&hl=ko",
         "github": "https://github.com/hslee90",
+        "homepage": "https://hslee90.github.io/",
         "research_interests": [
             "Sensor Data Privacy",
             "Usable Privacy",
