@@ -137,7 +137,7 @@ let members: { [key: string]: MemberInfo } = {
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
         "role": "M.S. Student",
-        "email": "kjhrlawjdgus@kaist.ac.kr",
+        "email": "jeonghyun.kim@kaist.ac.kr",
         "github": "https://github.com/Jeonghyun109",
         "google_scholar": "https://scholar.google.com/citations?user=yourid&user=U4BoWB4AAAAJ",
         "homepage": "https://www.jeonghyun109.com/",
