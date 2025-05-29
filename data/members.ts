@@ -139,6 +139,8 @@ let members: { [key: string]: MemberInfo } = {
         "role": "M.S. Student",
         "email": "kjhrlawjdgus@kaist.ac.kr",
         "github": "https://github.com/Jeonghyun109",
+        "google_scholar": "https://scholar.google.com/citations?user=yourid&user=U4BoWB4AAAAJ",
+        "homepage": "https://www.jeonghyun109.com/",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -147,9 +149,7 @@ let members: { [key: string]: MemberInfo } = {
             }
         ],
         "research_interests": [
-            "Human-Computer Interaction",
-            "Affective Computing",
-            "IoT sensor data",
+            "User-centered Design",
             "Personalized Digital Health"
         ],
         "image": "/members/JeonghyunKim.jpg"
