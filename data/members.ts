@@ -356,7 +356,7 @@ let members: { [key: string]: MemberInfo } = {
         "role": "Ph.D. Student",
         "email": "sangjun@kaist.ac.kr",
         "github": "https://github.com/highjun10170",
-        "homepage": "https://highjun10170.github.io/",
+        "homepage": "https://homepage.sangjun.dev",
         "google_scholar": "https://scholar.google.com/citations?user=esrgGaEAAAAJ&hl=ko",
         "research_interests": [
             "Mobile Sensing Platform",
