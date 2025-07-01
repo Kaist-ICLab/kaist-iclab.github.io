@@ -117,23 +117,6 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/YoungseokSeo.jpg"
     },
-    "DejiangZheng": {
-        "name": "Dejiang Zheng",
-        "role": "Ph.D. Student",
-        "email": "deok-kang@kaist.ac.kr",
-        "research_interests": [
-            "Mobile Computing",
-            "Human Computer Interaction"
-        ],
-        "histories": [
-            {
-                "role": "Ph.D. Student",
-                "enterance": "2024.09",
-                "graduation": ""
-            }
-        ],
-        "image": "/members/DejiangZheng.jpg"
-    },
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
         "role": "M.S. Student",
