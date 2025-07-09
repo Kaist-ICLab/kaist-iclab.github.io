@@ -417,8 +417,9 @@ let members: { [key: string]: MemberInfo } = {
                 "role": "M.S. Student",
                 "enterance": "2023.03",
                 "graduation": "2025.02"
-            }
+            },
         ],
+        "affiliation": "PhD student at Georgia Tech University",
         "homepage": "https://hyesoopark.com",
         "github": "https://github.com/HyeSPark",
         "google_scholar": "https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko",
