@@ -336,7 +336,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "SangjunPark": {
         "name": "Sangjun Park",
-        "role": "Ph.D. Student",
+        "role": "Alumni",
         "email": "sangjun@kaist.ac.kr",
         "github": "https://github.com/highjun10170",
         "homepage": "https://homepage.sangjun.dev",

@@ -54,6 +54,10 @@ const lectures: LectureInfo[] = [
         audience: "For Undergraduate & Graduate Students",
         syllabuses: [
             {
+                link: "https://docs.google.com/document/d/1Q6MnigWGJM2Z_cGyzDa6RDEhfPbiIpCylojCaibTJEk/edit?tab=t.0",
+                semester: "2025 Spring"
+            },
+            {
                 link: "https://docs.google.com/document/d/1mU-SesMat3zBO3f7uwgQFxXa1flHi1B_Iyl3mPcITG4/edit?usp=sharing",
                 semester: "2024 Spring"
             },
