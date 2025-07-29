@@ -449,7 +449,7 @@ let members: { [key: string]: MemberInfo } = {
         "github": "https://github.com/thunini",
         "research_interests": [
             "Human-Computer Interaction",
-            "Sensor Data Science",
+            "Conversational Agents",
             "Mental Health Sensing",
             "Human-AI Interaction"
         ],
