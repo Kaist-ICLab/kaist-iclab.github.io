@@ -59,7 +59,7 @@ let members: { [key: string]: MemberInfo } = {
                 "graduation": ""
             }
         ],
-        "image": "/members/RdPradiptaGitayaSamiadji.jpg"
+        "image": "/members/RdPradiptaGitayaSamiadji.png"
     },
     "MinseoPark": {
         "name": "Minseo Park",
