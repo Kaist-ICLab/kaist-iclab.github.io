@@ -42,6 +42,25 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "RdPradiptaGitayaSamiadji": {
+        "name": "Rd Pradipta Gitaya Samiadji",
+        "role": "M.S. Student",
+        "email": "rd.pradipta@kaist.ac.kr",
+        "github": "https://github.com/Diptags",
+        "research_interests": [
+            "Device Sensing",
+            "Applied AI",
+            "Wellbeing Intervention",
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2025.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/RdPradiptaGitayaSamiadji.jpg"
+    },
     "MinseoPark": {
         "name": "Minseo Park",
         "role": "Ph.D. Student",
