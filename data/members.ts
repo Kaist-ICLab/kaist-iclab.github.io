@@ -136,6 +136,23 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/YoungseokSeo.jpg"
     },
+    "JihoonWoo": {
+        "name": "Jihoon Woo",
+        "role": "M.S. Student",
+        "email": "jihoon9809@kaist.ac.kr",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Human Behavior"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2024.09", // Actually joined in 2025.09, but will graduate in 2026.08
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JihoonWoo.JPG"
+    },
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
         "role": "M.S. Student",
