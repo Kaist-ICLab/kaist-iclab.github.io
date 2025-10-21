@@ -9,10 +9,11 @@ const Publication: React.FC<PublicationInfo> = (publication) => {
       <p className="text-sm leading-7 text-gray-600">{publication.authors}</p>
       <p className="italic text-base leading-7 text-gray-600">{publication.venue + (publication.published ? "" : " (To be appear)")}</p>
       <div className="flex mt-1">
-        {[[publication.supplementary.paper, "paper", "blue"],
-        [publication.supplementary.slide, "slide", "yellow"],
-        [publication.supplementary.code, "code", "gray"],
-        [publication.supplementary.video, "video", "red"]].map(([link, type, color]) => (
+        {[[publication.supplementary.paper, "Paper", "blue"],
+        [publication.supplementary.slide, "Slide", "yellow"],
+        [publication.supplementary["google slide"], "Google slide", "yellow"],
+        [publication.supplementary.code, "Code", "gray"],
+        [publication.supplementary.video, "Video", "red"]].map(([link, type, color]) => (
           link && <Link href={link} newpage key={type} className={`bg-${color}-100 text-${color}-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded`}>
             {type}
           </Link>

@@ -2,8 +2,12 @@ const supplementaries: {
     [key: string]: {
         video?: string;
         code?: string;
+        "google slide"?: string;
     }
 } = {
+    han2024systematic: {
+        "google slide": "https://docs.google.com/presentation/d/11Lwb71tRptiFVa87ZdjN_wqj3Ak6nwhIfJu-21aFq_g/edit?slide=id.g263f0289868_1_481#slide=id.g263f0289868_1_481"
+    },
     jang2025micro: {
         video: 'https://www.youtube.com/watch?v=pIksCTegmLo',
     },

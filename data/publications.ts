@@ -7,6 +7,7 @@ export interface PublicationSupplementaryInfo {
     slide?: string;
     video?: string;
     code?: string;
+    "google slide": string;
 }
 
 export interface PublicationInfo {
@@ -78,6 +79,7 @@ const publications: {
             slide: fs.existsSync(`public/publications/slides/${key}.pdf`) ? `/publications/slides/${key}.pdf` : undefined,
             video: supplementaries[key]?.video,
             code: supplementaries[key]?.code,
+            "google slide": supplementaries[key]?.["google slide"]
         }
     }]
 }).sort((a: any, b: any) => Number(b[1].date.split("-")[0]) - Number(a[1].date.split("-")[0])))
