@@ -42,6 +42,25 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "RdPradiptaGitayaSamiadji": {
+        "name": "Rd Pradipta Gitaya Samiadji",
+        "role": "M.S. Student",
+        "email": "rd.pradipta@kaist.ac.kr",
+        "github": "https://github.com/Diptags",
+        "research_interests": [
+            "Device Sensing",
+            "Applied AI",
+            "Wellbeing Intervention",
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2025.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/RdPradiptaGitayaSamiadji.png"
+    },
     "MinseoPark": {
         "name": "Minseo Park",
         "role": "Ph.D. Student",
@@ -116,6 +135,23 @@ let members: { [key: string]: MemberInfo } = {
             }
         ],
         "image": "/members/YoungseokSeo.jpg"
+    },
+    "JihoonWoo": {
+        "name": "Jihoon Woo",
+        "role": "M.S. Student",
+        "email": "jihoon9809@kaist.ac.kr",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Human Behavior"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2024.09", // Actually joined in 2025.09, but will graduate in 2026.08
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JihoonWoo.JPG"
     },
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
@@ -419,7 +455,7 @@ let members: { [key: string]: MemberInfo } = {
                 "graduation": "2025.02"
             },
         ],
-        "affiliation": "PhD student at Georgia Tech University",
+        "affiliation": "Ph.D. Student at Georgia Institute of Technology",
         "homepage": "https://hyesoopark.com",
         "github": "https://github.com/HyeSPark",
         "google_scholar": "https://scholar.google.com/citations?user=RI56iIAAAAAJ&hl=ko",
@@ -449,7 +485,7 @@ let members: { [key: string]: MemberInfo } = {
         "github": "https://github.com/thunini",
         "research_interests": [
             "Human-Computer Interaction",
-            "Sensor Data Science",
+            "Conversational Agents",
             "Mental Health Sensing",
             "Human-AI Interaction"
         ],
