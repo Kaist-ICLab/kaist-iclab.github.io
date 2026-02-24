@@ -1,8 +1,8 @@
 export const memberRoles = [
-    "Professor", 
-    "Post Doctoral Researcher", 
-    "Ph.D. Student", 
-    "M.S. Student", 
+    "Professor",
+    "Post Doctoral Researcher",
+    "Ph.D. Student",
+    "M.S. Student",
     "Alumni"
 ] as const;
 
@@ -827,6 +827,7 @@ let members: { [key: string]: MemberInfo } = {
     "JeminLee": {
         "name": "Jemin Lee",
         "role": "Alumni",
+        "affiliation": "Assistant Professor at Jeonbuk National Univ.",
         "histories": [
             {
                 "role": "Post Doctoral Researcher",
@@ -1056,8 +1057,8 @@ const sortMemberByEntrance = (a: MemberInfo, b: MemberInfo) => {
 }
 
 const alumnis = Object.values(members).filter(member => member.role === "Alumni")
-    .sort((a,b) => sortMemberByEntrance(a, b));
+    .sort((a, b) => sortMemberByEntrance(a, b));
 const currentMembers = Object.values(members).filter(member => member.role !== "Alumni")
-    .sort((a,b) => sortMemberByEntrance(a, b));
+    .sort((a, b) => sortMemberByEntrance(a, b));
 
-export { alumnis, currentMembers, currentMemberRole};
+export { alumnis, currentMembers, currentMemberRole };
