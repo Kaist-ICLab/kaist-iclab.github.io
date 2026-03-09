@@ -81,7 +81,7 @@ let members: { [key: string]: MemberInfo } = {
     "EstherKang": {
         "name": "Esther Kang",
         "role": "M.S. Student",
-        "email": "esther.kang@kaist.ac.kr",
+        "email": "estheri.kang@kaist.ac.kr",
         "research_interests": [
             "Human-AI Interaction",
             "Conversational Agents"
