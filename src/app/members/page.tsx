@@ -67,6 +67,9 @@ const Members: React.FC = () => (
                         {alumnis.map((alumni) => <Alumni key={alumni.name} {...alumni} />)}
                     </div>
                 </div>
+                <span className="mt-5 text-md">
+                    To update your profile, please contact <a href="mailto:junmo.lee@kse.kaist.ac.kr">junmo.lee@kse.kaist.ac.kr</a>.
+                </span>
             </div>
         </div>
     </MainContent>

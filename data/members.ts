@@ -1,8 +1,8 @@
 export const memberRoles = [
-    "Professor", 
-    "Post Doctoral Researcher", 
-    "Ph.D. Student", 
-    "M.S. Student", 
+    "Professor",
+    "Post Doctoral Researcher",
+    "Ph.D. Student",
+    "M.S. Student",
     "Alumni"
 ] as const;
 
@@ -41,6 +41,76 @@ let members: { [key: string]: MemberInfo } = {
             }
         ],
         "image": "/members/UichinLee.jpg"
+    },
+    "BonwooKoo": {
+        "name": "Bonwoo Koo",
+        "role": "M.S. Student",
+        "google_scholar": "https://scholar.google.com/citations?hl=en&user=ZuhqRfoAAAAJ",
+        "email": "bonwoo.koo@kaist.ac.kr",
+        "research_interests": [
+            "Sensor Data Science",
+            "Foundation Model"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/BonwooKoo.png"
+    },
+    "EstherKang": {
+        "name": "Esther Kang",
+        "role": "M.S. Student",
+        "email": "esther.kang@kaist.ac.kr",
+        "research_interests": [
+            "Human-AI Interaction",
+            "Conversational Agents"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/EstherKang.png"
+    },
+    "GyeongminNa": {
+        "name": "Gyeongmin Na",
+        "role": "M.S. Student",
+        "email": "gyeongmin@kaist.ac.kr",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Natural Language Processing & Linguistics",
+            "Sentiment Analysis"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/GyeongminNa.jpg"
+    },
+    "JinyoungYoo": {
+        "name": "Jinyoung Yoo",
+        "role": "Ph.D. Student",
+        "email": "jinyoung.yoo@kaist.ac.kr",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Mental Health"
+        ],
+        "histories": [
+            {
+                "role": "Ph.D. Student",
+                "enterance": "2026.03",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JinyoungYoo.png"
     },
     "RdPradiptaGitayaSamiadji": {
         "name": "Rd Pradipta Gitaya Samiadji",
@@ -155,7 +225,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "JeonghyunKim": {
         "name": "Jeonghyun Kim",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "jeonghyun.kim@kaist.ac.kr",
         "github": "https://github.com/Jeonghyun109",
         "google_scholar": "https://scholar.google.com/citations?user=yourid&user=U4BoWB4AAAAJ",
@@ -164,7 +234,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "M.S. Student",
                 "enterance": "2024.03",
-                "graduation": ""
+                "graduation": "2026.02"
             }
         ],
         "research_interests": [
@@ -175,13 +245,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "ThuVo": {
         "name": "Thu Vo",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "thuvo@kaist.ac.kr",
         "histories": [
             {
                 "role": "M.S. Student",
                 "enterance": "2024.03",
-                "graduation": ""
+                "graduation": "2026.02"
             }
         ],
         "research_interests": [
@@ -192,7 +262,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "GyunaKim": {
         "name": "Gyuna Kim",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "gyuna.kim@kaist.ac.kr",
         "github": "https://github.com/gn0219",
         "research_interests": [
@@ -205,7 +275,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "M.S. Student",
                 "enterance": "2024.03",
-                "graduation": ""
+                "graduation": "2026.02"
             }
         ],
         "image": "/members/GyunaKim.jpg"
@@ -330,13 +400,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "DuriLee": {
         "name": "Duri Lee",
-        "role": "Ph.D. Student",
+        "role": "Alumni",
         "email": "duri.lee@kaist.ac.kr",
         "histories": [
             {
                 "role": "Ph.D. Student",
                 "enterance": "2022.03",
-                "graduation": ""
+                "graduation": "2026.02"
             }
         ],
         "research_interests": [
@@ -827,6 +897,7 @@ let members: { [key: string]: MemberInfo } = {
     "JeminLee": {
         "name": "Jemin Lee",
         "role": "Alumni",
+        "affiliation": "Assistant Professor at Jeonbuk National Univ.",
         "histories": [
             {
                 "role": "Post Doctoral Researcher",
@@ -1056,8 +1127,8 @@ const sortMemberByEntrance = (a: MemberInfo, b: MemberInfo) => {
 }
 
 const alumnis = Object.values(members).filter(member => member.role === "Alumni")
-    .sort((a,b) => sortMemberByEntrance(a, b));
+    .sort((a, b) => sortMemberByEntrance(a, b));
 const currentMembers = Object.values(members).filter(member => member.role !== "Alumni")
-    .sort((a,b) => sortMemberByEntrance(a, b));
+    .sort((a, b) => sortMemberByEntrance(a, b));
 
-export { alumnis, currentMembers, currentMemberRole};
+export { alumnis, currentMembers, currentMemberRole };
