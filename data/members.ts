@@ -42,6 +42,24 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "SeungwanJin": {
+        "name": "Seungwan Jin",
+        "role": "Post Doctoral Researcher",
+        "google_scholar": "https://scholar.google.com/citations?user=OYYoqS0AAAAJ&hl=en&oi=ao",
+        "email": "seungwan@kse.kaist.ac.kr",
+        "research_interests": [
+            "Longitudinal Personalization",
+            "Agent Memory"
+        ],
+        "histories": [
+            {
+                "role": "Post Doctoral Researcher",
+                "enterance": "2026.04",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/SeungwanJin.png"
+    },
     "BonwooKoo": {
         "name": "Bonwoo Koo",
         "role": "M.S. Student",
