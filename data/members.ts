@@ -335,6 +335,7 @@ let members: { [key: string]: MemberInfo } = {
         "email": "hansoo@kaist.ac.kr",
         "google_scholar": "https://scholar.google.co.kr/citations?user=Ezt-IT0AAAAJ",
         "github": "https://github.com/hansoolee18",
+        "affiliation": "Research Fellow at Imperial College London",
         "research_interests": [
             "Mobile Sensing",
             "Digital Health",
@@ -353,6 +354,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Gyuwon Jung",
         "role": "Alumni",
         "email": "gwjung@kaist.ac.kr",
+        "affiliation": "Post Doctoral Researcher at Aalto Univ.",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -420,6 +422,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Duri Lee",
         "role": "Alumni",
         "email": "duri.lee@kaist.ac.kr",
+        "affiliation": "ROKA Future Innovation Research Center (육군 미래혁신연구센터)",
         "histories": [
             {
                 "role": "Ph.D. Student",
@@ -487,6 +490,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Yunjo Han",
         "role": "Alumni",
         "email": "yjhan99@kaist.ac.kr",
+        "affiliation": "Samsung Research",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -494,7 +498,6 @@ let members: { [key: string]: MemberInfo } = {
                 "graduation": "2024.02"
             }
         ],
-        "affiliation": "Samsung Research",
     },
     "EunkiJoung": {
         "name": "Eunki Joung",
@@ -655,7 +658,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Woohyeok Choi",
         "role": "Alumni",
         "email": "woohyeok.choi@kaist.ac.kr",
-        "affiliation": "Assistant Professor, Kangwon National University",
+        "affiliation": "Assistant Professor at Kangwon National Univ.",
         "histories": [
             {
                 "role": "Post Doctoral Researcher",
@@ -696,7 +699,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Soowon Kang",
         "role": "Alumni",
         "email": "sw.kang@kaist.ac.kr",
-        "affiliation": "Hyundai Motor Group",
+        "affiliation": "Samsung Electronics",
         "histories": [
             {
                 "role": "Ph.D. Student",
@@ -709,7 +712,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Eunji Park",
         "role": "Alumni",
         "email": "eunji.park@kaist.ac.kr",
-        "affiliation": "Assistant Professor, Chung-Ang University",
+        "affiliation": "Assistant Professor at Chung-Ang Univ.",
         "histories": [
             {
                 "role": "Ph.D. Student",
@@ -734,6 +737,7 @@ let members: { [key: string]: MemberInfo } = {
     "JieunLim": {
         "name": "Jieun Lim",
         "role": "Alumni",
+        "affiliation": "DB HiTek",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -758,7 +762,7 @@ let members: { [key: string]: MemberInfo } = {
     "YongShinKim": {
         "name": "Yongshin Kim",
         "role": "Alumni",
-        "affiliation": "OKESTRO",
+        "affiliation": "KPMG",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -797,6 +801,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Cheulyoung Park",
         "role": "Alumni",
         "email": "cheulyop@kaist.ac.kr",
+        "affiliation": "Upstage",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -809,6 +814,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Minhyoung Kim",
         "role": "Alumni",
         "email": "mindrome95@kaist.ac.kr",
+        "affiliation": "Doeat",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -821,7 +827,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Juho Sun",
         "role": "Alumni",
         "email": "juho.sun@kaist.ac.kr",
-        "affiliation": "Yanolja",
+        "affiliation": "Bucketplace",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -847,7 +853,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Narae Cha",
         "role": "Alumni",
         "email": "nr.cha@kaist.ac.kr",
-        "affiliation": "LG CNS",
+        "affiliation": "LibL",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -860,7 +866,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Jongwon Kim",
         "role": "Alumni",
         "email": "jong1k@kaist.ac.kr",
-        "affiliation": "TmaxSoft",
+        "affiliation": "KB Kookmin Bank",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -925,10 +931,10 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "email": "leejaymin@kaist.ac.kr",
     },
-    "RihunKim": {
-        "name": "Rihun Kim",
+    "RiheonKim": {
+        "name": "Riheon Kim",
         "role": "Alumni",
-        "affiliation": "Kakao",
+        "affiliation": "Naver",
         "email": "rihun.kim@kaist.ac.kr",
         "histories": [
             {
@@ -966,7 +972,7 @@ let members: { [key: string]: MemberInfo } = {
     "SujinKwon": {
         "name": "Sujin Kwon",
         "role": "Alumni",
-        "affiliation": "ADD",
+        "affiliation": "Agency for Defense Development",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -979,7 +985,7 @@ let members: { [key: string]: MemberInfo } = {
     "SungwookMoon": {
         "name": "Sungwook Moon",
         "role": "Alumni",
-        "affiliation": "Becod",
+        "affiliation": "Swing Mobility Co.",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -992,7 +998,7 @@ let members: { [key: string]: MemberInfo } = {
     "HayeonJeong": {
         "name": "Hayeon Jeong",
         "role": "Alumni",
-        "affiliation": "Amorepacific Research",
+        "affiliation": "Hankook&Company",
         "email": "hayeon412@kaist.ac.kr",
         "histories": [
             {
@@ -1056,7 +1062,7 @@ let members: { [key: string]: MemberInfo } = {
     "SungjunKang": {
         "name": "Sungjun Kang",
         "role": "Alumni",
-        "affiliation": "Skelter Labs",
+        "affiliation": "KakaoPay",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -1069,7 +1075,7 @@ let members: { [key: string]: MemberInfo } = {
     "DaeheeShin": {
         "name": "Daehee Shin",
         "role": "Alumni",
-        "affiliation": "KB Kookmin Card",
+        "affiliation": "KakaoPay",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -1094,7 +1100,7 @@ let members: { [key: string]: MemberInfo } = {
     "JoonwonLee": {
         "name": "Joonwon Lee",
         "role": "Alumni",
-        "affiliation": "Naver",
+        "affiliation": "DelightRoom",
         "histories": [
             {
                 "role": "M.S. Student",
@@ -1108,7 +1114,7 @@ let members: { [key: string]: MemberInfo } = {
         "name": "Youngchang Ko",
         "email": "youngchang@kaist.ac.kr",
         "role": "Alumni",
-        "affiliation": "ADD",
+        "affiliation": "Defense Rapid Acquisition Technology Research Institute",
         "histories": [
             {
                 "role": "M.S. Student",
