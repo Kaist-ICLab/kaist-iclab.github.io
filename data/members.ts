@@ -42,6 +42,25 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "WonmoKoo": {
+        "name": "Wonmo Koo",
+        "role": "Post Doctoral Researcher",
+        "email": "wonmo.koo@kse.kaist.ac.kr",
+        "google_scholar": "https://scholar.google.com/citations?hl=ko&user=WReEdqoAAAAJ",
+        "homepage": "https://sites.google.com/view/wonmokoo",
+        "research_interests": [
+            "Multivariate Time Series Analysis",
+            "Autonomous Systems"
+        ],
+        "histories": [
+            {
+                "role": "Post Doctoral Researcher",
+                "enterance": "2026.05",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/WonmoKoo.jpg"
+    },
     "SeungwanJin": {
         "name": "Seungwan Jin",
         "role": "Post Doctoral Researcher",
