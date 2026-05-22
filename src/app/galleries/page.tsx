@@ -12,7 +12,7 @@ const GalleryImage: React.FC<{ path: string, name: string }> = ({ path, name }) 
             alt={name}
             loading="lazy"
         />
-        <p className="text-center text-sm mb-1">{name}</p>
+        <p className="text-center text-md my-1">{name}</p>
     </div>
 )
 

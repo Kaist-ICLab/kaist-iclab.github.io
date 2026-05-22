@@ -98,7 +98,7 @@ const galleries: ImageInfo[] = [
     },
     {
         path: "/galleries/2023-iclab-homecoming-seminar.jpg",
-        name: "During 2023 Homecoming Seminar"
+        name: "2023 Homecoming Seminar"
     },
 ];
 
