@@ -42,12 +42,32 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "RenzSamuelGutierrez": {
+        "name": "Renz Samuel Gutierrez",
+        "role": "M.S. Student",
+        "email": "rggutierrez@kaist.ac.kr",
+        "github": "github.com/cyrxhwr",
+        "research_interests": [
+            "Human-AI Interaction",
+            "Interactive Systems",
+            "User Modeling"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/RenzSamuelGutierrez.png"
+    },
     "WonmoKoo": {
         "name": "Wonmo Koo",
-        "role": "Post Doctoral Researcher",
+        "role": "Alumni",
         "email": "wonmo.koo@kaist.ac.kr",
         "google_scholar": "https://scholar.google.com/citations?hl=ko&user=WReEdqoAAAAJ",
         "homepage": "https://sites.google.com/view/wonmokoo",
+        // "affiliation": "Assistant Professor at Pusan National University",
         "research_interests": [
             "Multivariate Time Series Analysis",
             "Autonomous Systems"
@@ -56,7 +76,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Post Doctoral Researcher",
                 "enterance": "2026.05",
-                "graduation": ""
+                "graduation": "2026.08"
             }
         ],
         "image": "/members/WonmoKoo.jpg"
@@ -189,7 +209,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "SominPark": {
         "name": "Somin Park",
-        "role": "M.S. Student",
+        "role": "Ph.D. Student",
         "email": "som2n@kaist.ac.kr",
         "github": "https://github.com/MIApark2355",
         "research_interests": [
@@ -201,6 +221,11 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "M.S. Student",
                 "enterance": "2025.03",
+                "graduation": "2026.08"
+            },
+            {
+                "role": "Ph.D. Student",
+                "enterance": "2026.09",
                 "graduation": ""
             }
         ],
@@ -226,7 +251,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "YoungseokSeo": {
         "name": "Youngseok Seo",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "ysseo0910@kaist.ac.kr",
         "github": "https://github.com/komaseo",
         "google_scholar": "https://scholar.google.com/citations?view_op=list_works&hl=en&user=hzANqAEAAAAJ",
@@ -238,14 +263,14 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "M.S. Student",
                 "enterance": "2024.09",
-                "graduation": ""
+                "graduation": "2026.08"
             }
         ],
         "image": "/members/YoungseokSeo.jpg"
     },
     "JihoonWoo": {
         "name": "Jihoon Woo",
-        "role": "M.S. Student",
+        "role": "Alumni",
         "email": "jihoon9809@kaist.ac.kr",
         "research_interests": [
             "Human-Computer Interaction",
@@ -254,8 +279,8 @@ let members: { [key: string]: MemberInfo } = {
         "histories": [
             {
                 "role": "M.S. Student",
-                "enterance": "2024.09", // Actually joined in 2025.09, but will graduate in 2026.08
-                "graduation": ""
+                "enterance": "2024.09", // Actually joined our lab in 2025.09, but will graduate in 2026.08
+                "graduation": "2026.08"
             }
         ],
         "image": "/members/JihoonWoo.JPG"
@@ -397,13 +422,13 @@ let members: { [key: string]: MemberInfo } = {
     },
     "YoungjiKoh": {
         "name": "Youngji Koh",
-        "role": "Ph.D. Student",
+        "role": "Alumni",
         "email": "youngji@kaist.ac.kr",
         "histories": [
             {
                 "role": "Ph.D. Student",
                 "enterance": "2021.09",
-                "graduation": ""
+                "graduation": "2026.08"
             }
         ],
         "homepage": "https://youngji-koh.github.io/",
