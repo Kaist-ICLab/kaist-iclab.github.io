@@ -42,6 +42,40 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
+    "Jiwoo Kang": {
+        "name": "Jiwoo Kang",
+        "role": "M.S. Student",
+        "email": "jiwoo.kang@kaist.ac.kr",
+        "research_interests": [
+            "Human-Computer Interaction",
+            "Digital Healthcare",
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/JiwooKang.jpeg"
+    },
+    "InWoo": {
+        "name": "In Woo",
+        "role": "M.S. Student",
+        "email": "inwoo@kaist.ac.kr",
+        "research_interests": [
+            "Human-AI Interaction",
+            "Human-Computer Interaction"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/InWoo.png"
+    },
     "RenzSamuelGutierrez": {
         "name": "Renz Samuel Gutierrez",
         "role": "M.S. Student",
@@ -303,7 +337,8 @@ let members: { [key: string]: MemberInfo } = {
             "User-centered Design",
             "Personalized Digital Health"
         ],
-        "image": "/members/JeonghyunKim.jpg"
+        "image": "/members/JeonghyunKim.jpg",
+        "affiliation": "Hanwha Aerospace"
     },
     "ThuVo": {
         "name": "Thu Vo",
