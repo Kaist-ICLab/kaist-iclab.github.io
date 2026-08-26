@@ -101,7 +101,7 @@ let members: { [key: string]: MemberInfo } = {
         "email": "wonmo.koo@kaist.ac.kr",
         "google_scholar": "https://scholar.google.com/citations?hl=ko&user=WReEdqoAAAAJ",
         "homepage": "https://sites.google.com/view/wonmokoo",
-        // "affiliation": "Assistant Professor at Pusan National University",
+        "affiliation": "Assistant Professor at Pusan National University",
         "research_interests": [
             "Multivariate Time Series Analysis",
             "Autonomous Systems"
