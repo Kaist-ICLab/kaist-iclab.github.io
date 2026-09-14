@@ -42,24 +42,6 @@ let members: { [key: string]: MemberInfo } = {
         ],
         "image": "/members/UichinLee.jpg"
     },
-    "FarazFarangizadeh": {
-        "name": "Faraz Farangizadeh",
-        "role": "M.S. Student",
-        "email": "faraz@kaist.ac.kr",
-        "research_interests": [
-            "Human-AI Interaction",
-            "Ubiquitous Computing",
-            "Mobile & Wearable Sensing"
-        ],
-        "histories": [
-            {
-                "role": "M.S. Student",
-                "enterance": "2026.09",
-                "graduation": ""
-            }
-        ],
-        "image": "/members/FarazFarangizadeh.jpg"
-    },
     "Jiwoo Kang": {
         "name": "Jiwoo Kang",
         "role": "M.S. Student",
@@ -112,6 +94,24 @@ let members: { [key: string]: MemberInfo } = {
             }
         ],
         "image": "/members/RenzSamuelGutierrez.png"
+    },
+    "FarazFarangizadeh": {
+        "name": "Faraz Farangizadeh",
+        "role": "M.S. Student",
+        "email": "faraz@kaist.ac.kr",
+        "research_interests": [
+            "Human-AI Interaction",
+            "Ubiquitous Computing",
+            "Mobile & Wearable Sensing"
+        ],
+        "histories": [
+            {
+                "role": "M.S. Student",
+                "enterance": "2026.09",
+                "graduation": ""
+            }
+        ],
+        "image": "/members/FarazFarangizadeh.jpg"
     },
     "WonmoKoo": {
         "name": "Wonmo Koo",
