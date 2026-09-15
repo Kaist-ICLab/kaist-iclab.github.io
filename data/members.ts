@@ -671,10 +671,11 @@ let members: { [key: string]: MemberInfo } = {
             }
         ],
         "github": "https://github.com/thunini",
+        "homepage": "https://thunini.github.io/",
+        "google_scholar": "https://scholar.google.com/citations?user=KHoN-TUAAAAJ&hl=en",
         "research_interests": [
             "Human-Computer Interaction",
             "Conversational Agents",
-            "Mental Health Sensing",
             "Human-AI Interaction"
         ],
         "image": "/members/ChanheeLee.jpg"
