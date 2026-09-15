@@ -36,12 +36,16 @@ const parseAuthors = (authors: any): string => {
 
 const parseVenue = (entry: any): string => {
     if (entry["type"] === "article-journal") {
-        return `${entry['container-title']} Volume ${entry.volume}, Issue ${entry.issue}`;
+        return [
+            entry["container-title"],
+            entry.volume ? `Volume ${entry.volume}` : undefined,
+            entry.issue ? `Issue ${entry.issue}` : undefined,
+        ].filter(Boolean).join(", ");
     }
     else if (entry["type"] === "paper-conference") {
         return `${entry["container-title"]}` + (entry["collection-title"] ? ` (${entry["collection-title"]})` : "");
     }
-    return entry["container-title"];
+    return entry["container-title"] ?? entry.note ?? entry.publisher;
 }
 
 const parseDate = (entry: any): string => {
