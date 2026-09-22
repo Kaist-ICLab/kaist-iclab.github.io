@@ -68,7 +68,7 @@ const Members: React.FC = () => (
                     </div>
                 </div>
                 <span className="mt-5 text-md">
-                    To update your profile, please contact <a href="mailto:junmo.lee@kse.kaist.ac.kr">junmo.lee@kse.kaist.ac.kr</a>.
+                    To update your profile, please contact <a href="mailto:faraz@kse.kaist.ac.kr">faraz@kse.kaist.ac.kr</a>.
                 </span>
             </div>
         </div>

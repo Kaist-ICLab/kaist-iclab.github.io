@@ -398,7 +398,7 @@ let members: { [key: string]: MemberInfo } = {
     "HyunsooLee": {
         "name": "Hyunsoo Lee",
         "email": "hslee90@kaist.ac.kr",
-        "role": "Post Doctoral Researcher",
+        "role": "Alumni",
         "google_scholar": "https://scholar.google.com/citations?user=ctglUjoAAAAJ&hl=ko",
         "github": "https://github.com/hslee90",
         "homepage": "https://hslee90.github.io/",
@@ -421,7 +421,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Post Doctoral Researcher",
                 "enterance": "2023.09",
-                "graduation": ""
+                "graduation": "2026.08"
             }
         ],
         "image": "/members/HyunsooLee.jpg"
