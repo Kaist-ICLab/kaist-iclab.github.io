@@ -421,7 +421,7 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Post Doctoral Researcher",
                 "enterance": "2023.09",
-                "graduation": "2026.08"
+                "graduation": "2026.09"
             }
         ],
         "image": "/members/HyunsooLee.jpg"
