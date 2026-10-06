@@ -493,7 +493,7 @@ let members: { [key: string]: MemberInfo } = {
     },
     "YugyeongJung": {
         "name": "Yugyeong Jung",
-        "role": "Ph.D. Student",
+        "role": "Post Doctoral Researcher",
         "email": "yugyeong.jung@kaist.ac.kr",
         "histories": [
             {
@@ -504,7 +504,11 @@ let members: { [key: string]: MemberInfo } = {
             {
                 "role": "Ph.D. Student",
                 "enterance": "2022.03",
-                "graduation": ""
+                "graduation": "2026.08"
+            },
+            {
+                "role": "Post Doctoral Researcher",
+                "enterance": "2026.09"
             }
         ],
         "github": "https://github.com/yugyeongjung",
