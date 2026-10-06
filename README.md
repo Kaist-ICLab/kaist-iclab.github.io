@@ -62,3 +62,11 @@ The metadata of publication will be processed from `/data/publication.bib`.
 Please include bibtex for new publication on there.
 The slide and paper should be located in `/public/publications/papers/` and `/public/publications/slides/` respectively named with citeKey.
 The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publicationSupplementary.ts` on `supplementaries` variable
+
+Publication type is inferred from the BibTeX entry type (`@article`, `@inproceedings`, `@incollection`, and so on). To attach a publication to one or more research projects, add project IDs to the standard `keywords` field using the `project:` prefix:
+
+```bibtex
+keywords = {project:health-wellbeing}
+```
+
+The supported project IDs are defined in `/data/publicationMetadata.ts`. Ordinary topical keywords can remain in the same field alongside project IDs.

@@ -1,94 +1,101 @@
 import fs from "fs";
-import Cite from 'citation-js';
-import supplementaries  from "@data/pulbicationSupplementary";
+import Cite from "citation-js";
+import supplementaries from "@data/pulbicationSupplementary";
+import { isResearchProjectId, PublicationType, ResearchProjectId } from "@data/publicationMetadata";
 
 export interface PublicationSupplementaryInfo {
-    paper: string;
+    paper?: string;
     slide?: string;
     video?: string;
     code?: string;
-    "google slide": string;
+    "google slide"?: string;
 }
 
 export interface PublicationInfo {
+    id: string;
     title: string;
     venue: string;
     authors: string;
     date: string;
     published: boolean;
+    type: PublicationType;
+    projects: ResearchProjectId[];
     supplementary: PublicationSupplementaryInfo;
 }
 
-
-const bib = fs.readFileSync('data/publication.bib', 'utf8');
+const bib = fs.readFileSync("data/publication.bib", "utf8");
 const cites = new Cite(bib);
 
-const parseAuthors = (authors: any): string => {
-    let author = authors.map((a: any) => (a.given ?? "") + " " + (a.family ?? ""));
+const parseAuthors = (authors: any[]): string => {
+    let author = authors.map((item) => `${item.given ?? ""} ${item.family ?? ""}`.trim());
     if (author.length > 2) {
-        author[author.length - 1] = "and " + author[author.length - 1]
-    } else if (authors.length === 2) {
-        author = [author[0] + " and " + author[1]]
+        author[author.length - 1] = `and ${author[author.length - 1]}`;
+    } else if (author.length === 2) {
+        author = [`${author[0]} and ${author[1]}`];
     }
-    author = author.join(", ");
-    return author;
+    return author.join(", ");
 }
 
 const parseVenue = (entry: any): string => {
-    if (entry["type"] === "article-journal") {
-        return `${entry['container-title']} Volume ${entry.volume}, Issue ${entry.issue}`;
+    if (entry.type === "article-journal") {
+        return [
+            entry["container-title"],
+            entry.volume ? `Volume ${entry.volume}` : undefined,
+            entry.issue ? `Issue ${entry.issue}` : undefined,
+        ].filter(Boolean).join(", ");
     }
-    else if (entry["type"] === "paper-conference") {
-        return `${entry["container-title"]}` + (entry["collection-title"] ? ` (${entry["collection-title"]})` : "");
+    if (entry.type === "paper-conference") {
+        return `${entry["container-title"] ?? ""}${entry["collection-title"] ? ` (${entry["collection-title"]})` : ""}`;
     }
-    return entry["container-title"];
+    if (entry.type === "document" && entry.note?.toLowerCase().includes("patent")) {
+        return [entry.publisher, entry.note].filter(Boolean).join(" · ");
+    }
+    return entry["container-title"] ?? entry.publisher ?? "";
 }
 
-const parseDate = (entry: any): string => {
-    const date = entry.issued["date-parts"][0].join("-")
-    return date
+const parseType = (entry: any): PublicationType => {
+    if (entry.type === "article-journal") return "Journal Article";
+    if (entry.type === "paper-conference") return "Conference Paper";
+    if (entry.type === "chapter") return "Book Chapter";
+    if (entry.type === "document" && entry.note?.toLowerCase().includes("patent")) return "Patent";
+    return "Other";
 }
 
-const data = cites.get().map((entry: any) => {
-    const key = entry["citation-key"]
-    const authors = parseAuthors(entry.author)
-    const venue = parseVenue(entry)
-    const date = parseDate(entry);
+const parseProjects = (entry: any): ResearchProjectId[] => {
+    const keywords = typeof entry.keyword === "string" ? entry.keyword.split(/[,;]/) : [];
+    return keywords
+        .map((keyword: string) => keyword.trim())
+        .filter((keyword: string) => keyword.startsWith("project:"))
+        .map((keyword: string) => keyword.slice("project:".length))
+        .filter(isResearchProjectId);
+}
 
-    const ret = [key, {
+const publications: PublicationInfo[] = cites.get().map((entry: any, index: number) => {
+    const citationKey = entry["citation-key"];
+    const date = entry.issued["date-parts"][0].join("-");
+    return {
+        id: `${citationKey}-${index}`,
         title: entry.title,
-        authors,
-        venue,
-        date
-    }]
-    return ret
-})
-
-
-const publications: {
-    [key: string]: PublicationInfo;
-} = Object.fromEntries(data.map(([key, { title, authors, venue, date }]: [string, { title: string, authors: string, venue: string, date: string }]) => {
-    return [key, {
-        title,
-        venue,
-        authors,
+        authors: parseAuthors(entry.author),
+        venue: parseVenue(entry),
         date,
         published: true,
+        type: parseType(entry),
+        projects: parseProjects(entry),
         supplementary: {
-            paper: fs.existsSync(`public/publications/papers/${key}.pdf`) ? `/publications/papers/${key}.pdf` : undefined,
-            slide: fs.existsSync(`public/publications/slides/${key}.pdf`) ? `/publications/slides/${key}.pdf` : undefined,
-            video: supplementaries[key]?.video,
-            code: supplementaries[key]?.code,
-            "google slide": supplementaries[key]?.["google slide"]
-        }
-    }]
-}).sort((a: any, b: any) => Number(b[1].date.split("-")[0]) - Number(a[1].date.split("-")[0])))
+            paper: fs.existsSync(`public/publications/papers/${citationKey}.pdf`) ? `/publications/papers/${citationKey}.pdf` : undefined,
+            slide: fs.existsSync(`public/publications/slides/${citationKey}.pdf`) ? `/publications/slides/${citationKey}.pdf` : undefined,
+            video: supplementaries[citationKey]?.video,
+            code: supplementaries[citationKey]?.code,
+            "google slide": supplementaries[citationKey]?.["google slide"],
+        },
+    }
+}).sort((a: PublicationInfo, b: PublicationInfo) => {
+    const [aYear, aMonth = 0] = a.date.split("-").map(Number);
+    const [bYear, bMonth = 0] = b.date.split("-").map(Number);
+    return bYear - aYear || bMonth - aMonth;
+});
 
-// For debugging
-// fs.writeFileSync('raw.json', JSON.stringify(cites.get(), null, 2));
-// fs.writeFileSync('publications.json', JSON.stringify(publications, null, 2));
-
-const currentYear = new Date().getFullYear();
-export const publicationYears = Array.from({ length: currentYear - 2000 + 1 }, (_, index) => currentYear - index);
+export const publicationYears = Array.from(new Set(publications.map(({ date }) => Number(date.split("-")[0]))));
 
 export default publications;
