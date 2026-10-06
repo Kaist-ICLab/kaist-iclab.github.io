@@ -1,13 +1,10 @@
 export const researchProjects = [
-    { id: "emotion-labor", label: "Emotion Labor" },
-    { id: "digital-columbus", label: "Digital Columbus" },
-    { id: "ai-interviewer", label: "AI Interviewer", parentId: "digital-columbus" },
-    { id: "mobile-agents", label: "Mobile Agents" },
-    { id: "simsimi", label: "심심이" },
-    { id: "meta-scientist-ai-science-hub", label: "Meta-Scientist & AI Science Hub" },
-    { id: "physical-ai", label: "Physical AI" },
-    { id: "ethics", label: "Ethics" },
-    { id: "enpulse-mobile-wearable-computing", label: "EnPULSE for Mobile and Wearable Computing" },
+    { id: "health-wellbeing", label: "Health & Wellbeing" },
+    { id: "ubiquitous-sensing-systems", label: "Ubiquitous Sensing & Systems" },
+    { id: "ai-data-intelligence", label: "AI & Data Intelligence" },
+    { id: "human-ai-interaction", label: "Human-AI Interaction" },
+    { id: "social-collaborative-computing", label: "Social & Collaborative Computing" },
+    { id: "privacy-safety-responsible-computing", label: "Privacy, Safety & Responsible Computing" },
 ] as const;
 
 export type ResearchProjectId = typeof researchProjects[number]["id"];

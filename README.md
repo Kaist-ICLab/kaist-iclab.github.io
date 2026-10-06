@@ -66,7 +66,7 @@ The links of other supplementary materials (i.e., video and code) can be inserte
 Publication type is inferred from the BibTeX entry type (`@article`, `@inproceedings`, `@incollection`, and so on). To attach a publication to one or more research projects, add project IDs to the standard `keywords` field using the `project:` prefix:
 
 ```bibtex
-keywords = {project:ai-interviewer}
+keywords = {project:health-wellbeing}
 ```
 
-The supported project IDs are defined in `/data/publicationMetadata.ts`. Selecting a parent project also includes publications tagged with its child projects, so use the most specific project ID. Ordinary topical keywords can remain in the same field alongside project IDs.
+The supported project IDs are defined in `/data/publicationMetadata.ts`. Ordinary topical keywords can remain in the same field alongside project IDs.

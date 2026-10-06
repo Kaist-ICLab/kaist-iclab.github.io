@@ -32,16 +32,10 @@ const ProjectFilter: React.FC<{
   const menuRef = useRef<HTMLDivElement>(null);
   const labelId = useId();
 
-  const topLevelProjects = researchProjects.filter((project) => !("parentId" in project));
   const selectedDefinition = value === "all" ? undefined : researchProjects.find(({ id }) => id === value);
-  const selectedParent = selectedDefinition && "parentId" in selectedDefinition
-    ? researchProjects.find(({ id }) => id === selectedDefinition.parentId)
-    : undefined;
   const selectedLabel = value === "all"
     ? "All projects"
-    : selectedParent
-      ? `${selectedParent.label} / ${selectedDefinition?.label}`
-      : selectedDefinition?.label;
+    : selectedDefinition?.label;
 
   useEffect(() => {
     if (!open) return;
@@ -91,8 +85,7 @@ const ProjectFilter: React.FC<{
   const ProjectOption: React.FC<{
     id: ProjectSelection;
     children: React.ReactNode;
-    nested?: boolean;
-  }> = ({ id, children, nested = false }) => {
+  }> = ({ id, children }) => {
     const selected = value === id;
     return (
       <button
@@ -102,7 +95,7 @@ const ProjectFilter: React.FC<{
         onClick={() => selectProject(id)}
         className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 ${
           selected ? "bg-blue-50 font-medium text-blue-800" : "text-gray-700 hover:bg-gray-50"
-        } ${nested ? "pl-8" : ""}`}
+        }`}
       >
         <span className={`flex h-4 w-4 shrink-0 items-center justify-center ${selected ? "text-blue-700" : "text-transparent"}`} aria-hidden="true">
           <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4">
@@ -149,38 +142,14 @@ const ProjectFilter: React.FC<{
           <ProjectOption id="all">All projects</ProjectOption>
           <div className="my-2 border-t border-gray-100" />
 
-          {topLevelProjects.map((project) => {
-            const children = researchProjects.filter((candidate) => (
-              "parentId" in candidate && candidate.parentId === project.id
-            ));
-
-            if (children.length === 0) {
-              return <ProjectOption key={project.id} id={project.id}>{project.label}</ProjectOption>;
-            }
-
-            return (
-              <div key={project.id} className="py-1">
-                <ProjectOption id={project.id}>{project.label}</ProjectOption>
-                <div className="relative ml-7 border-l border-gray-200 pl-1">
-                  {children.map((child) => (
-                    <ProjectOption key={child.id} id={child.id} nested>{child.label}</ProjectOption>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+          {researchProjects.map((project) => (
+            <ProjectOption key={project.id} id={project.id}>{project.label}</ProjectOption>
+          ))}
         </div>
       )}
     </div>
   );
 };
-
-const projectMatchesSelection = (project: ResearchProjectId, selectedProject: ResearchProjectId): boolean => {
-  if (project === selectedProject) return true;
-  const definition = researchProjects.find(({ id }) => id === project);
-  if (!definition || !("parentId" in definition)) return false;
-  return definition.parentId === selectedProject;
-}
 
 const Publication: React.FC<{ publication: PublicationInfo }> = ({ publication }) => (
   <article className="not-format flex w-full max-w-screen-xl flex-col">
@@ -212,7 +181,7 @@ const PublicationBrowser: React.FC<{ publications: PublicationInfo[] }> = ({ pub
   const [selectedType, setSelectedType] = useState<PublicationType | "all">("all");
 
   const filteredPublications = useMemo(() => publications.filter((publication) => (
-    (selectedProject === "all" || publication.projects.some((project) => projectMatchesSelection(project, selectedProject))) &&
+    (selectedProject === "all" || publication.projects.includes(selectedProject)) &&
     (selectedType === "all" || publication.type === selectedType)
   )), [publications, selectedProject, selectedType]);
 
