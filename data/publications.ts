@@ -90,11 +90,7 @@ const publications: PublicationInfo[] = cites.get().map((entry: any, index: numb
             "google slide": supplementaries[citationKey]?.["google slide"],
         },
     }
-}).sort((a: PublicationInfo, b: PublicationInfo) => {
-    const [aYear, aMonth = 0] = a.date.split("-").map(Number);
-    const [bYear, bMonth = 0] = b.date.split("-").map(Number);
-    return bYear - aYear || bMonth - aMonth;
-});
+})
 
 export const publicationYears = Array.from(new Set(publications.map(({ date }) => Number(date.split("-")[0]))));
 
