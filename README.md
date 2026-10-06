@@ -37,6 +37,23 @@ npm run dev
 
 To add data, you can follow the instructions below directly on github, but I recommend you to run it locally to check whether it is added as you intended.
 
+### Update/Add Research Project Cards
+
+The research project cards in the main page are stored in the `projects` array in `/src/app/page.tsx`.
+To update a card, edit its existing entry. To add a card, please (1) add an image in `/public/researchProjects/` and (2) add an entry to the `projects` array using the following format:
+{
+  title: "New Research Project",
+  href: "(ICLab brunch article link)",
+  image: "/researchProjects/new-project.png",
+  description: "A short description of the project shown in the card overlay.",
+},
+
+* title: The project title displayed below the image.
+* image: Use a 3:2 image ratio to match the existing cards (e.g. 1536 × 1024).
+* description: The text displayed when hovering over the card. Please keep it short.
+
+On a touch device, tapping the card opens or closes the overlay, and tapping `Learn more` opens the link.
+
 ### Adding Gallery Image
 
 The metadata of gallery images are stored as a list in `/data/galleries.ts`.
