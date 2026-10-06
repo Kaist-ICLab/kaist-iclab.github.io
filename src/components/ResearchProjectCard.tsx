@@ -52,7 +52,7 @@ export default function ResearchProjectCard({ title, image, description, href }:
           rel="noopener noreferrer"
           aria-label={`Learn more about ${title} (opens in a new tab)`}
         >
-          {/* Learn more <span aria-hidden="true">→</span> */}
+          Learn more <span aria-hidden="true">→</span>
         </a>
       </div>
     </article>
