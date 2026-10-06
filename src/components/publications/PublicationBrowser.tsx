@@ -22,29 +22,52 @@ const projectLabels = Object.fromEntries(researchProjects.map(({ id, label }) =>
 
 type ProjectSelection = ResearchProjectId | "all";
 
-const ProjectFilter: React.FC<{
-  value: ProjectSelection;
-  onChange: (value: ProjectSelection) => void;
-}> = ({ value, onChange }) => {
+const FilterSelect: React.FC<React.SelectHTMLAttributes<HTMLSelectElement>> = ({ children, className = "", ...props }) => (
+  <span className="grid min-w-0">
+    <select
+      {...props}
+      className={`col-start-1 row-start-1 min-h-[42px] w-full min-w-0 appearance-none rounded-lg border border-gray-300 bg-white py-2.5 pl-3 pr-10 text-sm font-normal text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 ${className}`}
+    >
+      {children}
+    </select>
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className="pointer-events-none col-start-1 row-start-1 mr-3 h-4 w-4 self-center justify-self-end text-gray-500"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  </span>
+);
+
+function FilterDropdown<T extends string>({ label, allLabel, options, value, onChange }: {
+  label: string;
+  allLabel: string;
+  options: readonly { id: T; label: string }[];
+  value: T | "all";
+  onChange: (value: T | "all") => void;
+}) {
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const labelId = useId();
 
-  const selectedDefinition = value === "all" ? undefined : researchProjects.find(({ id }) => id === value);
+  const selectedDefinition = value === "all" ? undefined : options.find(({ id }) => id === value);
   const selectedLabel = value === "all"
-    ? "All projects"
+    ? allLabel
     : selectedDefinition?.label;
 
   useEffect(() => {
     if (!open) return;
 
-    const closeOnOutsideClick = (event: MouseEvent) => {
+    const closeOnOutsideClick = (event: PointerEvent) => {
       if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
     };
-    document.addEventListener("mousedown", closeOnOutsideClick);
-    return () => document.removeEventListener("mousedown", closeOnOutsideClick);
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
   }, [open]);
 
   useEffect(() => {
@@ -53,8 +76,8 @@ const ProjectFilter: React.FC<{
     selectedOption?.focus();
   }, [open]);
 
-  const selectProject = (project: ProjectSelection) => {
-    onChange(project);
+  const selectOption = (option: T | "all") => {
+    onChange(option);
     setOpen(false);
     triggerRef.current?.focus();
   };
@@ -82,17 +105,16 @@ const ProjectFilter: React.FC<{
     options[nextIndex]?.focus();
   };
 
-  const ProjectOption: React.FC<{
-    id: ProjectSelection;
-    children: React.ReactNode;
-  }> = ({ id, children }) => {
+  const renderOption = (id: T | "all", optionLabel: string) => {
     const selected = value === id;
     return (
       <button
+        key={id}
         type="button"
         role="menuitemradio"
         aria-checked={selected}
-        onClick={() => selectProject(id)}
+        tabIndex={-1}
+        onClick={() => selectOption(id)}
         className={`flex w-full items-center gap-3 rounded-md px-3 py-2 text-left text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 ${
           selected ? "bg-blue-50 font-medium text-blue-800" : "text-gray-700 hover:bg-gray-50"
         }`}
@@ -102,20 +124,27 @@ const ProjectFilter: React.FC<{
             <path d="m4 10 4 4 8-9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
-        <span>{children}</span>
+        <span>{optionLabel}</span>
       </button>
     );
   };
 
   return (
-    <div ref={containerRef} className="relative flex flex-col gap-1 text-sm font-medium text-gray-700">
-      <span id={labelId}>Research Project</span>
+    <div
+      ref={containerRef}
+      className="relative flex flex-col gap-1 text-sm font-medium text-gray-700"
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setOpen(false);
+      }}
+    >
+      <span id={labelId}>{label}</span>
       <button
         ref={triggerRef}
         type="button"
         aria-labelledby={`${labelId} ${labelId}-value`}
         aria-haspopup="menu"
         aria-expanded={open}
+        aria-controls={open ? `${labelId}-menu` : undefined}
         onClick={() => setOpen((current) => !current)}
         onKeyDown={(event) => {
           if (["ArrowDown", "ArrowUp"].includes(event.key)) {
@@ -134,17 +163,16 @@ const ProjectFilter: React.FC<{
       {open && (
         <div
           ref={menuRef}
+          id={`${labelId}-menu`}
           role="menu"
           aria-labelledby={labelId}
           onKeyDown={handleMenuKeyDown}
           className="absolute left-0 top-full z-40 mt-2 max-h-[28rem] w-full min-w-72 overflow-y-auto rounded-xl border border-gray-200 bg-white p-2 shadow-xl"
         >
-          <ProjectOption id="all">All projects</ProjectOption>
+          {renderOption("all", allLabel)}
           <div className="my-2 border-t border-gray-100" />
 
-          {researchProjects.map((project) => (
-            <ProjectOption key={project.id} id={project.id}>{project.label}</ProjectOption>
-          ))}
+          {options.map((option) => renderOption(option.id, option.label))}
         </div>
       )}
     </div>
@@ -210,32 +238,32 @@ const PublicationBrowser: React.FC<{ publications: PublicationInfo[] }> = ({ pub
       <h2>Publications</h2>
 
       <div className="not-format mb-8 mt-8 grid gap-4 md:grid-cols-2 xl:mr-36">
-        <ProjectFilter value={selectedProject} onChange={setSelectedProject} />
-
-        <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
-          Publication Type
-          <select
-            value={selectedType}
-            onChange={(event) => setSelectedType(event.target.value as PublicationType | "all")}
-            className="rounded-lg border border-gray-300 bg-white p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
-          >
-            <option value="all">All types</option>
-            {availableTypes.map((type) => <option key={type} value={type}>{type}</option>)}
-          </select>
-        </label>
+        <FilterDropdown<ResearchProjectId>
+          label="Research Project"
+          allLabel="All projects"
+          options={researchProjects}
+          value={selectedProject}
+          onChange={setSelectedProject}
+        />
+        <FilterDropdown<PublicationType>
+          label="Publication Type"
+          allLabel="All types"
+          options={availableTypes.map((type) => ({ id: type, label: type }))}
+          value={selectedType}
+          onChange={setSelectedType}
+        />
       </div>
 
       {groupedPublications.length > 0 && (
         <label className="not-format mb-8 flex flex-col gap-1 text-sm font-medium text-gray-700 xl:hidden">
           Jump to year
-          <select
+          <FilterSelect
             defaultValue=""
             onChange={(event) => scrollToYear(Number(event.target.value))}
-            className="rounded-lg border border-gray-300 bg-white p-2.5 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
           >
             <option value="" disabled>Select a year</option>
             {groupedPublications.map(([year]) => <option key={year} value={year}>{year}</option>)}
-          </select>
+          </FilterSelect>
         </label>
       )}
 
