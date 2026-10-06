@@ -25,43 +25,43 @@ const researchSteps = [
 const projects = [
   {
     title: "EnPULSE for Mobile and Wearable Computing",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/enpulse.png",
     description: "EnPULSE (Enabling Platform for User Logging & Sensing Environment) is an open-source platform for mobile and wearable health research, which helps researchers run and monitor in-the-wild studies with less engineering overhead.",
   },
   {
     title: "Digital Columbus & AI Interviewer",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/digital columbus.png",
     description: "Digital Columbus uses multi-agent AI to interpret longitudinal patient-generated data and support psychiatric prognostic reasoning, preserving evidence and uncertainty for clinician review. AI Interviewer gathers psychiatric histories and screens for risks before visits.",
   },
   {
     title: "Physical AI",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/physicalAI.png",
     description: "We develop Physical AI for factory operations by integrating Factory-VLM perception, anomaly detection, and factory knowledge to assess risks, prioritize responses, and support safe human-robot collaboration through HMI and multi-agent coordination.",
   },
   {
     title: "Meta-Scientist & AI Science Hub",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/meta scientist.png",
     description: "Meta-Scientist explores AI researcher clones for scholarly consultation, examining representation, reciprocity, and diversity. AI Science Hub investigates human digital twins as research participants, reviewing their construction, use, and validation.",
   },
   {
     title: "Mobile Agents",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/mobile agents.png",
     description: "We explore the mental model of older adults when interacting with a mobile agent, develop a language model specialized in understanding their utterances, and research on interactive methods for error recovery.",
   },
   {
     title: "Agentic AI Companion",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/agentic AI companion.png",
     description: "We explore agentic AI companions that sense daily context to deliver just-in-time adaptive interventions (JITAI) for well-being, while learning from user responses to remain personalized, safe, and non-intrusive.",
   },
   {
     title: "Emotion Labor",
-    href: "https://brunch.co.kr/@kaisticlab",
+    // href: "https://brunch.co.kr/@kaisticlab",
     image: "/researchProjects/emotion labor.png",
     description: "We focus on a real-time mental health management system for emotional labor workers, such as call center agents. It uses sensors to monitor and assess their physiological and perceived stress states to provide personalized mental health management.",
   },
@@ -73,21 +73,21 @@ const opportunities = [
     description:
       "Gain practical research experience by contributing to ongoing projects and exploring your interests.",
     action: "Explore internship",
-    href: "https://brunch.co.kr/@kaisticlab",
+    href: "https://brunch.co.kr/@kaisticlab/51",
   },
   {
     title: "Prospective Students",
     description:
       "Explore our projects and discover how your interests connect with the questions we study.",
     action: "Joining the lab",
-    href: "https://brunch.co.kr/@kaisticlab",
+    href: "https://brunch.co.kr/@kaisticlab/3",
   },
   {
     title: "Research Collaborators",
     description:
       "Connect around a research question, a study setting, or a system you would like to build together.",
     action: "Explore collaboration",
-    href: "https://brunch.co.kr/@kaisticlab",
+    href: "https://brunch.co.kr/@kaisticlab/63",
   },
 ];
 

@@ -22,7 +22,7 @@ export default function ResearchProjectCard({ title, image, description, href }:
     >
       <div className="home-project-content flex min-w-0 flex-col">
         <Image src={image} alt={title} width={1536} height={1024} className="h-auto w-full shrink-0" unoptimized />
-        <h3 id={`${id}-title`} className="flex flex-1 items-center px-5 py-4 text-lg font-bold leading-tight tracking-tight text-gray-600">{title}</h3>
+        <h3 id={`${id}-title`} className="flex flex-1 items-center px-5 py-4 text-lg font-bold leading-tight tracking-tight text-gray-700">{title}</h3>
       </div>
 
       {/* CSS selects the appropriate control based on hover/pointer capability. */}
@@ -52,7 +52,7 @@ export default function ResearchProjectCard({ title, image, description, href }:
           rel="noopener noreferrer"
           aria-label={`Learn more about ${title} (opens in a new tab)`}
         >
-          Learn more <span aria-hidden="true">→</span>
+          {/* Learn more <span aria-hidden="true">→</span> */}
         </a>
       </div>
     </article>
