@@ -8,12 +8,12 @@ import Link from "@/components/Link";
 
 const navs: { name: string; link?: string }[] = [
     { name: "projects", link: "/#research-projects" },
+    { name: "news", link: "/#lab-news" },
+    { name: "collaboration", link: "/#join-collaborate" },
     { name: "publications" },
     { name: "members" },
     { name: "lectures" },
     { name: "galleries" },
-    { name: "news", link: "/#lab-news" },
-    { name: "collaboration", link: "/#join-collaborate" },
     { name: "blog", link: "https://brunch.co.kr/@kaisticlab" },
 ]
 
@@ -96,7 +96,12 @@ const NavBar: React.FC = () => {
                         onClickCapture={handleNavigationClick}
                     >
                         {navs.map((nav) => (
-                            <li key={nav.name}>
+                            <li
+                                key={nav.name}
+                                className={nav.name === "publications" || nav.name === "blog"
+                                    ? "border-t border-gray-300 mt-2 pt-2 lg:mt-0 lg:pt-0 lg:border-t-0 lg:-ml-2 lg:border-l lg:pl-4"
+                                    : ""}
+                            >
                                 <Menu name={nav.name} link={nav.link} isActive={currentPath === "/" + nav.name} />
                             </li>
                         ))}
