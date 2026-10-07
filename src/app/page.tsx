@@ -24,6 +24,13 @@ const researchSteps = [
 
 const projects = [
   {
+      title: "Wearable Foundation Model for Everyday Health",
+      href: "https://brunch.co.kr/@kaisticlab/65",
+      image: "/researchProjects/wearableFM.png",
+      description: "We aim to develop wearable foundation models for personalized health monitoring using physiological and contextual data collected in everyday life."
+
+  },
+  {
     title: "EnPULSE for Mobile and Wearable Computing",
     href: "https://brunch.co.kr/@kaisticlab/53",
     image: "/researchProjects/enpulse.png",
