@@ -24,11 +24,16 @@ const researchSteps = [
 
 const projects = [
   {
+      title: "Routine Computing",
+      href: "https://brunch.co.kr/@kaisticlab/66",
+      image: "/researchProjects/Routine Computing.png",
+      description: "Routine Computing aims to understand, model, and predict human daily behaviors and routines using data collected from smartphones, wearable devices, and other ubiquitous sensing technologies."
+  },
+  {
       title: "Wearable Foundation Model for Everyday Health",
       href: "https://brunch.co.kr/@kaisticlab/65",
       image: "/researchProjects/wearableFM.png",
       description: "We aim to develop wearable foundation models for personalized health monitoring using physiological and contextual data collected in everyday life."
-
   },
   {
     title: "EnPULSE for Mobile and Wearable Computing",
