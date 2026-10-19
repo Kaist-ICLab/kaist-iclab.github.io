@@ -25,7 +25,7 @@ const researchSteps = [
 const projects = [
   {
       title: "Routine Computing",
-      href: "https://brunch.co.kr/@kaisticlab/65",
+      href: "https://brunch.co.kr/@kaisticlab/66",
       image: "/researchProjects/Routine Computing.png",
       description: "Routine Computing aims to understand, model, and predict human daily behaviors and routines using data collected from smartphones, wearable devices, and other ubiquitous sensing technologies."
   },
