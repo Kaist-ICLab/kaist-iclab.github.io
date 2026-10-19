@@ -14,6 +14,7 @@ const resourceLinks = [
   { key: "paper", label: "Paper", className: "bg-blue-100 text-blue-800" },
   { key: "slide", label: "Slide", className: "bg-yellow-100 text-yellow-800" },
   { key: "google slide", label: "Google slide", className: "bg-yellow-100 text-yellow-800" },
+  { key: "poster", label: "Poster", className: "bg-purple-100 text-purple-800" },
   { key: "code", label: "Code", className: "bg-gray-100 text-gray-800" },
   { key: "video", label: "Video", className: "bg-red-100 text-red-800" },
 ] as const;
@@ -186,6 +187,11 @@ const Publication: React.FC<{ publication: PublicationInfo }> = ({ publication }
     <p className="text-base italic leading-7 text-gray-600">
       {publication.venue + (publication.published ? "" : " (To be appear)")}
     </p>
+    {publication.award && (
+      <p className="text-base italic leading-7 text-amber-800">
+        {publication.award}
+      </p>
+    )}
     <div className="mt-1 flex flex-wrap items-center gap-2">
       {resourceLinks.map(({ key, label, className }) => {
         const href = publication.supplementary[key];
