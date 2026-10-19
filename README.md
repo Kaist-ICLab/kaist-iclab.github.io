@@ -77,8 +77,10 @@ For updating image, please change the image in `/pulbic/members/`.
 
 The metadata of publication will be processed from `/data/publication.bib`.
 Please include bibtex for new publication on there.
-The slide and paper should be located in `/public/publications/papers/` and `/public/publications/slides/` respectively named with citeKey.
+Paper, slide, and poster PDFs should be located in `/public/publications/papers/`, `/public/publications/slides/`, and `/public/publications/posters/` respectively, named `<citeKey>.pdf` to match their BibTeX entry. A matching file automatically adds a Paper, Slide, or Poster button to the publication.
 The links of other supplementary materials (i.e., video and code) can be inserted in `/data/publicationSupplementary.ts` on `supplementaries` variable
+
+To display an award below a publication's venue, add its wording in the BibTeX `award` field (for example, `award = {ACM WellComp 2026 Best Paper Runner-Up Award}`). The `note` field is independent and is not used for awards.
 
 Publication type is inferred from the BibTeX entry type (`@article`, `@inproceedings`, `@incollection`, and so on). To attach a publication to one or more research projects, add project IDs to the standard `keywords` field using the `project:` prefix:
 

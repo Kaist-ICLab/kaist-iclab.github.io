@@ -6,6 +6,7 @@ import { isResearchProjectId, PublicationType, ResearchProjectId } from "@data/p
 export interface PublicationSupplementaryInfo {
     paper?: string;
     slide?: string;
+    poster?: string;
     video?: string;
     code?: string;
     "google slide"?: string;
@@ -15,6 +16,7 @@ export interface PublicationInfo {
     id: string;
     title: string;
     venue: string;
+    award?: string;
     authors: string;
     date: string;
     published: boolean;
@@ -24,7 +26,12 @@ export interface PublicationInfo {
 }
 
 const bib = fs.readFileSync("data/publication.bib", "utf8");
-const cites = new Cite(bib);
+const bibEntries = Cite.plugins.input.data(bib, "@biblatex/text");
+const cites = new Cite(bibEntries);
+// Preserve the custom award field, which Citation.js omits from its CSL output.
+const awards = new Map<string, string | undefined>(
+    bibEntries.map((entry: any) => [entry.label, entry.properties.award])
+);
 
 const parseAuthors = (authors: any[]): string => {
     let author = authors.map((item) => `${item.given ?? ""} ${item.family ?? ""}`.trim());
@@ -78,6 +85,7 @@ const publications: PublicationInfo[] = cites.get().map((entry: any, index: numb
         title: entry.title,
         authors: parseAuthors(entry.author),
         venue: parseVenue(entry),
+        award: awards.get(citationKey),
         date,
         published: true,
         type: parseType(entry),
@@ -85,6 +93,7 @@ const publications: PublicationInfo[] = cites.get().map((entry: any, index: numb
         supplementary: {
             paper: fs.existsSync(`public/publications/papers/${citationKey}.pdf`) ? `/publications/papers/${citationKey}.pdf` : undefined,
             slide: fs.existsSync(`public/publications/slides/${citationKey}.pdf`) ? `/publications/slides/${citationKey}.pdf` : undefined,
+            poster: fs.existsSync(`public/publications/posters/${citationKey}.pdf`) ? `/publications/posters/${citationKey}.pdf` : undefined,
             video: supplementaries[citationKey]?.video,
             code: supplementaries[citationKey]?.code,
             "google slide": supplementaries[citationKey]?.["google slide"],

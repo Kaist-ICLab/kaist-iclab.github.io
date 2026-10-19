@@ -5,6 +5,21 @@ const supplementaries: {
         "google slide"?: string;
     }
 } = {
+    zhang2026crossshift: {
+        code: 'https://github.com/Kaist-ICLab/CrossShift',
+    },
+    zhang2026time: {
+        code: 'https://github.com/Kaist-ICLab/MobileStressTemporalAdaptation',
+    },
+    zhang2026tabpfn: {
+        code: 'https://github.com/Kaist-ICLab/TabPFN_MobileMoodInference',
+    },
+    lee2026opensource: {
+        code: 'https://github.com/Kaist-ICLab/EnPULSE',
+    },
+    kim2026feeling: {
+        code: 'https://github.com/Jeonghyun109/stress-data-dashboard',
+    },
     han2024systematic: {
         "google slide": "https://docs.google.com/presentation/d/11Lwb71tRptiFVa87ZdjN_wqj3Ak6nwhIfJu-21aFq_g/edit?slide=id.g263f0289868_1_481#slide=id.g263f0289868_1_481"
     },
